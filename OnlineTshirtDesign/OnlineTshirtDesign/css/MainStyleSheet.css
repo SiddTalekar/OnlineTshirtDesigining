@@ -1,0 +1,102 @@
+﻿@font-face {
+    font-family: 'fontawesome';
+    src: url('/fonts/fontawesome-webfont.eot');
+    src: local('☺'), url('/fonts/fontawesome-webfont.woff') format('woff'), url('/fonts/fontawesome-webfont.ttf') format('truetype'), url('/fonts/fontawesome-webfont.svg') format('svg');
+}
+
+@font-face {
+    font-family: 'glyphicons';
+    src: url('/fonts/glyphicons-halflings-regular.eot');
+    src: local('☺'), url('/fonts/glyphicons-halflings-regular.woff') format('woff'), url('/fonts/glyphicons-halflings-regular.ttf') format('truetype'), url('/fonts/glyphicons-halflings-regular.svg') format('svg');
+}
+
+@font-face {
+    font-family: 'Samsung Sharp Sans Regular Regular';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Samsung Sharp Sans Regular Regular'), url('/fonts/SamsungSharpSansRegular-Regular.woff') format('woff');
+}
+
+
+@font-face {
+    font-family: 'SamsungSharpSans-Bold';
+    font-style: normal;
+    font-weight: normal;
+    src: local('SamsungSharpSans-Bold'), url('/fonts/samsung_s_sharp_by_629lyric-d8y77l9.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'vadodara-bld';
+    src: url('/fonts/HindVadodara-Bold.ttf');
+}
+
+@font-face {
+    font-family: 'vadodara-lgt';
+    src: url('/fonts/HindVadodara-Light.ttf');
+}
+
+@font-face {
+    font-family: 'vadodara-md';
+    src: url('/fonts/HindVadodara-Medium.ttf');
+}
+
+@font-face {
+    font-family: 'vadodara-regular';
+    src: url('/fonts/HindVadodara-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'vadodara-semibld';
+    src: url('../fonts/HindVadodara-SemiBold.ttf');
+}
+
+html, body{
+     height: 95%;
+}
+
+body {
+    font-size: 16px;
+    font-family: vadodara-regular, Helvetica, Arial, "Trebuchet MS", sans-serif;
+    font-weight: normal;
+    line-height: 1.5;
+    color: #444444;
+    overflow-x: hidden !important;
+    -webkit-font-smoothing: antialiased !important;
+    -moz-font-smooth: always !important;
+}
+
+.main-content, #form1 {
+    height:inherit;
+}
+
+footer {
+    font-size: 12px;
+    background-color: #681214;
+    color: white;
+    padding: 10px 0;
+}
+
+    footer a {
+        color:white;
+        text-decoration: none;
+    }
+
+        footer a:hover {
+            color:white;
+            text-decoration: none;
+        }
+    footer p {
+       
+        margin: 5px 0;
+    }
+    footer .share-link__social-icon i {
+        padding: 4px 0px;
+        margin: 0 3px;
+        border: 1px dashed #ffffff;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 12px;
+        font-family: FontAwesome;
+        width: 22px;
+    }
+                                                
