@@ -9,11 +9,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link href="Content/bootstrap.css" type="text/css" rel="stylesheet" />
-    <link href="css/MainStyleSheet.css" type="text/css" rel="stylesheet" />
+    <link href="Sass/MainStyleSheet.css" type="text/css" rel="stylesheet" />
     <link href="Content/font-awesome.css" rel="stylesheet" />
 
+    <!--Flexslider links -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flexslider/2.7.1/flexslider.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flexslider/2.7.1/flexslider.min.css.map" rel="stylesheet" />
+    
+    <script src="scripts/jquery-1.9.1.intellisense.js"></script>
     <script src="scripts/jquery-1.9.1.js"></script>
-    <script src="scripts/bootstrap.js"></script>  
+    <script src="scripts/bootstrap.js"></script>
+    <script src="scripts/Main.js"></script>
+
+    <!--Flexslider scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flexslider/2.7.1/jquery.flexslider.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flexslider/2.7.1/jquery.flexslider.min.js.map"></script>
+
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
 </head>
@@ -32,9 +43,9 @@
                         <div>
 
                             <div class="navbar-brand-wrap inline-block">
-                                <a class="navbar-brand">
-                                    <img src="Images/Brands/logo.png" alt="logo" width="130" class="img-responsive">
-                                </a>
+                                <asp:HyperLink ID="HyperLinkBrandLogo" CssClass="navbar-brand" runat="server">
+                                    <asp:Image ID="ImageLogo" Width="130px" ImageUrl="Images/Brands/logo.png" CssClass="img-responsive" runat="server" />
+                                </asp:HyperLink>
                             </div>
                         </div>
                     </div>
@@ -44,42 +55,47 @@
                                 <div>
                                     <div class="search-box-area">
                                         <div>
-                                            <input type="search" placeholder="search">
+                                            <input type="search"  placeholder="search">
                                         </div>
                                     </div>
                                 </div>
                             </li>
 
-                            <li><a href="" class="wish-list"><i class="fa fa-heart hvr-pulse"></i>Wishlist</a></li>
+                            <li>
+                                <asp:HyperLink ID="HyperLinkwishlistNav" NavigateUrl="#"  CssClass="wish-list" runat="server">
+                                    <i class="fa fa-heart hvr-pulse"></i>Wishlist</asp:HyperLink>
+                                </li>
 
                             <li>
-                                <a href="# " class="mycart">
-
-                                    <i class="fa fa-shopping-cart "></i>Cart ( <span>3</span> )</a>
+                                <asp:HyperLink ID="HyperLinkCart" NavigateUrl="#" CssClass="mycart" runat="server">
+                                    <i class="fa fa-shopping-cart "></i>Cart ( <span>3</span> )
+                                </asp:HyperLink>
                                 <ul class="cart-dropdown-menu dropdown-menu">
                                     <li>
                                         <div class="dropdown-menu__dropdown-cart ">
                                             <div class="inline-block img ">
-                                                <img  " alt="shirt_img" class="img-responsive ">
+                                                <asp:Image ID="Image1" AlternateText="shirt_img" CssClass="img-responsive" runat="server" />
                                             </div>
                                             <div class="inline-block desc ">
                                                 <h5>Product</h5>
-                                                <p><i class="fa fa-inr " aria-hidden="true "><span class="product-cost">0</span></i></p>
+                                                <p><i class="fa fa-inr " aria-hidden="true ">
+                                                    <asp:Label ID="LabelProductCost" CssClass="product-cost" runat="server" Text="0"></asp:Label>
+                                                   </i></p>
                                                 <p></p>
 
                                                 <div class="inline-block__size ">
                                                     <div class="inline-block ">
                                                         <div class="size ">
-                                                            <span>Sid</span>
+                                                            <asp:Label ID="LabelUserNameCartNav" runat="server" Text="SIdd"></asp:Label>
                                                         </div>
                                                     </div>
                                                     <div class="inline-block ">
-                                                        <span>Size</span>
+                                                        <asp:Label ID="LabelUserSizeCartNav" runat="server" Text="Size"></asp:Label>
                                                     </div>
                                                 </div>
                                                 <p>
-                                                    <button class="btn remove--btn ">
-                                                        <i class="fa fa-trash-o " aria-hidden="true "></i>Remove</button>
+                                                    <asp:LinkButton ID="LinkButton1" CssClass="btn remove--btn" runat="server"> <i class="fa fa-trash-o " aria-hidden="true "></i>Remove</asp:LinkButton>
+
                                                 </p>
                                             </div>
                                         </div>
@@ -87,7 +103,8 @@
                                     </li>
                                     <div class="dropdown-menu__btn text-center ">
                                         <a>
-                                            <button class="btn btn--brown-checkout" >CHECKOUT</button></a>
+                                            <asp:Button ID="ButtonCheckout" CssClass="btn btn--brown-checkout" runat="server" Text="CHECKOUT" />
+                                        </a>
                                         <p>{{cartErr}}</p>
                                     </div>
                                 </ul>
@@ -95,18 +112,32 @@
                             </li>
 
                             <li>
-                                <button class="btn header--login ">LOGIN</button>
+                                <a>
+                                    <asp:Button ID="ButtonLogin" CssClass="btn header--login" runat="server" Text="LOGIN" />
+                                </a>
                             </li>
                             <li>
-                                <a href="#" class="user-name">hi, Siddhesh <i class="fa fa-caret-down"></i></a>
+                                <asp:HyperLink ID="HyperLinkuserName" CssClass="user-name" runat="server">hi, Siddhesh <i class="fa fa-caret-down"></i></asp:HyperLink>
                                 <!--<button class=" btn header--logout" ng-click="logout(); " ng-if="userId !='' ">Hi, siddhesh</button>-->
                                 <ul class="header-top-right-dropdown list-unstyled">
-                                    <li class="text-uppercase"><a>profile</a> </li>
-                                    <li class="text-uppercase"><a>manage address</a> </li>
-                                    <li class="text-uppercase"><a>order</a> </li>
-                                    <li class="text-uppercase"><a>Wishlist</a> </li>
+                                    <li class="text-uppercase">
+                                        <asp:HyperLink ID="HyperLinkProfile" NavigateUrl="#" runat="server">profile</asp:HyperLink>
+                                    </li>
+                                    <li class="text-uppercase">
+                                        <asp:HyperLink ID="HyperLinkManageAddress" NavigateUrl="#" runat="server">manage address</asp:HyperLink>
+                                    </li>
+                                    <li class="text-uppercase">
+                                        <asp:HyperLink ID="HyperLinkOrder" NavigateUrl="#" runat="server">order</asp:HyperLink>
+                                    </li>
+                                    <li class="text-uppercase">
+                                        <asp:HyperLink ID="HyperLinkWishlist" NavigateUrl="#" runat="server">Wishlist</asp:HyperLink>
+
+                                    </li>
                                     <!-- <li class="text-uppercase"><a href="">forgot password?</a> </li> -->
-                                    <li class="text-uppercase"><a>logout</a> </li>
+                                    <li class="text-uppercase">
+                                        <asp:HyperLink ID="HyperLinkLogout" NavigateUrl="#" runat="server">logout</asp:HyperLink>
+
+                                    </li>
                                 </ul>
                             </li>
                         </ul>
@@ -213,7 +244,8 @@
                                     </ul>
                                 </address>
                                 <p>
-                                    <button class="btn contact--btn ">Call us: +91 8754555035<br>
+                                    <button class="btn contact--btn ">
+                                        Call us: +91 8754555035<br>
                                         +91 9768349972.</button>
                                 </p>
                             </div>
@@ -225,7 +257,7 @@
                 </div>
             </div>
             <div class="container">
-                <div class="row">
+                <div class="row flex-item-container align-item-center flex-direction-row">
                     <div class="col-sm-4 ">
                         <!--<p>Copyright &copy; {{template.year}}. All Right Resvered.</p>-->
                         <div class="copyright text-center">
@@ -241,9 +273,11 @@
                             </div>
                             <div class="inline-block">
                                 <div class="share-link__social-icon">
-                                    <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-                                    <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-                                    <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                                    <asp:HyperLink ID="HyperLinkFacebook" NavigateUrl="#" runat="server"><i class="fa fa-facebook" aria-hidden="true"></i></asp:HyperLink>
+                                    <asp:HyperLink ID="HyperLinkTwitter" NavigateUrl="#"  runat="server"><i class="fa fa-twitter" aria-hidden="true"></i></asp:HyperLink>
+
+                                    <asp:HyperLink ID="HyperLinkInsta" NavigateUrl="#" runat="server"><i class="fa fa-instagram" aria-hidden="true"></i></asp:HyperLink>
+
                                 </div>
                             </div>
                         </div>
