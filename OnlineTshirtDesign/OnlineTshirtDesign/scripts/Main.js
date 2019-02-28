@@ -4,18 +4,30 @@
 
 $(document).ready(function () {
     $('#HomeBannersSlider').flexslider({
-        animation: "slide",
+        animation: "slide"
     });
     $('#NewArrivalSlider').flexslider({
         animation: "slide",
         itemWidth: 220,
         itemMargin: 20,
-        controlNav: false,
+        controlNav: false
     });
 
-    $('.blog__slider').flexslider({
+    $('.innerBlogSlider').flexslider({
+        animation: "slide",
+        controlNav: false,
+        slideShow: false
+    });
+
+    $('#blog__slider').flexslider({
         animation: "slide",
         itemWidth: 400,
+        controlNav: false
+    });
+
+    $('.innerblog-other').flexslider({
+        animation: "slide",
+        itemWidth: 300,
         controlNav: false
     });
     

@@ -109,7 +109,9 @@
     <Content Include="Images\AboutUs\background-banner.jpg" />
     <Content Include="Images\AboutUs\man.png" />
     <Content Include="Images\AboutUs\qoutes.png" />
+    <Content Include="Images\UserAccount\myaccount-banner.jpg" />
     <Content Include="Images\Brands\logo.png" />
+    <Content Include="Images\ContactUs\contactus-banner.jpg" />
     <Content Include="Images\Home\1.jpg" />
     <Content Include="Images\Home\10.jpg" />
     <Content Include="Images\Home\11.jpg" />
@@ -281,6 +283,7 @@
     <Content Include="scripts\ai.0.22.9-build00167.min.js" />
     <Content Include="scripts\Main.js" />
     <Content Include="StoreLocator.aspx" />
+    <Content Include="UserAccount.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -348,11 +351,16 @@
     <Compile Include="StoreLocator.aspx.designer.cs">
       <DependentUpon>StoreLocator.aspx</DependentUpon>
     </Compile>
+    <Compile Include="UserAccount.aspx.cs">
+      <DependentUpon>UserAccount.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserAccount.aspx.designer.cs">
+      <DependentUpon>UserAccount.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Images\Account\" />
     <Folder Include="Images\Cart\" />
-    <Folder Include="Images\ContactUs\" />
     <Folder Include="Images\Individual\" />
     <Folder Include="Images\StoreLocator\" />
   </ItemGroup>

@@ -119,7 +119,7 @@
                 </div>
 
                 <asp:Panel ID="BlogSlider" runat="server">
-                    <div  class="blog__slider flexslider">
+                    <div id="blog__slider" class="blog__slider flexslider">
                         <ul class="slides">
                             <%-- <flex-slider flex-slide="blog in blogs track by $index" prev-text="" next-text="" animation="slide" item-width="400" min-items="3">--%>
                             <li class="relate">
@@ -132,7 +132,7 @@
                                         <h3 class="text-uppercase">{{blog.name}}</h3>
                                         <p class="typedin-desc">bakskajbkjafbkkbkabkfakabkfabfafbkakfkakfafk</p>
                                         <p class="relate extra-content">
-                                            <asp:HyperLink ID="HyperLinkReadMore" ImageUrl="#" runat="server">Read more</asp:HyperLink>
+                                            <asp:HyperLink ID="HyperLinkReadMore" NavigateUrl="#" runat="server">Read more</asp:HyperLink>
                                             </p>
                                     </div>
                                 </article>

@@ -5971,68 +5971,305 @@ body {
 .relate {
   position: relative; }
 
+.font17, .contact-us p,
+.contact-us address {
+  font-size: 17px; }
+
+.flexslider:hover .flex-direction-nav .flex-prev:hover,
+.flexslider:hover .flex-direction-nav .flex-next:hover {
+  background-color: #341314; }
+  .flexslider:hover .flex-direction-nav .flex-prev:hover:before,
+  .flexslider:hover .flex-direction-nav .flex-next:hover:before {
+    color: white; }
+
+.flex-direction-nav a {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: white;
+  color: #341314; }
+  .flex-direction-nav a:before {
+    color: #341314;
+    font-size: 16px; }
+
+.flex-direction-nav .flex-prev {
+  text-align: center !important; }
+  .flex-direction-nav .flex-prev:before {
+    content: "\f053" !important;
+    font-family: FontAwesome;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%); }
+
+.flex-direction-nav .flex-next {
+  text-align: center !important; }
+  .flex-direction-nav .flex-next:before {
+    content: "\f054" !important;
+    font-family: FontAwesome;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%); }
+
 /*Boot strap mixin*/
-.btn--brown, .navbar .navbar-right .header--login, .navbar .navbar-right .cart-dropdown-menu .dropdown-menu__dropdown-cart .inline-block.desc .remove--btn, .dropdown-menu__btn .btn--brown-checkout, .footer-up .contact--btn, .cloth-cat .get-center .shop--now, .new-arrival .new-arrival__slider .new-arrival__banner-detail .buynow--btn {
+.btn--brown, .navbar .navbar-right .header--login, .navbar .navbar-right .cart-dropdown-menu .dropdown-menu__dropdown-cart .inline-block.desc .remove--btn, .dropdown-menu__btn .btn--brown-checkout, .footer-up .contact--btn, .cloth-cat .get-center .shop--now, .new-arrival .new-arrival__slider .new-arrival__banner-detail .buynow--btn, .contact-us .send--btn, .address-edit-btn,
+.address-delt-btn,
+.save--btn,
+.delt--btn,
+.invoice--btn,
+.comnt-submit--btn {
   color: white;
   background-color: #341314;
   border-color: white;
   border: 1px dashed white;
   text-transform: uppercase;
   letter-spacing: 1px; }
-  .btn--brown:focus, .navbar .navbar-right .header--login:focus, .navbar .navbar-right .cart-dropdown-menu .dropdown-menu__dropdown-cart .inline-block.desc .remove--btn:focus, .dropdown-menu__btn .btn--brown-checkout:focus, .footer-up .contact--btn:focus, .cloth-cat .get-center .shop--now:focus, .new-arrival .new-arrival__slider .new-arrival__banner-detail .buynow--btn:focus, .btn--brown.focus, .navbar .navbar-right .focus.header--login, .navbar .navbar-right .cart-dropdown-menu .dropdown-menu__dropdown-cart .inline-block.desc .focus.remove--btn, .dropdown-menu__btn .focus.btn--brown-checkout, .footer-up .focus.contact--btn, .cloth-cat .get-center .focus.shop--now, .new-arrival .new-arrival__slider .new-arrival__banner-detail .focus.buynow--btn {
+  .btn--brown:focus, .navbar .navbar-right .header--login:focus, .navbar .navbar-right .cart-dropdown-menu .dropdown-menu__dropdown-cart .inline-block.desc .remove--btn:focus, .dropdown-menu__btn .btn--brown-checkout:focus, .footer-up .contact--btn:focus, .cloth-cat .get-center .shop--now:focus, .new-arrival .new-arrival__slider .new-arrival__banner-detail .buynow--btn:focus, .contact-us .send--btn:focus, .address-edit-btn:focus,
+  .address-delt-btn:focus,
+  .save--btn:focus,
+  .delt--btn:focus,
+  .invoice--btn:focus,
+  .comnt-submit--btn:focus, .btn--brown.focus, .navbar .navbar-right .focus.header--login, .navbar .navbar-right .cart-dropdown-menu .dropdown-menu__dropdown-cart .inline-block.desc .focus.remove--btn, .dropdown-menu__btn .focus.btn--brown-checkout, .footer-up .focus.contact--btn, .cloth-cat .get-center .focus.shop--now, .new-arrival .new-arrival__slider .new-arrival__banner-detail .focus.buynow--btn, .contact-us .focus.send--btn, .focus.address-edit-btn,
+  .focus.address-delt-btn,
+  .focus.save--btn,
+  .focus.delt--btn,
+  .focus.invoice--btn,
+  .focus.comnt-submit--btn {
     color: white;
     background-color: #0f0506;
     border-color: #bfbfbf; }
-  .btn--brown:hover, .navbar .navbar-right .header--login:hover, .navbar .navbar-right .cart-dropdown-menu .dropdown-menu__dropdown-cart .inline-block.desc .remove--btn:hover, .dropdown-menu__btn .btn--brown-checkout:hover, .footer-up .contact--btn:hover, .cloth-cat .get-center .shop--now:hover, .new-arrival .new-arrival__slider .new-arrival__banner-detail .buynow--btn:hover {
+  .btn--brown:hover, .navbar .navbar-right .header--login:hover, .navbar .navbar-right .cart-dropdown-menu .dropdown-menu__dropdown-cart .inline-block.desc .remove--btn:hover, .dropdown-menu__btn .btn--brown-checkout:hover, .footer-up .contact--btn:hover, .cloth-cat .get-center .shop--now:hover, .new-arrival .new-arrival__slider .new-arrival__banner-detail .buynow--btn:hover, .contact-us .send--btn:hover, .address-edit-btn:hover,
+  .address-delt-btn:hover,
+  .save--btn:hover,
+  .delt--btn:hover,
+  .invoice--btn:hover,
+  .comnt-submit--btn:hover {
     color: white;
     background-color: #0f0506;
     border-color: #e0e0e0; }
-  .btn--brown:active, .navbar .navbar-right .header--login:active, .navbar .navbar-right .cart-dropdown-menu .dropdown-menu__dropdown-cart .inline-block.desc .remove--btn:active, .dropdown-menu__btn .btn--brown-checkout:active, .footer-up .contact--btn:active, .cloth-cat .get-center .shop--now:active, .new-arrival .new-arrival__slider .new-arrival__banner-detail .buynow--btn:active, .btn--brown.active, .navbar .navbar-right .active.header--login, .navbar .navbar-right .cart-dropdown-menu .dropdown-menu__dropdown-cart .inline-block.desc .active.remove--btn, .dropdown-menu__btn .active.btn--brown-checkout, .footer-up .active.contact--btn, .cloth-cat .get-center .active.shop--now, .new-arrival .new-arrival__slider .new-arrival__banner-detail .active.buynow--btn,
+  .btn--brown:active, .navbar .navbar-right .header--login:active, .navbar .navbar-right .cart-dropdown-menu .dropdown-menu__dropdown-cart .inline-block.desc .remove--btn:active, .dropdown-menu__btn .btn--brown-checkout:active, .footer-up .contact--btn:active, .cloth-cat .get-center .shop--now:active, .new-arrival .new-arrival__slider .new-arrival__banner-detail .buynow--btn:active, .contact-us .send--btn:active, .address-edit-btn:active,
+  .address-delt-btn:active,
+  .save--btn:active,
+  .delt--btn:active,
+  .invoice--btn:active,
+  .comnt-submit--btn:active, .btn--brown.active, .navbar .navbar-right .active.header--login, .navbar .navbar-right .cart-dropdown-menu .dropdown-menu__dropdown-cart .inline-block.desc .active.remove--btn, .dropdown-menu__btn .active.btn--brown-checkout, .footer-up .active.contact--btn, .cloth-cat .get-center .active.shop--now, .new-arrival .new-arrival__slider .new-arrival__banner-detail .active.buynow--btn, .contact-us .active.send--btn, .active.address-edit-btn,
+  .active.address-delt-btn,
+  .active.save--btn,
+  .active.delt--btn,
+  .active.invoice--btn,
+  .active.comnt-submit--btn,
   .open > .btn--brown.dropdown-toggle, .navbar .navbar-right
   .open > .dropdown-toggle.header--login, .navbar .navbar-right .cart-dropdown-menu .dropdown-menu__dropdown-cart .inline-block.desc
   .open > .dropdown-toggle.remove--btn, .dropdown-menu__btn
   .open > .dropdown-toggle.btn--brown-checkout, .footer-up
   .open > .dropdown-toggle.contact--btn, .cloth-cat .get-center
   .open > .dropdown-toggle.shop--now, .new-arrival .new-arrival__slider .new-arrival__banner-detail
-  .open > .dropdown-toggle.buynow--btn {
+  .open > .dropdown-toggle.buynow--btn, .contact-us
+  .open > .dropdown-toggle.send--btn,
+  .open > .dropdown-toggle.address-edit-btn,
+  .open >
+  .dropdown-toggle.address-delt-btn,
+  .open >
+  .dropdown-toggle.save--btn,
+  .open >
+  .dropdown-toggle.delt--btn,
+  .open >
+  .dropdown-toggle.invoice--btn,
+  .open >
+  .dropdown-toggle.comnt-submit--btn {
     color: white;
     background-color: #0f0506;
     border-color: #e0e0e0; }
-    .btn--brown:active:hover, .navbar .navbar-right .header--login:active:hover, .navbar .navbar-right .cart-dropdown-menu .dropdown-menu__dropdown-cart .inline-block.desc .remove--btn:active:hover, .dropdown-menu__btn .btn--brown-checkout:active:hover, .footer-up .contact--btn:active:hover, .cloth-cat .get-center .shop--now:active:hover, .new-arrival .new-arrival__slider .new-arrival__banner-detail .buynow--btn:active:hover, .btn--brown:active:focus, .navbar .navbar-right .header--login:active:focus, .navbar .navbar-right .cart-dropdown-menu .dropdown-menu__dropdown-cart .inline-block.desc .remove--btn:active:focus, .dropdown-menu__btn .btn--brown-checkout:active:focus, .footer-up .contact--btn:active:focus, .cloth-cat .get-center .shop--now:active:focus, .new-arrival .new-arrival__slider .new-arrival__banner-detail .buynow--btn:active:focus, .btn--brown:active.focus, .navbar .navbar-right .header--login:active.focus, .navbar .navbar-right .cart-dropdown-menu .dropdown-menu__dropdown-cart .inline-block.desc .remove--btn:active.focus, .dropdown-menu__btn .btn--brown-checkout:active.focus, .footer-up .contact--btn:active.focus, .cloth-cat .get-center .shop--now:active.focus, .new-arrival .new-arrival__slider .new-arrival__banner-detail .buynow--btn:active.focus, .btn--brown.active:hover, .navbar .navbar-right .active.header--login:hover, .navbar .navbar-right .cart-dropdown-menu .dropdown-menu__dropdown-cart .inline-block.desc .active.remove--btn:hover, .dropdown-menu__btn .active.btn--brown-checkout:hover, .footer-up .active.contact--btn:hover, .cloth-cat .get-center .active.shop--now:hover, .new-arrival .new-arrival__slider .new-arrival__banner-detail .active.buynow--btn:hover, .btn--brown.active:focus, .navbar .navbar-right .active.header--login:focus, .navbar .navbar-right .cart-dropdown-menu .dropdown-menu__dropdown-cart .inline-block.desc .active.remove--btn:focus, .dropdown-menu__btn .active.btn--brown-checkout:focus, .footer-up .active.contact--btn:focus, .cloth-cat .get-center .active.shop--now:focus, .new-arrival .new-arrival__slider .new-arrival__banner-detail .active.buynow--btn:focus, .btn--brown.active.focus, .navbar .navbar-right .active.focus.header--login, .navbar .navbar-right .cart-dropdown-menu .dropdown-menu__dropdown-cart .inline-block.desc .active.focus.remove--btn, .dropdown-menu__btn .active.focus.btn--brown-checkout, .footer-up .active.focus.contact--btn, .cloth-cat .get-center .active.focus.shop--now, .new-arrival .new-arrival__slider .new-arrival__banner-detail .active.focus.buynow--btn,
+    .btn--brown:active:hover, .navbar .navbar-right .header--login:active:hover, .navbar .navbar-right .cart-dropdown-menu .dropdown-menu__dropdown-cart .inline-block.desc .remove--btn:active:hover, .dropdown-menu__btn .btn--brown-checkout:active:hover, .footer-up .contact--btn:active:hover, .cloth-cat .get-center .shop--now:active:hover, .new-arrival .new-arrival__slider .new-arrival__banner-detail .buynow--btn:active:hover, .contact-us .send--btn:active:hover, .address-edit-btn:active:hover,
+    .address-delt-btn:active:hover,
+    .save--btn:active:hover,
+    .delt--btn:active:hover,
+    .invoice--btn:active:hover,
+    .comnt-submit--btn:active:hover, .btn--brown:active:focus, .navbar .navbar-right .header--login:active:focus, .navbar .navbar-right .cart-dropdown-menu .dropdown-menu__dropdown-cart .inline-block.desc .remove--btn:active:focus, .dropdown-menu__btn .btn--brown-checkout:active:focus, .footer-up .contact--btn:active:focus, .cloth-cat .get-center .shop--now:active:focus, .new-arrival .new-arrival__slider .new-arrival__banner-detail .buynow--btn:active:focus, .contact-us .send--btn:active:focus, .address-edit-btn:active:focus,
+    .address-delt-btn:active:focus,
+    .save--btn:active:focus,
+    .delt--btn:active:focus,
+    .invoice--btn:active:focus,
+    .comnt-submit--btn:active:focus, .btn--brown:active.focus, .navbar .navbar-right .header--login:active.focus, .navbar .navbar-right .cart-dropdown-menu .dropdown-menu__dropdown-cart .inline-block.desc .remove--btn:active.focus, .dropdown-menu__btn .btn--brown-checkout:active.focus, .footer-up .contact--btn:active.focus, .cloth-cat .get-center .shop--now:active.focus, .new-arrival .new-arrival__slider .new-arrival__banner-detail .buynow--btn:active.focus, .contact-us .send--btn:active.focus, .address-edit-btn:active.focus,
+    .address-delt-btn:active.focus,
+    .save--btn:active.focus,
+    .delt--btn:active.focus,
+    .invoice--btn:active.focus,
+    .comnt-submit--btn:active.focus, .btn--brown.active:hover, .navbar .navbar-right .active.header--login:hover, .navbar .navbar-right .cart-dropdown-menu .dropdown-menu__dropdown-cart .inline-block.desc .active.remove--btn:hover, .dropdown-menu__btn .active.btn--brown-checkout:hover, .footer-up .active.contact--btn:hover, .cloth-cat .get-center .active.shop--now:hover, .new-arrival .new-arrival__slider .new-arrival__banner-detail .active.buynow--btn:hover, .contact-us .active.send--btn:hover, .active.address-edit-btn:hover,
+    .active.address-delt-btn:hover,
+    .active.save--btn:hover,
+    .active.delt--btn:hover,
+    .active.invoice--btn:hover,
+    .active.comnt-submit--btn:hover, .btn--brown.active:focus, .navbar .navbar-right .active.header--login:focus, .navbar .navbar-right .cart-dropdown-menu .dropdown-menu__dropdown-cart .inline-block.desc .active.remove--btn:focus, .dropdown-menu__btn .active.btn--brown-checkout:focus, .footer-up .active.contact--btn:focus, .cloth-cat .get-center .active.shop--now:focus, .new-arrival .new-arrival__slider .new-arrival__banner-detail .active.buynow--btn:focus, .contact-us .active.send--btn:focus, .active.address-edit-btn:focus,
+    .active.address-delt-btn:focus,
+    .active.save--btn:focus,
+    .active.delt--btn:focus,
+    .active.invoice--btn:focus,
+    .active.comnt-submit--btn:focus, .btn--brown.active.focus, .navbar .navbar-right .active.focus.header--login, .navbar .navbar-right .cart-dropdown-menu .dropdown-menu__dropdown-cart .inline-block.desc .active.focus.remove--btn, .dropdown-menu__btn .active.focus.btn--brown-checkout, .footer-up .active.focus.contact--btn, .cloth-cat .get-center .active.focus.shop--now, .new-arrival .new-arrival__slider .new-arrival__banner-detail .active.focus.buynow--btn, .contact-us .active.focus.send--btn, .active.focus.address-edit-btn,
+    .active.focus.address-delt-btn,
+    .active.focus.save--btn,
+    .active.focus.delt--btn,
+    .active.focus.invoice--btn,
+    .active.focus.comnt-submit--btn,
     .open > .btn--brown.dropdown-toggle:hover, .navbar .navbar-right
     .open > .dropdown-toggle.header--login:hover, .navbar .navbar-right .cart-dropdown-menu .dropdown-menu__dropdown-cart .inline-block.desc
     .open > .dropdown-toggle.remove--btn:hover, .dropdown-menu__btn
     .open > .dropdown-toggle.btn--brown-checkout:hover, .footer-up
     .open > .dropdown-toggle.contact--btn:hover, .cloth-cat .get-center
     .open > .dropdown-toggle.shop--now:hover, .new-arrival .new-arrival__slider .new-arrival__banner-detail
-    .open > .dropdown-toggle.buynow--btn:hover,
+    .open > .dropdown-toggle.buynow--btn:hover, .contact-us
+    .open > .dropdown-toggle.send--btn:hover,
+    .open > .dropdown-toggle.address-edit-btn:hover,
+    .open >
+    .dropdown-toggle.address-delt-btn:hover,
+    .open >
+    .dropdown-toggle.save--btn:hover,
+    .open >
+    .dropdown-toggle.delt--btn:hover,
+    .open >
+    .dropdown-toggle.invoice--btn:hover,
+    .open >
+    .dropdown-toggle.comnt-submit--btn:hover,
     .open > .btn--brown.dropdown-toggle:focus, .navbar .navbar-right
     .open > .dropdown-toggle.header--login:focus, .navbar .navbar-right .cart-dropdown-menu .dropdown-menu__dropdown-cart .inline-block.desc
     .open > .dropdown-toggle.remove--btn:focus, .dropdown-menu__btn
     .open > .dropdown-toggle.btn--brown-checkout:focus, .footer-up
     .open > .dropdown-toggle.contact--btn:focus, .cloth-cat .get-center
     .open > .dropdown-toggle.shop--now:focus, .new-arrival .new-arrival__slider .new-arrival__banner-detail
-    .open > .dropdown-toggle.buynow--btn:focus,
+    .open > .dropdown-toggle.buynow--btn:focus, .contact-us
+    .open > .dropdown-toggle.send--btn:focus,
+    .open > .dropdown-toggle.address-edit-btn:focus,
+    .open >
+    .dropdown-toggle.address-delt-btn:focus,
+    .open >
+    .dropdown-toggle.save--btn:focus,
+    .open >
+    .dropdown-toggle.delt--btn:focus,
+    .open >
+    .dropdown-toggle.invoice--btn:focus,
+    .open >
+    .dropdown-toggle.comnt-submit--btn:focus,
     .open > .btn--brown.dropdown-toggle.focus, .navbar .navbar-right
     .open > .dropdown-toggle.focus.header--login, .navbar .navbar-right .cart-dropdown-menu .dropdown-menu__dropdown-cart .inline-block.desc
     .open > .dropdown-toggle.focus.remove--btn, .dropdown-menu__btn
     .open > .dropdown-toggle.focus.btn--brown-checkout, .footer-up
     .open > .dropdown-toggle.focus.contact--btn, .cloth-cat .get-center
     .open > .dropdown-toggle.focus.shop--now, .new-arrival .new-arrival__slider .new-arrival__banner-detail
-    .open > .dropdown-toggle.focus.buynow--btn {
+    .open > .dropdown-toggle.focus.buynow--btn, .contact-us
+    .open > .dropdown-toggle.focus.send--btn,
+    .open > .dropdown-toggle.focus.address-edit-btn,
+    .open >
+    .dropdown-toggle.focus.address-delt-btn,
+    .open >
+    .dropdown-toggle.focus.save--btn,
+    .open >
+    .dropdown-toggle.focus.delt--btn,
+    .open >
+    .dropdown-toggle.focus.invoice--btn,
+    .open >
+    .dropdown-toggle.focus.comnt-submit--btn {
       color: white;
       background-color: black;
       border-color: #bfbfbf; }
-  .btn--brown:active, .navbar .navbar-right .header--login:active, .navbar .navbar-right .cart-dropdown-menu .dropdown-menu__dropdown-cart .inline-block.desc .remove--btn:active, .dropdown-menu__btn .btn--brown-checkout:active, .footer-up .contact--btn:active, .cloth-cat .get-center .shop--now:active, .new-arrival .new-arrival__slider .new-arrival__banner-detail .buynow--btn:active, .btn--brown.active, .navbar .navbar-right .active.header--login, .navbar .navbar-right .cart-dropdown-menu .dropdown-menu__dropdown-cart .inline-block.desc .active.remove--btn, .dropdown-menu__btn .active.btn--brown-checkout, .footer-up .active.contact--btn, .cloth-cat .get-center .active.shop--now, .new-arrival .new-arrival__slider .new-arrival__banner-detail .active.buynow--btn,
+  .btn--brown:active, .navbar .navbar-right .header--login:active, .navbar .navbar-right .cart-dropdown-menu .dropdown-menu__dropdown-cart .inline-block.desc .remove--btn:active, .dropdown-menu__btn .btn--brown-checkout:active, .footer-up .contact--btn:active, .cloth-cat .get-center .shop--now:active, .new-arrival .new-arrival__slider .new-arrival__banner-detail .buynow--btn:active, .contact-us .send--btn:active, .address-edit-btn:active,
+  .address-delt-btn:active,
+  .save--btn:active,
+  .delt--btn:active,
+  .invoice--btn:active,
+  .comnt-submit--btn:active, .btn--brown.active, .navbar .navbar-right .active.header--login, .navbar .navbar-right .cart-dropdown-menu .dropdown-menu__dropdown-cart .inline-block.desc .active.remove--btn, .dropdown-menu__btn .active.btn--brown-checkout, .footer-up .active.contact--btn, .cloth-cat .get-center .active.shop--now, .new-arrival .new-arrival__slider .new-arrival__banner-detail .active.buynow--btn, .contact-us .active.send--btn, .active.address-edit-btn,
+  .active.address-delt-btn,
+  .active.save--btn,
+  .active.delt--btn,
+  .active.invoice--btn,
+  .active.comnt-submit--btn,
   .open > .btn--brown.dropdown-toggle, .navbar .navbar-right
   .open > .dropdown-toggle.header--login, .navbar .navbar-right .cart-dropdown-menu .dropdown-menu__dropdown-cart .inline-block.desc
   .open > .dropdown-toggle.remove--btn, .dropdown-menu__btn
   .open > .dropdown-toggle.btn--brown-checkout, .footer-up
   .open > .dropdown-toggle.contact--btn, .cloth-cat .get-center
   .open > .dropdown-toggle.shop--now, .new-arrival .new-arrival__slider .new-arrival__banner-detail
-  .open > .dropdown-toggle.buynow--btn {
+  .open > .dropdown-toggle.buynow--btn, .contact-us
+  .open > .dropdown-toggle.send--btn,
+  .open > .dropdown-toggle.address-edit-btn,
+  .open >
+  .dropdown-toggle.address-delt-btn,
+  .open >
+  .dropdown-toggle.save--btn,
+  .open >
+  .dropdown-toggle.delt--btn,
+  .open >
+  .dropdown-toggle.invoice--btn,
+  .open >
+  .dropdown-toggle.comnt-submit--btn {
     background-image: none; }
-  .btn--brown.disabled, .navbar .navbar-right .disabled.header--login, .navbar .navbar-right .cart-dropdown-menu .dropdown-menu__dropdown-cart .inline-block.desc .disabled.remove--btn, .dropdown-menu__btn .disabled.btn--brown-checkout, .footer-up .disabled.contact--btn, .cloth-cat .get-center .disabled.shop--now, .new-arrival .new-arrival__slider .new-arrival__banner-detail .disabled.buynow--btn, .btn--brown.disabled:hover, .navbar .navbar-right .disabled.header--login:hover, .navbar .navbar-right .cart-dropdown-menu .dropdown-menu__dropdown-cart .inline-block.desc .disabled.remove--btn:hover, .dropdown-menu__btn .disabled.btn--brown-checkout:hover, .footer-up .disabled.contact--btn:hover, .cloth-cat .get-center .disabled.shop--now:hover, .new-arrival .new-arrival__slider .new-arrival__banner-detail .disabled.buynow--btn:hover, .btn--brown.disabled:focus, .navbar .navbar-right .disabled.header--login:focus, .navbar .navbar-right .cart-dropdown-menu .dropdown-menu__dropdown-cart .inline-block.desc .disabled.remove--btn:focus, .dropdown-menu__btn .disabled.btn--brown-checkout:focus, .footer-up .disabled.contact--btn:focus, .cloth-cat .get-center .disabled.shop--now:focus, .new-arrival .new-arrival__slider .new-arrival__banner-detail .disabled.buynow--btn:focus, .btn--brown.disabled.focus, .navbar .navbar-right .disabled.focus.header--login, .navbar .navbar-right .cart-dropdown-menu .dropdown-menu__dropdown-cart .inline-block.desc .disabled.focus.remove--btn, .dropdown-menu__btn .disabled.focus.btn--brown-checkout, .footer-up .disabled.focus.contact--btn, .cloth-cat .get-center .disabled.focus.shop--now, .new-arrival .new-arrival__slider .new-arrival__banner-detail .disabled.focus.buynow--btn, .btn--brown.disabled:active, .navbar .navbar-right .disabled.header--login:active, .navbar .navbar-right .cart-dropdown-menu .dropdown-menu__dropdown-cart .inline-block.desc .disabled.remove--btn:active, .dropdown-menu__btn .disabled.btn--brown-checkout:active, .footer-up .disabled.contact--btn:active, .cloth-cat .get-center .disabled.shop--now:active, .new-arrival .new-arrival__slider .new-arrival__banner-detail .disabled.buynow--btn:active, .btn--brown.disabled.active, .navbar .navbar-right .disabled.active.header--login, .navbar .navbar-right .cart-dropdown-menu .dropdown-menu__dropdown-cart .inline-block.desc .disabled.active.remove--btn, .dropdown-menu__btn .disabled.active.btn--brown-checkout, .footer-up .disabled.active.contact--btn, .cloth-cat .get-center .disabled.active.shop--now, .new-arrival .new-arrival__slider .new-arrival__banner-detail .disabled.active.buynow--btn, .btn--brown[disabled], .navbar .navbar-right [disabled].header--login, .navbar .navbar-right .cart-dropdown-menu .dropdown-menu__dropdown-cart .inline-block.desc [disabled].remove--btn, .dropdown-menu__btn [disabled].btn--brown-checkout, .footer-up [disabled].contact--btn, .cloth-cat .get-center [disabled].shop--now, .new-arrival .new-arrival__slider .new-arrival__banner-detail [disabled].buynow--btn, .btn--brown[disabled]:hover, .navbar .navbar-right [disabled].header--login:hover, .navbar .navbar-right .cart-dropdown-menu .dropdown-menu__dropdown-cart .inline-block.desc [disabled].remove--btn:hover, .dropdown-menu__btn [disabled].btn--brown-checkout:hover, .footer-up [disabled].contact--btn:hover, .cloth-cat .get-center [disabled].shop--now:hover, .new-arrival .new-arrival__slider .new-arrival__banner-detail [disabled].buynow--btn:hover, .btn--brown[disabled]:focus, .navbar .navbar-right [disabled].header--login:focus, .navbar .navbar-right .cart-dropdown-menu .dropdown-menu__dropdown-cart .inline-block.desc [disabled].remove--btn:focus, .dropdown-menu__btn [disabled].btn--brown-checkout:focus, .footer-up [disabled].contact--btn:focus, .cloth-cat .get-center [disabled].shop--now:focus, .new-arrival .new-arrival__slider .new-arrival__banner-detail [disabled].buynow--btn:focus, .btn--brown[disabled].focus, .navbar .navbar-right [disabled].focus.header--login, .navbar .navbar-right .cart-dropdown-menu .dropdown-menu__dropdown-cart .inline-block.desc [disabled].focus.remove--btn, .dropdown-menu__btn [disabled].focus.btn--brown-checkout, .footer-up [disabled].focus.contact--btn, .cloth-cat .get-center [disabled].focus.shop--now, .new-arrival .new-arrival__slider .new-arrival__banner-detail [disabled].focus.buynow--btn, .btn--brown[disabled]:active, .navbar .navbar-right [disabled].header--login:active, .navbar .navbar-right .cart-dropdown-menu .dropdown-menu__dropdown-cart .inline-block.desc [disabled].remove--btn:active, .dropdown-menu__btn [disabled].btn--brown-checkout:active, .footer-up [disabled].contact--btn:active, .cloth-cat .get-center [disabled].shop--now:active, .new-arrival .new-arrival__slider .new-arrival__banner-detail [disabled].buynow--btn:active, .btn--brown[disabled].active, .navbar .navbar-right [disabled].active.header--login, .navbar .navbar-right .cart-dropdown-menu .dropdown-menu__dropdown-cart .inline-block.desc [disabled].active.remove--btn, .dropdown-menu__btn [disabled].active.btn--brown-checkout, .footer-up [disabled].active.contact--btn, .cloth-cat .get-center [disabled].active.shop--now, .new-arrival .new-arrival__slider .new-arrival__banner-detail [disabled].active.buynow--btn,
+  .btn--brown.disabled, .navbar .navbar-right .disabled.header--login, .navbar .navbar-right .cart-dropdown-menu .dropdown-menu__dropdown-cart .inline-block.desc .disabled.remove--btn, .dropdown-menu__btn .disabled.btn--brown-checkout, .footer-up .disabled.contact--btn, .cloth-cat .get-center .disabled.shop--now, .new-arrival .new-arrival__slider .new-arrival__banner-detail .disabled.buynow--btn, .contact-us .disabled.send--btn, .disabled.address-edit-btn,
+  .disabled.address-delt-btn,
+  .disabled.save--btn,
+  .disabled.delt--btn,
+  .disabled.invoice--btn,
+  .disabled.comnt-submit--btn, .btn--brown.disabled:hover, .navbar .navbar-right .disabled.header--login:hover, .navbar .navbar-right .cart-dropdown-menu .dropdown-menu__dropdown-cart .inline-block.desc .disabled.remove--btn:hover, .dropdown-menu__btn .disabled.btn--brown-checkout:hover, .footer-up .disabled.contact--btn:hover, .cloth-cat .get-center .disabled.shop--now:hover, .new-arrival .new-arrival__slider .new-arrival__banner-detail .disabled.buynow--btn:hover, .contact-us .disabled.send--btn:hover, .disabled.address-edit-btn:hover,
+  .disabled.address-delt-btn:hover,
+  .disabled.save--btn:hover,
+  .disabled.delt--btn:hover,
+  .disabled.invoice--btn:hover,
+  .disabled.comnt-submit--btn:hover, .btn--brown.disabled:focus, .navbar .navbar-right .disabled.header--login:focus, .navbar .navbar-right .cart-dropdown-menu .dropdown-menu__dropdown-cart .inline-block.desc .disabled.remove--btn:focus, .dropdown-menu__btn .disabled.btn--brown-checkout:focus, .footer-up .disabled.contact--btn:focus, .cloth-cat .get-center .disabled.shop--now:focus, .new-arrival .new-arrival__slider .new-arrival__banner-detail .disabled.buynow--btn:focus, .contact-us .disabled.send--btn:focus, .disabled.address-edit-btn:focus,
+  .disabled.address-delt-btn:focus,
+  .disabled.save--btn:focus,
+  .disabled.delt--btn:focus,
+  .disabled.invoice--btn:focus,
+  .disabled.comnt-submit--btn:focus, .btn--brown.disabled.focus, .navbar .navbar-right .disabled.focus.header--login, .navbar .navbar-right .cart-dropdown-menu .dropdown-menu__dropdown-cart .inline-block.desc .disabled.focus.remove--btn, .dropdown-menu__btn .disabled.focus.btn--brown-checkout, .footer-up .disabled.focus.contact--btn, .cloth-cat .get-center .disabled.focus.shop--now, .new-arrival .new-arrival__slider .new-arrival__banner-detail .disabled.focus.buynow--btn, .contact-us .disabled.focus.send--btn, .disabled.focus.address-edit-btn,
+  .disabled.focus.address-delt-btn,
+  .disabled.focus.save--btn,
+  .disabled.focus.delt--btn,
+  .disabled.focus.invoice--btn,
+  .disabled.focus.comnt-submit--btn, .btn--brown.disabled:active, .navbar .navbar-right .disabled.header--login:active, .navbar .navbar-right .cart-dropdown-menu .dropdown-menu__dropdown-cart .inline-block.desc .disabled.remove--btn:active, .dropdown-menu__btn .disabled.btn--brown-checkout:active, .footer-up .disabled.contact--btn:active, .cloth-cat .get-center .disabled.shop--now:active, .new-arrival .new-arrival__slider .new-arrival__banner-detail .disabled.buynow--btn:active, .contact-us .disabled.send--btn:active, .disabled.address-edit-btn:active,
+  .disabled.address-delt-btn:active,
+  .disabled.save--btn:active,
+  .disabled.delt--btn:active,
+  .disabled.invoice--btn:active,
+  .disabled.comnt-submit--btn:active, .btn--brown.disabled.active, .navbar .navbar-right .disabled.active.header--login, .navbar .navbar-right .cart-dropdown-menu .dropdown-menu__dropdown-cart .inline-block.desc .disabled.active.remove--btn, .dropdown-menu__btn .disabled.active.btn--brown-checkout, .footer-up .disabled.active.contact--btn, .cloth-cat .get-center .disabled.active.shop--now, .new-arrival .new-arrival__slider .new-arrival__banner-detail .disabled.active.buynow--btn, .contact-us .disabled.active.send--btn, .disabled.active.address-edit-btn,
+  .disabled.active.address-delt-btn,
+  .disabled.active.save--btn,
+  .disabled.active.delt--btn,
+  .disabled.active.invoice--btn,
+  .disabled.active.comnt-submit--btn, .btn--brown[disabled], .navbar .navbar-right [disabled].header--login, .navbar .navbar-right .cart-dropdown-menu .dropdown-menu__dropdown-cart .inline-block.desc [disabled].remove--btn, .dropdown-menu__btn [disabled].btn--brown-checkout, .footer-up [disabled].contact--btn, .cloth-cat .get-center [disabled].shop--now, .new-arrival .new-arrival__slider .new-arrival__banner-detail [disabled].buynow--btn, .contact-us [disabled].send--btn, [disabled].address-edit-btn,
+  [disabled].address-delt-btn,
+  [disabled].save--btn,
+  [disabled].delt--btn,
+  [disabled].invoice--btn,
+  [disabled].comnt-submit--btn, .btn--brown[disabled]:hover, .navbar .navbar-right [disabled].header--login:hover, .navbar .navbar-right .cart-dropdown-menu .dropdown-menu__dropdown-cart .inline-block.desc [disabled].remove--btn:hover, .dropdown-menu__btn [disabled].btn--brown-checkout:hover, .footer-up [disabled].contact--btn:hover, .cloth-cat .get-center [disabled].shop--now:hover, .new-arrival .new-arrival__slider .new-arrival__banner-detail [disabled].buynow--btn:hover, .contact-us [disabled].send--btn:hover, [disabled].address-edit-btn:hover,
+  [disabled].address-delt-btn:hover,
+  [disabled].save--btn:hover,
+  [disabled].delt--btn:hover,
+  [disabled].invoice--btn:hover,
+  [disabled].comnt-submit--btn:hover, .btn--brown[disabled]:focus, .navbar .navbar-right [disabled].header--login:focus, .navbar .navbar-right .cart-dropdown-menu .dropdown-menu__dropdown-cart .inline-block.desc [disabled].remove--btn:focus, .dropdown-menu__btn [disabled].btn--brown-checkout:focus, .footer-up [disabled].contact--btn:focus, .cloth-cat .get-center [disabled].shop--now:focus, .new-arrival .new-arrival__slider .new-arrival__banner-detail [disabled].buynow--btn:focus, .contact-us [disabled].send--btn:focus, [disabled].address-edit-btn:focus,
+  [disabled].address-delt-btn:focus,
+  [disabled].save--btn:focus,
+  [disabled].delt--btn:focus,
+  [disabled].invoice--btn:focus,
+  [disabled].comnt-submit--btn:focus, .btn--brown[disabled].focus, .navbar .navbar-right [disabled].focus.header--login, .navbar .navbar-right .cart-dropdown-menu .dropdown-menu__dropdown-cart .inline-block.desc [disabled].focus.remove--btn, .dropdown-menu__btn [disabled].focus.btn--brown-checkout, .footer-up [disabled].focus.contact--btn, .cloth-cat .get-center [disabled].focus.shop--now, .new-arrival .new-arrival__slider .new-arrival__banner-detail [disabled].focus.buynow--btn, .contact-us [disabled].focus.send--btn, [disabled].focus.address-edit-btn,
+  [disabled].focus.address-delt-btn,
+  [disabled].focus.save--btn,
+  [disabled].focus.delt--btn,
+  [disabled].focus.invoice--btn,
+  [disabled].focus.comnt-submit--btn, .btn--brown[disabled]:active, .navbar .navbar-right [disabled].header--login:active, .navbar .navbar-right .cart-dropdown-menu .dropdown-menu__dropdown-cart .inline-block.desc [disabled].remove--btn:active, .dropdown-menu__btn [disabled].btn--brown-checkout:active, .footer-up [disabled].contact--btn:active, .cloth-cat .get-center [disabled].shop--now:active, .new-arrival .new-arrival__slider .new-arrival__banner-detail [disabled].buynow--btn:active, .contact-us [disabled].send--btn:active, [disabled].address-edit-btn:active,
+  [disabled].address-delt-btn:active,
+  [disabled].save--btn:active,
+  [disabled].delt--btn:active,
+  [disabled].invoice--btn:active,
+  [disabled].comnt-submit--btn:active, .btn--brown[disabled].active, .navbar .navbar-right [disabled].active.header--login, .navbar .navbar-right .cart-dropdown-menu .dropdown-menu__dropdown-cart .inline-block.desc [disabled].active.remove--btn, .dropdown-menu__btn [disabled].active.btn--brown-checkout, .footer-up [disabled].active.contact--btn, .cloth-cat .get-center [disabled].active.shop--now, .new-arrival .new-arrival__slider .new-arrival__banner-detail [disabled].active.buynow--btn, .contact-us [disabled].active.send--btn, [disabled].active.address-edit-btn,
+  [disabled].active.address-delt-btn,
+  [disabled].active.save--btn,
+  [disabled].active.delt--btn,
+  [disabled].active.invoice--btn,
+  [disabled].active.comnt-submit--btn,
   fieldset[disabled] .btn--brown,
   fieldset[disabled] .navbar .navbar-right .header--login, .navbar .navbar-right
   fieldset[disabled] .header--login,
@@ -6046,6 +6283,19 @@ body {
   fieldset[disabled] .shop--now,
   fieldset[disabled] .new-arrival .new-arrival__slider .new-arrival__banner-detail .buynow--btn, .new-arrival .new-arrival__slider .new-arrival__banner-detail
   fieldset[disabled] .buynow--btn,
+  fieldset[disabled] .contact-us .send--btn, .contact-us
+  fieldset[disabled] .send--btn,
+  fieldset[disabled] .address-edit-btn,
+  fieldset[disabled]
+  .address-delt-btn,
+  fieldset[disabled]
+  .save--btn,
+  fieldset[disabled]
+  .delt--btn,
+  fieldset[disabled]
+  .invoice--btn,
+  fieldset[disabled]
+  .comnt-submit--btn,
   fieldset[disabled] .btn--brown:hover,
   fieldset[disabled] .navbar .navbar-right .header--login:hover, .navbar .navbar-right
   fieldset[disabled] .header--login:hover,
@@ -6059,6 +6309,19 @@ body {
   fieldset[disabled] .shop--now:hover,
   fieldset[disabled] .new-arrival .new-arrival__slider .new-arrival__banner-detail .buynow--btn:hover, .new-arrival .new-arrival__slider .new-arrival__banner-detail
   fieldset[disabled] .buynow--btn:hover,
+  fieldset[disabled] .contact-us .send--btn:hover, .contact-us
+  fieldset[disabled] .send--btn:hover,
+  fieldset[disabled] .address-edit-btn:hover,
+  fieldset[disabled]
+  .address-delt-btn:hover,
+  fieldset[disabled]
+  .save--btn:hover,
+  fieldset[disabled]
+  .delt--btn:hover,
+  fieldset[disabled]
+  .invoice--btn:hover,
+  fieldset[disabled]
+  .comnt-submit--btn:hover,
   fieldset[disabled] .btn--brown:focus,
   fieldset[disabled] .navbar .navbar-right .header--login:focus, .navbar .navbar-right
   fieldset[disabled] .header--login:focus,
@@ -6072,6 +6335,19 @@ body {
   fieldset[disabled] .shop--now:focus,
   fieldset[disabled] .new-arrival .new-arrival__slider .new-arrival__banner-detail .buynow--btn:focus, .new-arrival .new-arrival__slider .new-arrival__banner-detail
   fieldset[disabled] .buynow--btn:focus,
+  fieldset[disabled] .contact-us .send--btn:focus, .contact-us
+  fieldset[disabled] .send--btn:focus,
+  fieldset[disabled] .address-edit-btn:focus,
+  fieldset[disabled]
+  .address-delt-btn:focus,
+  fieldset[disabled]
+  .save--btn:focus,
+  fieldset[disabled]
+  .delt--btn:focus,
+  fieldset[disabled]
+  .invoice--btn:focus,
+  fieldset[disabled]
+  .comnt-submit--btn:focus,
   fieldset[disabled] .btn--brown.focus,
   fieldset[disabled] .navbar .navbar-right .focus.header--login, .navbar .navbar-right
   fieldset[disabled] .focus.header--login,
@@ -6085,6 +6361,19 @@ body {
   fieldset[disabled] .focus.shop--now,
   fieldset[disabled] .new-arrival .new-arrival__slider .new-arrival__banner-detail .focus.buynow--btn, .new-arrival .new-arrival__slider .new-arrival__banner-detail
   fieldset[disabled] .focus.buynow--btn,
+  fieldset[disabled] .contact-us .focus.send--btn, .contact-us
+  fieldset[disabled] .focus.send--btn,
+  fieldset[disabled] .focus.address-edit-btn,
+  fieldset[disabled]
+  .focus.address-delt-btn,
+  fieldset[disabled]
+  .focus.save--btn,
+  fieldset[disabled]
+  .focus.delt--btn,
+  fieldset[disabled]
+  .focus.invoice--btn,
+  fieldset[disabled]
+  .focus.comnt-submit--btn,
   fieldset[disabled] .btn--brown:active,
   fieldset[disabled] .navbar .navbar-right .header--login:active, .navbar .navbar-right
   fieldset[disabled] .header--login:active,
@@ -6098,6 +6387,19 @@ body {
   fieldset[disabled] .shop--now:active,
   fieldset[disabled] .new-arrival .new-arrival__slider .new-arrival__banner-detail .buynow--btn:active, .new-arrival .new-arrival__slider .new-arrival__banner-detail
   fieldset[disabled] .buynow--btn:active,
+  fieldset[disabled] .contact-us .send--btn:active, .contact-us
+  fieldset[disabled] .send--btn:active,
+  fieldset[disabled] .address-edit-btn:active,
+  fieldset[disabled]
+  .address-delt-btn:active,
+  fieldset[disabled]
+  .save--btn:active,
+  fieldset[disabled]
+  .delt--btn:active,
+  fieldset[disabled]
+  .invoice--btn:active,
+  fieldset[disabled]
+  .comnt-submit--btn:active,
   fieldset[disabled] .btn--brown.active,
   fieldset[disabled] .navbar .navbar-right .active.header--login, .navbar .navbar-right
   fieldset[disabled] .active.header--login,
@@ -6110,13 +6412,46 @@ body {
   fieldset[disabled] .cloth-cat .get-center .active.shop--now, .cloth-cat .get-center
   fieldset[disabled] .active.shop--now,
   fieldset[disabled] .new-arrival .new-arrival__slider .new-arrival__banner-detail .active.buynow--btn, .new-arrival .new-arrival__slider .new-arrival__banner-detail
-  fieldset[disabled] .active.buynow--btn {
+  fieldset[disabled] .active.buynow--btn,
+  fieldset[disabled] .contact-us .active.send--btn, .contact-us
+  fieldset[disabled] .active.send--btn,
+  fieldset[disabled] .active.address-edit-btn,
+  fieldset[disabled]
+  .active.address-delt-btn,
+  fieldset[disabled]
+  .active.save--btn,
+  fieldset[disabled]
+  .active.delt--btn,
+  fieldset[disabled]
+  .active.invoice--btn,
+  fieldset[disabled]
+  .active.comnt-submit--btn {
     background-color: #341314;
     border-color: white; }
-  .btn--brown .badge, .navbar .navbar-right .header--login .badge, .navbar .navbar-right .cart-dropdown-menu .dropdown-menu__dropdown-cart .inline-block.desc .remove--btn .badge, .dropdown-menu__btn .btn--brown-checkout .badge, .footer-up .contact--btn .badge, .cloth-cat .get-center .shop--now .badge, .new-arrival .new-arrival__slider .new-arrival__banner-detail .buynow--btn .badge {
+  .btn--brown .badge, .navbar .navbar-right .header--login .badge, .navbar .navbar-right .cart-dropdown-menu .dropdown-menu__dropdown-cart .inline-block.desc .remove--btn .badge, .dropdown-menu__btn .btn--brown-checkout .badge, .footer-up .contact--btn .badge, .cloth-cat .get-center .shop--now .badge, .new-arrival .new-arrival__slider .new-arrival__banner-detail .buynow--btn .badge, .contact-us .send--btn .badge, .address-edit-btn .badge,
+  .address-delt-btn .badge,
+  .save--btn .badge,
+  .delt--btn .badge,
+  .invoice--btn .badge,
+  .comnt-submit--btn .badge {
     color: #341314;
     background-color: white; }
-  .btn--brown:hover, .navbar .navbar-right .header--login:hover, .navbar .navbar-right .cart-dropdown-menu .dropdown-menu__dropdown-cart .inline-block.desc .remove--btn:hover, .dropdown-menu__btn .btn--brown-checkout:hover, .footer-up .contact--btn:hover, .cloth-cat .get-center .shop--now:hover, .new-arrival .new-arrival__slider .new-arrival__banner-detail .buynow--btn:hover, .btn--brown:active, .navbar .navbar-right .header--login:active, .navbar .navbar-right .cart-dropdown-menu .dropdown-menu__dropdown-cart .inline-block.desc .remove--btn:active, .dropdown-menu__btn .btn--brown-checkout:active, .footer-up .contact--btn:active, .cloth-cat .get-center .shop--now:active, .new-arrival .new-arrival__slider .new-arrival__banner-detail .buynow--btn:active, .btn--brown:focus, .navbar .navbar-right .header--login:focus, .navbar .navbar-right .cart-dropdown-menu .dropdown-menu__dropdown-cart .inline-block.desc .remove--btn:focus, .dropdown-menu__btn .btn--brown-checkout:focus, .footer-up .contact--btn:focus, .cloth-cat .get-center .shop--now:focus, .new-arrival .new-arrival__slider .new-arrival__banner-detail .buynow--btn:focus {
+  .btn--brown:hover, .navbar .navbar-right .header--login:hover, .navbar .navbar-right .cart-dropdown-menu .dropdown-menu__dropdown-cart .inline-block.desc .remove--btn:hover, .dropdown-menu__btn .btn--brown-checkout:hover, .footer-up .contact--btn:hover, .cloth-cat .get-center .shop--now:hover, .new-arrival .new-arrival__slider .new-arrival__banner-detail .buynow--btn:hover, .contact-us .send--btn:hover, .address-edit-btn:hover,
+  .address-delt-btn:hover,
+  .save--btn:hover,
+  .delt--btn:hover,
+  .invoice--btn:hover,
+  .comnt-submit--btn:hover, .btn--brown:active, .navbar .navbar-right .header--login:active, .navbar .navbar-right .cart-dropdown-menu .dropdown-menu__dropdown-cart .inline-block.desc .remove--btn:active, .dropdown-menu__btn .btn--brown-checkout:active, .footer-up .contact--btn:active, .cloth-cat .get-center .shop--now:active, .new-arrival .new-arrival__slider .new-arrival__banner-detail .buynow--btn:active, .contact-us .send--btn:active, .address-edit-btn:active,
+  .address-delt-btn:active,
+  .save--btn:active,
+  .delt--btn:active,
+  .invoice--btn:active,
+  .comnt-submit--btn:active, .btn--brown:focus, .navbar .navbar-right .header--login:focus, .navbar .navbar-right .cart-dropdown-menu .dropdown-menu__dropdown-cart .inline-block.desc .remove--btn:focus, .dropdown-menu__btn .btn--brown-checkout:focus, .footer-up .contact--btn:focus, .cloth-cat .get-center .shop--now:focus, .new-arrival .new-arrival__slider .new-arrival__banner-detail .buynow--btn:focus, .contact-us .send--btn:focus, .address-edit-btn:focus,
+  .address-delt-btn:focus,
+  .save--btn:focus,
+  .delt--btn:focus,
+  .invoice--btn:focus,
+  .comnt-submit--btn:focus {
     color: white;
     background-color: #341314; }
 
@@ -6126,10 +6461,10 @@ body {
   background-color: #341314;
   border: 1px dashed #fff !important; }
 
-.border-line, .new-arrival .new-arrival__title .new-arrival--border--line {
+.border-line, .new-arrival .new-arrival__title .new-arrival--border--line, .blog .blog__title .blog--border--line {
   position: relative;
   text-align: center; }
-  .border-line:before, .new-arrival .new-arrival__title .new-arrival--border--line:before {
+  .border-line:before, .new-arrival .new-arrival__title .new-arrival--border--line:before, .blog .blog__title .blog--border--line:before {
     content: '';
     display: block;
     position: absolute;
@@ -6137,7 +6472,7 @@ body {
     width: 40%;
     top: 50%;
     left: 0; }
-  .border-line:after, .new-arrival .new-arrival__title .new-arrival--border--line:after {
+  .border-line:after, .new-arrival .new-arrival__title .new-arrival--border--line:after, .blog .blog__title .blog--border--line:after {
     content: '';
     display: block;
     position: absolute;
@@ -6146,7 +6481,7 @@ body {
     top: 50%;
     right: 0; }
 
-.login-form p.border-line, .login-form .new-arrival .new-arrival__title p.new-arrival--border--line, .new-arrival .new-arrival__title .login-form p.new-arrival--border--line {
+.login-form p.border-line, .login-form .new-arrival .new-arrival__title p.new-arrival--border--line, .new-arrival .new-arrival__title .login-form p.new-arrival--border--line, .login-form .blog .blog__title p.blog--border--line, .blog .blog__title .login-form p.blog--border--line {
   font-size: 20px;
   margin-top: 10px; }
 
@@ -6189,7 +6524,8 @@ a {
   background-color: white; }
 
 /*NOTE: extend this class in dropdown's by using @extend */
-.dropdown-hidden-anim, .navbar .navbar-right .cart-dropdown-menu {
+.dropdown-hidden-anim, .navbar .navbar-right .cart-dropdown-menu, .state-dropdown-menu,
+.country-dropdown-menu {
   display: block;
   visibility: hidden;
   opacity: 0;
@@ -6219,7 +6555,8 @@ a {
   transition: all 0.35s ease;
   z-index: 9999; }
 
-.dropdown-visible-anim, .navbar .navbar-right li:hover .cart-dropdown-menu {
+.dropdown-visible-anim, .navbar .navbar-right li:hover .cart-dropdown-menu, .open .state-dropdown-menu,
+.open .country-dropdown-menu {
   visibility: visible;
   opacity: 1;
   -webkit-transform: rotate(0deg);
@@ -6239,7 +6576,8 @@ a {
   -o-transform: translate(0px, 0px);
   transform: translate(0px, 0px);
   /*@include transform(rotate(0deg) scale(1) skew(0deg) translate(0px, 0px));*/ }
-  .dropdown-visible-anim li > a:hover, .navbar .navbar-right li:hover .cart-dropdown-menu li > a:hover {
+  .dropdown-visible-anim li > a:hover, .navbar .navbar-right li:hover .cart-dropdown-menu li > a:hover, .open .state-dropdown-menu li > a:hover,
+  .open .country-dropdown-menu li > a:hover {
     background-color: #341314;
     color: white; }
 
@@ -6364,21 +6702,25 @@ input[type=number]::-webkit-outer-spin-button {
   appearance: none;
   margin: 0; }
 
-.scroll-bar ::-webkit-scrollbar {
+.scroll-bar ::-webkit-scrollbar, .state-dropdown-menu ::-webkit-scrollbar,
+.country-dropdown-menu ::-webkit-scrollbar {
   width: 5px; }
 
-.scroll-bar ::-webkit-scrollbar-track {
+.scroll-bar ::-webkit-scrollbar-track, .state-dropdown-menu ::-webkit-scrollbar-track,
+.country-dropdown-menu ::-webkit-scrollbar-track {
   box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
   -webkit-border-radius: 5px;
   border-radius: 5px; }
 
-.scroll-bar ::-webkit-scrollbar-thumb {
+.scroll-bar ::-webkit-scrollbar-thumb, .state-dropdown-menu ::-webkit-scrollbar-thumb,
+.country-dropdown-menu ::-webkit-scrollbar-thumb {
   -webkit-border-radius: 5px;
   border-radius: 5px;
   background: #341314;
   box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5); }
 
-.scroll-bar ::-webkit-scrollbar-thumb:window-inactive {
+.scroll-bar ::-webkit-scrollbar-thumb:window-inactive, .state-dropdown-menu ::-webkit-scrollbar-thumb:window-inactive,
+.country-dropdown-menu ::-webkit-scrollbar-thumb:window-inactive {
   background: #341314; }
 
 /************* End of global classes ************/
@@ -6974,3 +7316,356 @@ footer {
   .main-blog-section .flex-item {
     width: 33.33333333%;
     margin-bottom: 50px; }
+
+.blog .blog__title h1 {
+  color: #341314;
+  margin: 20px 0 30px;
+  font-family: 'fjalla-reg'; }
+
+.blog .blog__title .blog--border--line:before {
+  width: 10%;
+  top: 50%;
+  left: 35%;
+  border: 1px solid #e7dada; }
+
+.blog .blog__title .blog--border--line:after {
+  border: 1px solid #e7dada;
+  width: 10%;
+  top: 50%;
+  right: 35%; }
+
+.blog .blog__slider .flexslider {
+  margin: 0 0 70px; }
+  .blog .blog__slider .flexslider .flex-control-nav {
+    display: none; }
+  .blog .blog__slider .flexslider .flex-prev,
+  .blog .blog__slider .flexslider .flex-next {
+    display: none; }
+
+.blog .blog__slider .blog__banner-detail .blog__desc {
+  overflow: hidden;
+  color: white;
+  background-color: #341314;
+  padding: 1px 35px;
+  height: 176px; }
+  .blog .blog__slider .blog__banner-detail .blog__desc p:last-child:after {
+    content: '\02192';
+    position: relative;
+    top: 6px;
+    font-size: 28px;
+    padding: 0 4px; }
+  .blog .blog__slider .blog__banner-detail .blog__desc a {
+    color: white; }
+  .blog .blog__slider .blog__banner-detail .blog__desc h3 {
+    font-size: 20px;
+    font-weight: 600; }
+  .blog .blog__slider .blog__banner-detail .blog__desc p {
+    line-height: 1; }
+  .blog .blog__slider .blog__banner-detail .blog__desc .typedin-desc {
+    height: 72px;
+    display: -webkit-box;
+    -webkit-line-clamp: 5;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis; }
+  .blog .blog__slider .blog__banner-detail .blog__desc p.extra-content:after {
+    content: '\02192';
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translate(0, -50%);
+    -ms-transform: translate(0, -50%);
+    -o-transform: translate(0, -50%);
+    transform: translate(0, -50%);
+    font-size: 26px;
+    padding: 0 4px; }
+
+.contact-us {
+  background: #ededed; }
+  .contact-us .contactus-content {
+    max-width: 75%;
+    margin: 30px auto; }
+  .contact-us .enquiry-form-pdd {
+    display: inline-block;
+    padding: 40px 0;
+    vertical-align: top;
+    max-width: 40%; }
+  .contact-us .enquiry-form-shadow {
+    box-shadow: 3px 3px 10px rgba(128, 128, 128, 0.26);
+    padding: 20px;
+    background: white; }
+  .contact-us .enquiry-form {
+    padding: 35px 60px 35px 35px;
+    border: 1px dashed #341314; }
+  .contact-us .contactus-details {
+    display: inline-block;
+    vertical-align: top;
+    max-width: 60%;
+    padding: 40px 100px 30px;
+    margin-left: -25px;
+    background-color: #341314;
+    color: white; }
+    .contact-us .contactus-details .tab-title {
+      color: white; }
+  .contact-us .head-office {
+    padding: 75px 0; }
+
+.inner-blog-title {
+  padding: 5px 0;
+  margin: 10px 0;
+  color: #341314;
+  font-family: 'vadodara-md'; }
+
+.inner-blog .blog__slider .flexslider {
+  margin-bottom: 0; }
+  .inner-blog .blog__slider .flexslider:hover .flex-direction-nav .flex-prev,
+  .inner-blog .blog__slider .flexslider:hover .flex-direction-nav .flex-next {
+    opacity: 1; }
+
+.inner-blog-section {
+  width: 90%;
+  padding: 25px 0 0;
+  margin: 0 auto; }
+
+.inner-blog-change-content a {
+  text-decoration: none;
+  color: #341314; }
+
+.inner-blog-change-content .flex-item-container {
+  align-items: center;
+  flex-direction: row;
+  justify-content: flex-start; }
+
+.inner-blog-change-content .flex-item {
+  flex: 1; }
+
+.inner-blog-change-content .action .flex-prev,
+.inner-blog-change-content .action .flex-next {
+  display: block !important; }
+
+.inner-blog-change-content .action-btn {
+  margin-right: 5px;
+  margin-left: 5px; }
+
+.inner-blog-change-content .action-btn.action-btn-prev {
+  margin-left: 55px; }
+
+.inner-blog-change-content .action-btn.action-btn-next {
+  margin-right: 55px; }
+
+.inner-blog-change-content .fa-long-arrow-left,
+.inner-blog-change-content .fa-long-arrow-right {
+  font-size: 16px;
+  vertical-align: middle; }
+
+.inner-blog-change-content .social-box {
+  display: flex;
+  justify-content: center;
+  font-size: 19px; }
+  .inner-blog-change-content .social-box .flex-item-container {
+    align-items: center; }
+  .inner-blog-change-content .social-box li {
+    margin: 0 5px;
+    color: #341314; }
+  .inner-blog-change-content .social-box li:not(:first-child) {
+    width: 30px;
+    height: 30px; }
+  .inner-blog-change-content .social-box li:not(:first-child) a {
+    width: 100%;
+    height: 100%;
+    border: 1px dashed #341314;
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+    .inner-blog-change-content .social-box li:not(:first-child) a:hover {
+      border: 1px dashed white;
+      color: white;
+      background-color: #341314; }
+
+.also-view {
+  padding: 25px 0; }
+
+.tab-title {
+  margin-top: 0;
+  color: #341314;
+  font-family: 'fjalla-reg';
+  font-size: 24px; }
+
+.linking {
+  font-size: 14px;
+  font-family: 'vadodara-regular';
+  letter-spacing: 1px;
+  text-decoration: underline; }
+
+.item-name {
+  font-size: 18px;
+  font-family: 'vadodara-md';
+  color: #252525;
+  margin-top: 15px;
+  margin-bottom: 2px; }
+
+.item-code {
+  font-size: 13px;
+  color: #252525;
+  font-weight: normal; }
+
+.item-cost {
+  font-size: 25px;
+  color: #341314; }
+  .item-cost .fa-inr {
+    font-size: 20px;
+    margin-right: 5px; }
+
+.usrdtl-info {
+  color: #252525;
+  font-size: 16px; }
+
+.usrdtl-title .linking {
+  color: #341314;
+  margin-left: 10px; }
+
+.userdtl-main {
+  margin-bottom: 15px; }
+
+.usrdtl p {
+  margin-bottom: 15px; }
+
+.usrdtl span.left-space {
+  margin-left: 15px; }
+
+.usrdtl .linking {
+  font-family: 'vadodara-semibld';
+  color: inherit;
+  letter-spacing: 0; }
+
+.manage-addrs .usr-name {
+  font-size: 21px; }
+
+.usr-edit-detail {
+  margin-bottom: 50px; }
+
+.address-edit-btn,
+.address-delt-btn,
+.save--btn,
+.delt--btn,
+.invoice--btn,
+.comnt-submit--btn {
+  padding: 3px 12px;
+  margin-right: 10px; }
+
+.address-edit-btn,
+.save--btn {
+  width: 70px; }
+
+.address-delt-btn,
+.delt--btn,
+.comnt-submit--btn {
+  width: 90px; }
+
+.state-dropdown,
+.country-dropdown {
+  padding-top: 11px; }
+  .state-dropdown .state-dropdown--btn,
+  .state-dropdown .country-dropdown--btn,
+  .country-dropdown .state-dropdown--btn,
+  .country-dropdown .country-dropdown--btn {
+    position: relative;
+    width: 100%;
+    color: #999;
+    font-size: 14px;
+    text-align: left;
+    background-color: transparent;
+    border-bottom: 1px solid #341314; }
+  .state-dropdown .caret,
+  .country-dropdown .caret {
+    position: absolute;
+    top: 50%;
+    right: 8px;
+    color: #341314; }
+
+.state-dropdown-menu,
+.country-dropdown-menu {
+  width: 100%;
+  height: 215px;
+  overflow-y: auto;
+  overflow-x: hidden; }
+
+.btn--list, .order-list--btn, .order-action--btn {
+  margin-bottom: 10px;
+  padding: 3px 0;
+  width: 175px;
+  text-transform: uppercase;
+  color: #341314;
+  border: 1px dashed #341314;
+  letter-spacing: 1px; }
+  .btn--list:focus, .order-list--btn:focus, .order-action--btn:focus, .btn--list:active, .order-list--btn:active, .order-action--btn:active {
+    color: white; }
+
+/*NOTE:.account-order-table class has been extended in order-detail.html & return-order.html*/
+.account-order-table thead > tr:first-child,
+.account-order-table thead > tr:last-child {
+  border-top: 1px solid #e7dada;
+  background: #ededed;
+  color: #341314; }
+
+.account-order-table thead > tr > th {
+  padding-left: 40px;
+  font-weight: normal; }
+
+.account-order-table thead > tr > th:first-child {
+  border-left: 1px solid #e7dada; }
+
+.account-order-table thead > tr > th:last-child {
+  border-right: 1px solid #e7dada; }
+
+.account-order-table tbody tr > td {
+  border: 1px solid #e7dada;
+  border-right: none;
+  text-transform: uppercase; }
+
+.account-order-table tbody td + td {
+  border-left: none; }
+
+.account-order-table tbody td:last-child {
+  color: #341314;
+  border-right: 1px solid #e7dada; }
+
+.account-order-table tbody tr:nth-child(2) td {
+  border-top: none;
+  border-bottom: 1px solid #e7dada; }
+
+.account-order-table .item-img {
+  width: 185px;
+  vertical-align: top;
+  padding: 10px 15px;
+  margin-right: 10px; }
+  .account-order-table .item-img img {
+    width: 90px;
+    margin: 0 auto; }
+
+.account-order-table .comment {
+  padding-left: 15px; }
+
+.account-order-table .item-desc {
+  width: 330px;
+  white-space: normal; }
+
+.account-order-table .display-cell {
+  padding: 0 5px; }
+
+.order-list--btn {
+  margin-right: 15px; }
+
+.order-action--btn {
+  margin-right: 15px;
+  background-color: #ddd;
+  display: block; }
+  .order-action--btn:focus {
+    background-color: #341314;
+    color: white;
+    border: 1px dashed white; }
+
+p.item-code {
+  margin-bottom: 0; }
+
+p.item-cost {
+  line-height: 1; }

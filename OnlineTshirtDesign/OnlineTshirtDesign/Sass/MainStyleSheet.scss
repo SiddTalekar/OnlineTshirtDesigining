@@ -203,12 +203,65 @@ body {
     position: relative;
 }
 
+.font17 {
+    // This class is used for p elemment'font size
+    font-size: 17px;
+}
+
+//For navigation of flex slider
+.flexslider:hover .flex-direction-nav .flex-prev:hover,
+.flexslider:hover .flex-direction-nav .flex-next:hover {
+    background-color: $darkBrown1;
+
+    &:before {
+        color: white;
+    }
+}
+
+.flex-direction-nav a {
+    @include size(40px, 40px);
+    border-radius: 50%;
+    background-color: white;
+    color: $darkBrown1;
+
+    &:before {
+        color: $darkBrown1;
+        font-size: 16px;
+    }
+}
+
+.flex-direction-nav .flex-prev {
+    text-align: center !important;
+
+    &:before {
+        content: "\f053" !important;
+        font-family: FontAwesome;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        @include translate(-50%, -50%);
+    }
+}
+
+.flex-direction-nav .flex-next {
+    text-align: center !important;
+
+    &:before {
+        content: "\f054" !important;
+        font-family: FontAwesome;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        @include translate(-50%, -50%);
+    }
+}
+
 /*Boot strap mixin*/
 
 .btn--brown {
     // @include button-variant($darkBrown1,
     // #ededed,
-    // $white);
+    // white);
     @include button-variant(white, $darkBrown1, white);
     border: 1px dashed white;
     text-transform: uppercase;
@@ -1270,3 +1323,549 @@ footer {
 }
 //End of blogs.html
 
+//Start of Blog section design
+.blog {
+    .blog__title {
+        h1 {
+            color: $darkBrown1;
+            margin: 20px 0 30px;
+            font-family: 'fjalla-reg';
+        }
+
+        .blog--border--line {
+            @extend .border-line;
+
+            &:before {
+                width: 10%;
+                top: 50%;
+                left: 35%;
+                border: 1px solid $borderColor;
+            }
+
+            &:after {
+                border: 1px solid $borderColor;
+                width: 10%;
+                top: 50%;
+                right: 35%;
+            }
+        }
+    }
+
+    .blog__slider {
+        .flexslider {
+            margin: 0 0 70px;
+
+            .flex-control-nav {
+                display: none;
+            }
+
+            .flex-prev,
+            .flex-next {
+                display: none;
+            }
+        }
+
+        .blog__banner-detail {
+            .blog__desc {
+                overflow: hidden;
+
+                p:last-child {
+                    &:after {
+                        content: '\02192';
+                        position: relative;
+                        top: 6px;
+                        font-size: 28px;
+                        padding: 0 4px;
+                    }
+                }
+
+                a {
+                    color: white;
+                }
+
+                color: white;
+                background-color: $darkBrown1;
+                padding: 1px 35px;
+                height: 176px;
+
+                h3 {
+                    font-size: 20px;
+                    font-weight: 600;
+                }
+
+                p {
+                    line-height: 1;
+                }
+
+                .typedin-desc {
+                    height: 72px;
+                    display: -webkit-box;
+                    -webkit-line-clamp: 5;
+                    -webkit-box-orient: vertical;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                }
+
+                p.extra-content {
+                    &:after {
+                        content: '\02192';
+                        position: absolute;
+                        top: 50%;
+                        @include translate(0, -50%);
+                        font-size: 26px;
+                        padding: 0 4px;
+                    }
+                }
+            }
+        }
+    }
+}
+//End of Blog section design
+
+//Start of contactus.html
+.contact-us {
+    background: $lightGray1;
+
+    .contactus-content {
+        max-width: 75%;
+        margin: 30px auto;
+    }
+
+    .enquiry-form-pdd {
+        display: inline-block;
+        padding: 40px 0;
+        vertical-align: top;
+        max-width: 40%;
+    }
+
+    .enquiry-form-shadow {
+        box-shadow: 3px 3px 10px rgba(128, 128, 128, .26);
+        padding: 20px;
+        background: white;
+    }
+
+    .enquiry-form {
+        padding: 35px 60px 35px 35px;
+        border: 1px dashed $darkBrown1;
+    }
+
+    .send--btn {
+        @extend .btn--brown;
+    }
+
+    .contactus-details {
+        display: inline-block;
+        vertical-align: top;
+        max-width: 60%;
+        padding: 40px 100px 30px;
+        margin-left: -25px;
+        background-color: $darkBrown1;
+        color: white;
+
+        .tab-title {
+            color: white;
+        }
+    }
+
+    .head-office {
+        padding: 75px 0;
+    }
+
+    p,
+    address {
+        @extend .font17;
+    }
+}
+//End of contactus.html
+
+//Start of inner-blogs.html
+.inner-blog-title {
+    padding: 5px 0;
+    margin: 10px 0;
+    color: $darkBrown1;
+    font-family: 'vadodara-md';
+}
+
+.inner-blog {
+    .blog__slider {
+        .flexslider {
+            margin-bottom: 0;
+
+            &:hover {
+                .flex-direction-nav .flex-prev,
+                .flex-direction-nav .flex-next {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+}
+
+.inner-blog-section {
+    width: 90%;
+    padding: 25px 0 0;
+    margin: 0 auto;
+}
+
+.inner-blog-change-content {
+    a {
+        text-decoration: none;
+        color: $darkBrown1;
+    }
+
+    .flex-item-container {
+        align-items: center;
+        flex-direction: row;
+        justify-content: flex-start;
+    }
+
+    .flex-item {
+        flex: 1;
+    }
+
+    .action .flex-prev,
+    .action .flex-next {
+        display: block !important;
+    }
+
+    .action-btn {
+        margin-right: 5px;
+        margin-left: 5px;
+    }
+
+    .action-btn.action-btn-prev {
+        margin-left: 55px;
+    }
+
+    .action-btn.action-btn-next {
+        margin-right: 55px;
+    }
+
+    .fa-long-arrow-left,
+    .fa-long-arrow-right {
+        font-size: 16px;
+        vertical-align: middle;
+    }
+
+    .social-box {
+        display: flex;
+        justify-content: center;
+        font-size: 19px;
+
+        .flex-item-container {
+            align-items: center;
+        }
+
+        li {
+            margin: 0 5px;
+            color: $darkBrown1;
+        }
+
+        li:not(:first-child) {
+            width: 30px;
+            height: 30px;
+        }
+
+        li:not(:first-child) a {
+            width: 100%;
+            height: 100%;
+            border: 1px dashed $darkBrown1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            &:hover {
+                border: 1px dashed white;
+                color: white;
+                background-color: $darkBrown1;
+            }
+        }
+    }
+}
+
+.also-view {
+    padding: 25px 0;
+}
+//End of inner-blogs.html
+
+//Start of My account(myaccount.html)
+.tab-title {
+    // Used For all Tabs title which uses h3
+    margin-top: 0;
+    color: $darkBrown1;
+    font-family: 'fjalla-reg';
+    font-size: 24px;
+}
+
+.linking {
+    // For anchor Tag
+    font-size: 14px;
+    font-family: 'vadodara-regular';
+    letter-spacing: 1px;
+    text-decoration: underline;
+}
+
+
+
+.item-name {
+    font-size: 18px;
+    font-family: 'vadodara-md';
+    color: $darkGray;
+    margin-top: 15px;
+    margin-bottom: 2px;
+}
+
+.item-code {
+    font-size: 13px;
+    color: $darkGray;
+    font-weight: normal;
+}
+
+.item-cost {
+    font-size: 25px;
+    color: $darkBrown1;
+
+    .fa-inr {
+        font-size: 20px;
+        margin-right: 5px;
+    }
+}
+
+.usrdtl-info {
+    color: $darkGray;
+    font-size: 16px;
+}
+
+.usrdtl-title {
+    .linking {
+        color: $darkBrown1;
+        margin-left: 10px;
+    }
+}
+
+.userdtl-main {
+    margin-bottom: 15px;
+}
+
+.usrdtl {
+    p {
+        margin-bottom: 15px;
+    }
+
+    span.left-space {
+        margin-left: 15px;
+    }
+
+    .linking {
+        font-family: 'vadodara-semibld';
+        color: inherit;
+        letter-spacing: 0;
+    }
+}
+
+.manage-addrs {
+    .usr-name {
+        font-size: 21px;
+    }
+
+    span.city:after {
+    }
+}
+
+.usr-edit-detail {
+    margin-bottom: 50px;
+}
+
+.address-edit-btn,
+.address-delt-btn,
+.save--btn,
+.delt--btn,
+.invoice--btn,
+.comnt-submit--btn {
+    @extend .btn--brown;
+    padding: 3px 12px;
+    margin-right: 10px;
+}
+
+.address-edit-btn,
+.save--btn {
+    width: 70px;
+}
+
+.address-delt-btn,
+.delt--btn,
+.comnt-submit--btn {
+    width: 90px;
+}
+
+.state-dropdown,
+.country-dropdown {
+    padding-top: 11px;
+
+    .state-dropdown--btn,
+    .country-dropdown--btn {
+        position: relative;
+        width: 100%;
+        color: #999;
+        font-size: 14px;
+        text-align: left;
+        background-color: transparent;
+        border-bottom: 1px solid $darkBrown1;
+    }
+
+    .caret {
+        position: absolute;
+        top: 50%;
+        right: 8px;
+        color: $darkBrown1;
+    }
+}
+
+.state-dropdown-menu,
+.country-dropdown-menu {
+    width: 100%;
+    height: 215px;
+    @extend .dropdown-hidden-anim;
+    @extend .scroll-bar;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.open .state-dropdown-menu,
+.open .country-dropdown-menu {
+    @extend .dropdown-visible-anim;
+}
+
+.btn--list {
+    margin-bottom: 10px;
+    padding: 3px 0;
+    width: 175px;
+    text-transform: uppercase;
+    color: $darkBrown1;
+    border: 1px dashed $darkBrown1;
+    letter-spacing: 1px;
+
+    &:focus,
+    &:active {
+        color: white;
+    }
+}
+/*NOTE:.account-order-table class has been extended in order-detail.html & return-order.html*/
+
+.account-order-table {
+    thead > {
+        tr:first-child,
+        tr:last-child {
+            border-top: 1px solid $borderColor;
+            background: $lightGray1;
+            color: $darkBrown1;
+        }
+
+        tr > th {
+            padding-left: 40px;
+            font-weight: normal;
+        }
+
+        tr > th:first-child {
+            border-left: 1px solid $borderColor;
+        }
+
+        tr > th:last-child {
+            border-right: 1px solid $borderColor;
+        }
+    }
+
+    tbody {
+        tr > td {
+            border: 1px solid $borderColor;
+            border-right: none; // border-bottom: none;
+            text-transform: uppercase;
+        }
+
+        td + td {
+            border-left: none;
+        }
+
+        td:last-child {
+            color: $darkBrown1;
+            border-right: 1px solid $borderColor;
+        }
+
+        tr:nth-child(2) {
+            td {
+                border-top: none;
+                border-bottom: 1px solid $borderColor;
+            }
+        }
+    }
+
+    .item-img {
+        width: 185px;
+        vertical-align: top;
+        padding: 10px 15px;
+        margin-right: 10px;
+
+        img {
+            width: 90px;
+            margin : 0 auto ;
+        }
+    }
+
+    .comment {
+        padding-left: 15px;
+    }
+
+    .item-desc {
+        width: 330px;
+        white-space: normal;
+    }
+    // hr.table-divider {
+    //     @include position(absolute,
+    //     null 12% 10px 12%);
+    //     @include margin(10px auto);
+    //     @include linear-gradient(to right,
+    //     rgba(255,
+    //     255,
+    //     255,
+    //     1) 0%,
+    //     rgba(255,
+    //     255,
+    //     255,
+    //     0) 49%,
+    //     rgba(255,
+    //     255,
+    //     255,
+    //     1) 100%);
+    //     border-top: 1px solid $borderColor;
+    // }
+    .display-cell {
+       padding : 0 5px;
+    }
+}
+
+.order-list--btn {
+    @extend .btn--list;
+    margin-right: 15px;
+}
+
+.order-action--btn {
+    @extend .btn--list;
+    margin-right: 15px;
+    background-color: #ddd;
+    display: block;
+
+    &:focus {
+        background-color: $darkBrown1;
+        color: white;
+        border: 1px dashed white;
+    }
+}
+
+p.item-code {
+    margin-bottom: 0;
+}
+
+p.item-cost {
+    line-height: 1;
+}
+//End of My account(myaccount.html)
