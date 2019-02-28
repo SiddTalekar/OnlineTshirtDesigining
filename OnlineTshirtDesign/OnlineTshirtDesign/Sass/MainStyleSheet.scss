@@ -672,12 +672,15 @@ input[type=number]::-webkit-outer-spin-button {
         .fa {
             font-size: 18px;
         }
-        // .fa-search,
-        // .fa-heart,
-        // .fa-shopping-cart {
-        //     color: $darkBrown1;
-        //     @include margin(14px 0 0);
-        // }
+
+        .fa-search,
+        .fa-heart,
+        .fa-shopping-cart {
+            color: $darkBrown1;
+            margin-right: 5px;
+            margin-left: 5px;
+        }
+
         .header--login {
             font-size: 15px;
             padding: 3px 0;
@@ -1589,6 +1592,9 @@ footer {
 //End of inner-blogs.html
 
 //Start of My account(myaccount.html)
+.content-spacing {
+    margin: 40px 0 60px;
+}
 .tab-title {
     // Used For all Tabs title which uses h3
     margin-top: 0;

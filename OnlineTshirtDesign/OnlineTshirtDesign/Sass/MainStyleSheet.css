@@ -6867,6 +6867,12 @@ input[type=number]::-webkit-outer-spin-button {
     margin-bottom: 14.5px; }
     .navbar .navbar-right .fa {
       font-size: 18px; }
+    .navbar .navbar-right .fa-search,
+    .navbar .navbar-right .fa-heart,
+    .navbar .navbar-right .fa-shopping-cart {
+      color: #341314;
+      margin-right: 5px;
+      margin-left: 5px; }
     .navbar .navbar-right .header--login {
       font-size: 15px;
       padding: 3px 0;
@@ -7483,6 +7489,9 @@ footer {
 
 .also-view {
   padding: 25px 0; }
+
+.content-spacing {
+  margin: 40px 0 60px; }
 
 .tab-title {
   margin-top: 0;

@@ -21,6 +21,9 @@
                                 ADDRESS</asp:LinkButton>
                             </div>
                             <div class="checkout-tab-btn">
+                                <asp:LinkButton ID="LinkButtonuserOrdered" CssClass="btn order-list--btn text-uppercase" runat="server">Ordered</asp:LinkButton>
+                            </div>
+                            <div class="checkout-tab-btn">
                                 <asp:LinkButton ID="LinkButtonUserReturn" CssClass="btn order-list--btn text-uppercase" runat="server">Return/Exchange</asp:LinkButton>
                             </div>
                             <div class="checkout-tab-btn">
@@ -33,7 +36,7 @@
                     </div>
                     <!--To open profile Tab-->
                     <asp:Panel ID="PanelUserProf" CssClass="prof-tab" runat="server">
-                        <asp:MultiView ID="MultiViewUserChoice" ActiveViewIndex="0" runat="server">
+                        <asp:MultiView ID="MultiViewUserChoice"  runat="server">
                             <asp:View ID="ViewUserProf" runat="server">
                                 <div class="col-md-9 col-sm-12  col-xs-12">
                                     <div class="row">
@@ -127,13 +130,200 @@
                             <asp:View ID="ViewUserReturn" runat="server">
                             </asp:View>
                         </asp:MultiView>
-
-
-
                     </asp:Panel>
-                    <asp:Panel ID="PanelUserAddr" runat="server"></asp:Panel>
+
+                    <%--To open Manage address panel--%>
+                    <asp:Panel ID="PanelUserAddr" runat="server">
+                        <asp:MultiView ID="MultiViewUserAddr"  runat="server">
+                            <asp:View ID="ViewUserAddrSaved" runat="server">
+                                <!--To open Manage Address Tab-->
+                                <div class="col-md-9 col-sm-12 col-xs-12">
+                                    <div class="row">
+
+                                        <asp:Panel ID="PanelShowEditAddr" CssClass="col-md-12 col-sm-12 col-xs-12" runat="server">
+                                            <h3 class="tab-title text-uppercase">shipping address
+                                   
+                                                <a class="linking">
+                                                    <span class="tab-title pull-right">
+                                                        <i class="fa fa-plus"></i>
+                                                    </span>
+                                                </a>
+                                            </h3>
+
+                                        </asp:Panel>
+                                    </div>
+                                </div>
+
+                                <asp:Panel ID="PanelUserAddrSaved" CssClass="col-md-4 col-sm-6 col-xs-12" runat="server">
+
+                                    <div class="manage-addrs custom-checkbox">
+                                        <p class="usrdtl-info">
+                                            <span class="usr-name text-capitalize">{{userDetails.firstName}}
+                                            {{userDetails.lastName}}</span> {{userDetails.mobile}}
+                                       
+                                            <br>
+                                            {{userDetails.email}}
+                                        </p>
+                                        <address class="usrdtl-info">
+                                            {{shippingAdd.line1}}<br>
+                                            <span class="text-capitalize city">{{shippingAdd.city}}</span>{{shippingAdd.pinCode}}<br>
+                                            {{shippingAdd.country}}
+                                        </address>
+                                        <div class="checkbox usrdtl-info">
+                                            <asp:CheckBox ID="CheckBoxUserAddrDef" Text="Use this as default shipping address" runat="server" />
+                                        </div>
+                                        <p>
+                                            <asp:Button ID="ButtonUserAddrEdit" CommandName="SwitchViewByID" CommandArgument="ViewUserAddrEdit" CssClass="btn address-edit-btn" runat="server" Text="Edit" />
+                                            <asp:Button ID="ButtonUserAddrDelete" CssClass="btn address-delt-btn" runat="server" Text="Delete" />
+                                        </p>
+                                    </div>
+                                </asp:Panel>
+                            </asp:View>
+
+                            <asp:View ID="ViewUserAddrEdit" runat="server">
+                                <asp:Panel ID="PaneluserShowEditAddr" CssClass="col-md-9 col-sm-12 col-xs-12" runat="server">
+                                    <div class="edit-addrs">
+                                        <div class="customized-form">
+                                            <div class="row">
+                                                <div class="col-md-12 col-sm-12 col-xs-12">
+                                                    <h3 class="tab-title text-uppercase">shipping address</h3>
+                                                </div>
+                                                <div class="col-md-4 col-sm-6 col-xs-12">
+                                                    <div class="form-group">
+                                                        <input type="text" placeholder="Line 1*" class="form-control">
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-4 col-sm-6 col-xs-12">
+                                                    <div class="form-group">
+                                                        <input type="text" placeholder="Line 2" class="form-control">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-4 col-sm-6 col-xs-12">
+                                                    <div class="form-group">
+                                                        <input type="text" placeholder="Line 3" class="form-control">
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-4 col-sm-6 col-xs-12">
+                                                    <div class="form-group">
+                                                        <input type="text" placeholder="Line 4" class="form-control">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-4 col-sm-6 col-xs-12">
+                                                    <div class="form-group">
+                                                        <input type="text" placeholder="City" class="form-control">
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-4 col-sm-6 col-xs-12">
+                                                    <div class="form-group">
+                                                        <input type="text" placeholder="Pincode" class="form-control">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-4 col-sm-6 col-xs-12">
+                                                    <div class="form-group country-dropdown">
+                                                        <asp:DropDownList ID="DropDownListUserState" runat="server">
+                                                            <asp:ListItem Text="State" />
+                                                            <asp:ListItem Text="Maharashtra" />
+                                                            <asp:ListItem Text="India" />
+
+                                                        </asp:DropDownList>
+                                                        <%--<button class="btn country-dropdown--btn text-capitalize" ng-model="editAddress.country"type="button" >
+                                                            {{countryButton}} <span class="caret"></span>
+                                                        </button>
+
+                                                        <ul class="country-dropdown-menu dropdown-menu text-capitalize"
+                                                            uib-dropdown-menu role="menu">
+                                                            <li role="menuitem" ng-repeat="country in selectCounteries"
+                                                                ng-click="changeCountry(country.name)"><a>{{country.name}}</a></li>
+                                                        </ul>--%>
+                                                    </div>
+                                                </div>
+
+                                                <asp:Panel ID="PanelUserAddrCountry" CssClass="col-md-4 col-sm-6 col-xs-12" runat="server">
+                                                    <div class="form-group country-dropdown">
+                                                        <asp:DropDownList ID="DropDownListUserCountry" runat="server">
+                                                            <asp:ListItem Text="Country" />
+                                                            <asp:ListItem Text="Maha" />
+
+                                                        </asp:DropDownList>
+                                                        <%-- <button class="btn country-dropdown--btn text-capitalize" ng-model="editAddress.state"
+                                                            type="button" uib-dropdown-toggle>
+                                                            {{stateButton}} <span class="caret"></span>
+                                                        </button>
+                                                        <ul class="country-dropdown-menu dropdown-menu text-capitalize"
+                                                            uib-dropdown-menu role="menu">
+                                                            <li role="menuitem" ng-repeat="state in selectedState" ng-click="changeState(state)"><a>{{state}}</a></li>
+                                                        </ul>--%>
+                                                    </div>
+
+                                                </asp:Panel>
+
+                                                <asp:Panel ID="PanelUserAddrCountryNot" CssClass="col-md-4 col-sm-6 col-xs-12" runat="server">
+                                                    <div class="form-group">
+                                                        <input type="text" placeholder="state" class="form-control">
+                                                    </div>
+
+                                                </asp:Panel>
+                                            </div>
+                                            <p>
+                                                <asp:Button ID="ButtonUserAddrSave" CssClass="btn save--btn text-uppercase" runat="server" CommandName="SwitchViewByID" CommandArgument="ViewUserAddrSaved" Text="save" />
+                                                <asp:Button ID="ButtonUserAddrCancel" CssClass="btn delt--btn text-uppercase" runat="server" Text="cancel" />
+                                            </p>
+                                        </div>
+
+                                    </div>
+
+                                </asp:Panel>
+
+                            </asp:View>
+
+                        </asp:MultiView>
+                    </asp:Panel>
+
+                    <%--To open Ordered product panel--%>
+
+                    <asp:Panel ID="PanelUserOrdered" runat="server">
+                        <asp:MultiView ID="MultiViewUserOrdered" runat="server">
+                            <asp:View ID="ViewUserOrdered" runat="server">
+                                <div class="col-md-9 col-sm-12 col-xs-12">
+                                    <p class="text-uppercase order-list-action text-center">
+                                        <asp:Button ID="ButtonUserOrders" CssClass="btn order-list--btn text-capitalize" runat="server" Text="orders" />
+                                        <asp:Button ID="ButtonUserReturn" CssClass="btn order-list--btn text-capitalize" runat="server" Text="return" />
+                                        <asp:Button ID="ButtonUserCancelled" CssClass="btn order-list--btn text-capitalize" runat="server" Text="cancelled" />
+                                    </p>
+                                </div>
+                            </asp:View>
+
+                            <asp:View ID="ViewuserReturned" runat="server">
+
+                            </asp:View>
+
+                             <asp:View ID="ViewUserCancelled" runat="server">
+
+                            </asp:View>
+                        </asp:MultiView>
+
+                        <%--<div class="order-tab" ng-if="view == 'orderTab' ">
+                            <!--To open an Order Tab-->
+                        </div>--%>
+                        
+                    </asp:Panel>
+
+                    <%--To open Return product panel--%>
+
                     <asp:Panel ID="PanelUserReturn" runat="server"></asp:Panel>
+
+                    <%--To open Cancel product panel--%>
+
                     <asp:Panel ID="PanelUserCancel" runat="server"></asp:Panel>
+
+                    <%--To open Wishlist product panel--%>
+
                     <asp:Panel ID="PaneluserWishlist" runat="server"></asp:Panel>
                 </div>
             </div>
