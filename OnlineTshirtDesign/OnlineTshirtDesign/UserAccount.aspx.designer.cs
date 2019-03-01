@@ -40,33 +40,6 @@ namespace OnlineTshirtDesign {
         protected global::System.Web.UI.WebControls.LinkButton LinkButtonuserOrdered;
         
         /// <summary>
-        /// LinkButtonUserReturn control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton LinkButtonUserReturn;
-        
-        /// <summary>
-        /// LinkButtonUserCancel control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton LinkButtonUserCancel;
-        
-        /// <summary>
-        /// LinkButtonUserWishlist control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton LinkButtonUserWishlist;
-        
-        /// <summary>
         /// PanelUserProf control.
         /// </summary>
         /// <remarks>
@@ -355,31 +328,22 @@ namespace OnlineTshirtDesign {
         protected global::System.Web.UI.WebControls.Button ButtonUserAddrCancel;
         
         /// <summary>
-        /// PanelUserOrdered control.
+        /// PanelUserOrder control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Panel PanelUserOrdered;
+        protected global::System.Web.UI.WebControls.Panel PanelUserOrder;
         
         /// <summary>
-        /// MultiViewUserOrdered control.
+        /// PaneluserOrderButtons control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.MultiView MultiViewUserOrdered;
-        
-        /// <summary>
-        /// ViewUserOrdered control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.View ViewUserOrdered;
+        protected global::System.Web.UI.WebControls.Panel PaneluserOrderButtons;
         
         /// <summary>
         /// ButtonUserOrders control.
@@ -409,13 +373,40 @@ namespace OnlineTshirtDesign {
         protected global::System.Web.UI.WebControls.Button ButtonUserCancelled;
         
         /// <summary>
-        /// ViewuserReturned control.
+        /// MultiViewUserOrdered control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.View ViewuserReturned;
+        protected global::System.Web.UI.WebControls.MultiView MultiViewUserOrdered;
+        
+        /// <summary>
+        /// ViewUserOrdered control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.View ViewUserOrdered;
+        
+        /// <summary>
+        /// PanelUserOrderTable control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Panel PanelUserOrderTable;
+        
+        /// <summary>
+        /// ViewUserReturned control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.View ViewUserReturned;
         
         /// <summary>
         /// ViewUserCancelled control.
@@ -425,24 +416,6 @@ namespace OnlineTshirtDesign {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.View ViewUserCancelled;
-        
-        /// <summary>
-        /// PanelUserReturn control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Panel PanelUserReturn;
-        
-        /// <summary>
-        /// PanelUserCancel control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Panel PanelUserCancel;
         
         /// <summary>
         /// PaneluserWishlist control.

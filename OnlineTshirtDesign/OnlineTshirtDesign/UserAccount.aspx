@@ -21,9 +21,9 @@
                                 ADDRESS</asp:LinkButton>
                             </div>
                             <div class="checkout-tab-btn">
-                                <asp:LinkButton ID="LinkButtonuserOrdered" CssClass="btn order-list--btn text-uppercase" runat="server">Ordered</asp:LinkButton>
+                                <asp:LinkButton ID="LinkButtonuserOrdered" CssClass="btn order-list--btn text-uppercase" runat="server">Orders</asp:LinkButton>
                             </div>
-                            <div class="checkout-tab-btn">
+                            <%--<div class="checkout-tab-btn">
                                 <asp:LinkButton ID="LinkButtonUserReturn" CssClass="btn order-list--btn text-uppercase" runat="server">Return/Exchange</asp:LinkButton>
                             </div>
                             <div class="checkout-tab-btn">
@@ -31,12 +31,12 @@
                             </div>
                             <div class="checkout-tab-btn">
                                 <asp:LinkButton ID="LinkButtonUserWishlist" CssClass="btn btn--list text-uppercase" runat="server">WISHLIST</asp:LinkButton>
-                            </div>
+                            </div>--%>
                         </div>
                     </div>
                     <!--To open profile Tab-->
                     <asp:Panel ID="PanelUserProf" CssClass="prof-tab" runat="server">
-                        <asp:MultiView ID="MultiViewUserChoice"  runat="server">
+                        <asp:MultiView ID="MultiViewUserChoice" runat="server">
                             <asp:View ID="ViewUserProf" runat="server">
                                 <div class="col-md-9 col-sm-12  col-xs-12">
                                     <div class="row">
@@ -134,7 +134,7 @@
 
                     <%--To open Manage address panel--%>
                     <asp:Panel ID="PanelUserAddr" runat="server">
-                        <asp:MultiView ID="MultiViewUserAddr"  runat="server">
+                        <asp:MultiView ID="MultiViewUserAddr" runat="server">
                             <asp:View ID="ViewUserAddrSaved" runat="server">
                                 <!--To open Manage Address Tab-->
                                 <div class="col-md-9 col-sm-12 col-xs-12">
@@ -287,42 +287,44 @@
 
                     <%--To open Ordered product panel--%>
 
-                    <asp:Panel ID="PanelUserOrdered" runat="server">
-                        <asp:MultiView ID="MultiViewUserOrdered" runat="server">
+                    <asp:Panel ID="PanelUserOrder" runat="server">
+                        <asp:Panel ID="PaneluserOrderButtons" CssClass="col-md-9 col-sm-12 col-xs-12" runat="server">
+
+                            <p class="text-uppercase order-list-action text-center">
+                                <asp:Button ID="ButtonUserOrders" CssClass="btn order-list--btn text-capitalize" runat="server" Text="orders" />
+                                <asp:Button ID="ButtonUserReturn" CssClass="btn order-list--btn text-capitalize" runat="server" Text="return" />
+                                <asp:Button ID="ButtonUserCancelled"  CssClass="btn order-list--btn text-capitalize" runat="server" Text="cancelled" />
+                            </p>
+                        <asp:MultiView ID="MultiViewUserOrdered" ActiveViewIndex="0" runat="server">
                             <asp:View ID="ViewUserOrdered" runat="server">
-                                <div class="col-md-9 col-sm-12 col-xs-12">
-                                    <p class="text-uppercase order-list-action text-center">
-                                        <asp:Button ID="ButtonUserOrders" CssClass="btn order-list--btn text-capitalize" runat="server" Text="orders" />
-                                        <asp:Button ID="ButtonUserReturn" CssClass="btn order-list--btn text-capitalize" runat="server" Text="return" />
-                                        <asp:Button ID="ButtonUserCancelled" CssClass="btn order-list--btn text-capitalize" runat="server" Text="cancelled" />
-                                    </p>
-                                </div>
+                                <asp:Panel ID="PanelUserOrderTable" CssClass="account-order-table table-responsive" runat="server">
+                                    <%--<asp:Table ID="TableUserOrder" CssClass="table" runat="server">
+                                       
+                                    </asp:Table>--%>
+                                    <%--<asp:Table ID="TableTest" runat="server">
+                                        <asp:TableHeaderRow ID="thr" runat="server">
+                                           <asp:TableHeaderCell ID="th" runat="server">
+                                               Sammer
+                                           </asp:TableHeaderCell>
+                                        </asp:TableHeaderRow>
+                                    </asp:Table>--%>
+                                </asp:Panel>
                             </asp:View>
 
-                            <asp:View ID="ViewuserReturned" runat="server">
-
+                            <asp:View ID="ViewUserReturned" runat="server">
+                                <h2>In retuen view</h2>
                             </asp:View>
 
-                             <asp:View ID="ViewUserCancelled" runat="server">
-
+                            <asp:View ID="ViewUserCancelled" runat="server">
+                                <h2>in user cancelled view</h2>
                             </asp:View>
                         </asp:MultiView>
+                        </asp:Panel>
 
                         <%--<div class="order-tab" ng-if="view == 'orderTab' ">
                             <!--To open an Order Tab-->
                         </div>--%>
-                        
                     </asp:Panel>
-
-                    <%--To open Return product panel--%>
-
-                    <asp:Panel ID="PanelUserReturn" runat="server"></asp:Panel>
-
-                    <%--To open Cancel product panel--%>
-
-                    <asp:Panel ID="PanelUserCancel" runat="server"></asp:Panel>
-
-                    <%--To open Wishlist product panel--%>
 
                     <asp:Panel ID="PaneluserWishlist" runat="server"></asp:Panel>
                 </div>
