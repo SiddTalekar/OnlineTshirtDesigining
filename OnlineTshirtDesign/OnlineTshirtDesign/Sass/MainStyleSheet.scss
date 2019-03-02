@@ -1595,6 +1595,7 @@ footer {
 .content-spacing {
     margin: 40px 0 60px;
 }
+
 .tab-title {
     // Used For all Tabs title which uses h3
     margin-top: 0;
@@ -1759,7 +1760,7 @@ footer {
 /*NOTE:.account-order-table class has been extended in order-detail.html & return-order.html*/
 
 .account-order-table {
-    thead > {
+    thead > th {
         tr:first-child,
         tr:last-child {
             border-top: 1px solid $borderColor;
@@ -1813,7 +1814,7 @@ footer {
 
         img {
             width: 90px;
-            margin : 0 auto ;
+            margin: 0 auto;
         }
     }
 
@@ -1845,7 +1846,7 @@ footer {
     //     border-top: 1px solid $borderColor;
     // }
     .display-cell {
-       padding : 0 5px;
+        padding: 0 5px;
     }
 }
 
@@ -1875,3 +1876,130 @@ p.item-cost {
     line-height: 1;
 }
 //End of My account(myaccount.html)
+
+/*NOTE:.account-order-table class has been extended in order-detail.html & return-order.html*/
+
+//End of My account(myaccount.html)
+//Start of orderdetail.html
+.order-status-title {
+    // This class is used in return, order, return successful & cancel, cancel successful msg.html
+    font-family: 'vadodara-md';
+    color: $darkGray;
+    text-transform: uppercase;
+    margin: 25px 0;
+}
+
+.order-details-table {
+    // This class has been extended in order-return-table
+     padding: 0 85px 35px;
+    @extend .account-order-table;
+
+    tbody {
+        tr {
+            td:last-child {
+                vertical-align: bottom;
+                text-align: center;
+            }
+        }
+    }
+
+    .item-img img {
+        width: 105px;
+    }
+
+    .item-cost {
+        margin-top: 20px;
+    }
+
+    .usr-status {
+        .quantity__input {
+            position: absolute;
+            bottom: -80px;
+            left: 50%;
+
+            @include translate(-50%, 0);
+        }
+    }
+
+    .grand-total {
+        margin-bottom: 33px;
+    }
+
+    .usr-status-title {
+        font-size: 19px;
+        margin-top: 15px;
+        color: $darkBrown1;
+        text-transform: uppercase;
+
+        .usr-addrs-title {
+            letter-spacing: 1px;
+        }
+    }
+
+    .order-payment-info {
+        font-size: 17px;
+    }
+
+    address {
+        font-size: 17px;
+        text-transform: capitalize;
+        padding-right: 55px;
+    }
+
+    .return-table {
+        margin-bottom: 35px;
+    }
+}
+
+.order-return-table,
+.order-cancel-table {
+    @include form-control-focus($color: $darkBrown1);
+    @extend .order-details-table;
+
+    thead > th {
+        tr:nth-child(2) {
+            th {
+                padding: 3px;
+            }
+        }
+    }
+
+    tbody {
+        tr {
+            td:last-child {
+                vertical-align: top;
+                text-align: center;
+            }
+        }
+    }
+
+    .item-name .fa-inr {
+        margin-right: 5px;
+    }
+
+    .order-return {
+        .quantity__input {
+            margin-top: 10px;
+        }
+    }
+
+    .checkbox {
+        margin-top: 15px;
+    }
+
+    .item-return--btn {
+        color: $darkBrown1;
+        border: 1px dashed $darkBrown1;
+        padding: 0 12px; // @include button-size($padding-vertical: 0, $padding-horizontal: 12px, $font-size: 14px, $line-height: 1.428571429, $border-radius: 0);
+        text-align: left;
+    }
+
+    .return-dropdown-menu {
+        @extend .dropdown-hidden-anim;
+    }
+
+    .open .return-dropdown-menu {
+        @extend .dropdown-visible-anim;
+    }
+}
+//End of orderdetail.html

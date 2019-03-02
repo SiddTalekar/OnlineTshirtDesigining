@@ -6525,7 +6525,8 @@ a {
 
 /*NOTE: extend this class in dropdown's by using @extend */
 .dropdown-hidden-anim, .navbar .navbar-right .cart-dropdown-menu, .state-dropdown-menu,
-.country-dropdown-menu {
+.country-dropdown-menu, .order-return-table .return-dropdown-menu,
+.order-cancel-table .return-dropdown-menu {
   display: block;
   visibility: hidden;
   opacity: 0;
@@ -6556,7 +6557,8 @@ a {
   z-index: 9999; }
 
 .dropdown-visible-anim, .navbar .navbar-right li:hover .cart-dropdown-menu, .open .state-dropdown-menu,
-.open .country-dropdown-menu {
+.open .country-dropdown-menu, .order-return-table .open .return-dropdown-menu,
+.order-cancel-table .open .return-dropdown-menu {
   visibility: visible;
   opacity: 1;
   -webkit-transform: rotate(0deg);
@@ -6577,7 +6579,8 @@ a {
   transform: translate(0px, 0px);
   /*@include transform(rotate(0deg) scale(1) skew(0deg) translate(0px, 0px));*/ }
   .dropdown-visible-anim li > a:hover, .navbar .navbar-right li:hover .cart-dropdown-menu li > a:hover, .open .state-dropdown-menu li > a:hover,
-  .open .country-dropdown-menu li > a:hover {
+  .open .country-dropdown-menu li > a:hover, .order-return-table .open .return-dropdown-menu li > a:hover,
+  .order-cancel-table .open .return-dropdown-menu li > a:hover {
     background-color: #341314;
     color: white; }
 
@@ -7610,55 +7613,69 @@ footer {
     color: white; }
 
 /*NOTE:.account-order-table class has been extended in order-detail.html & return-order.html*/
-.account-order-table thead > tr:first-child,
-.account-order-table thead > tr:last-child {
+.account-order-table thead > th tr:first-child, .order-details-table thead > th tr:first-child, .order-return-table thead > th tr:first-child,
+.order-cancel-table thead > th tr:first-child,
+.account-order-table thead > th tr:last-child, .order-details-table thead > th tr:last-child, .order-return-table thead > th tr:last-child,
+.order-cancel-table thead > th tr:last-child {
   border-top: 1px solid #e7dada;
   background: #ededed;
   color: #341314; }
 
-.account-order-table thead > tr > th {
+.account-order-table thead > th tr > th, .order-details-table thead > th tr > th, .order-return-table thead > th tr > th,
+.order-cancel-table thead > th tr > th {
   padding-left: 40px;
   font-weight: normal; }
 
-.account-order-table thead > tr > th:first-child {
+.account-order-table thead > th tr > th:first-child, .order-details-table thead > th tr > th:first-child, .order-return-table thead > th tr > th:first-child,
+.order-cancel-table thead > th tr > th:first-child {
   border-left: 1px solid #e7dada; }
 
-.account-order-table thead > tr > th:last-child {
+.account-order-table thead > th tr > th:last-child, .order-details-table thead > th tr > th:last-child, .order-return-table thead > th tr > th:last-child,
+.order-cancel-table thead > th tr > th:last-child {
   border-right: 1px solid #e7dada; }
 
-.account-order-table tbody tr > td {
+.account-order-table tbody tr > td, .order-details-table tbody tr > td, .order-return-table tbody tr > td,
+.order-cancel-table tbody tr > td {
   border: 1px solid #e7dada;
   border-right: none;
   text-transform: uppercase; }
 
-.account-order-table tbody td + td {
+.account-order-table tbody td + td, .order-details-table tbody td + td, .order-return-table tbody td + td,
+.order-cancel-table tbody td + td {
   border-left: none; }
 
-.account-order-table tbody td:last-child {
+.account-order-table tbody td:last-child, .order-details-table tbody td:last-child, .order-return-table tbody td:last-child,
+.order-cancel-table tbody td:last-child {
   color: #341314;
   border-right: 1px solid #e7dada; }
 
-.account-order-table tbody tr:nth-child(2) td {
+.account-order-table tbody tr:nth-child(2) td, .order-details-table tbody tr:nth-child(2) td, .order-return-table tbody tr:nth-child(2) td,
+.order-cancel-table tbody tr:nth-child(2) td {
   border-top: none;
   border-bottom: 1px solid #e7dada; }
 
-.account-order-table .item-img {
+.account-order-table .item-img, .order-details-table .item-img, .order-return-table .item-img,
+.order-cancel-table .item-img {
   width: 185px;
   vertical-align: top;
   padding: 10px 15px;
   margin-right: 10px; }
-  .account-order-table .item-img img {
+  .account-order-table .item-img img, .order-details-table .item-img img, .order-return-table .item-img img,
+  .order-cancel-table .item-img img {
     width: 90px;
     margin: 0 auto; }
 
-.account-order-table .comment {
+.account-order-table .comment, .order-details-table .comment, .order-return-table .comment,
+.order-cancel-table .comment {
   padding-left: 15px; }
 
-.account-order-table .item-desc {
+.account-order-table .item-desc, .order-details-table .item-desc, .order-return-table .item-desc,
+.order-cancel-table .item-desc {
   width: 330px;
   white-space: normal; }
 
-.account-order-table .display-cell {
+.account-order-table .display-cell, .order-details-table .display-cell, .order-return-table .display-cell,
+.order-cancel-table .display-cell {
   padding: 0 5px; }
 
 .order-list--btn {
@@ -7678,3 +7695,91 @@ p.item-code {
 
 p.item-cost {
   line-height: 1; }
+
+/*NOTE:.account-order-table class has been extended in order-detail.html & return-order.html*/
+.order-status-title {
+  font-family: 'vadodara-md';
+  color: #252525;
+  text-transform: uppercase;
+  margin: 25px 0; }
+
+.order-details-table, .order-return-table,
+.order-cancel-table {
+  padding: 0 85px 35px; }
+  .order-details-table tbody tr td:last-child, .order-return-table tbody tr td:last-child,
+  .order-cancel-table tbody tr td:last-child {
+    vertical-align: bottom;
+    text-align: center; }
+  .order-details-table .item-img img, .order-return-table .item-img img,
+  .order-cancel-table .item-img img {
+    width: 105px; }
+  .order-details-table .item-cost, .order-return-table .item-cost,
+  .order-cancel-table .item-cost {
+    margin-top: 20px; }
+  .order-details-table .usr-status .quantity__input, .order-return-table .usr-status .quantity__input,
+  .order-cancel-table .usr-status .quantity__input {
+    position: absolute;
+    bottom: -80px;
+    left: 50%;
+    -webkit-transform: translate(-50%, 0);
+    -ms-transform: translate(-50%, 0);
+    -o-transform: translate(-50%, 0);
+    transform: translate(-50%, 0); }
+  .order-details-table .grand-total, .order-return-table .grand-total,
+  .order-cancel-table .grand-total {
+    margin-bottom: 33px; }
+  .order-details-table .usr-status-title, .order-return-table .usr-status-title,
+  .order-cancel-table .usr-status-title {
+    font-size: 19px;
+    margin-top: 15px;
+    color: #341314;
+    text-transform: uppercase; }
+    .order-details-table .usr-status-title .usr-addrs-title, .order-return-table .usr-status-title .usr-addrs-title,
+    .order-cancel-table .usr-status-title .usr-addrs-title {
+      letter-spacing: 1px; }
+  .order-details-table .order-payment-info, .order-return-table .order-payment-info,
+  .order-cancel-table .order-payment-info {
+    font-size: 17px; }
+  .order-details-table address, .order-return-table address,
+  .order-cancel-table address {
+    font-size: 17px;
+    text-transform: capitalize;
+    padding-right: 55px; }
+  .order-details-table .return-table, .order-return-table .return-table,
+  .order-cancel-table .return-table {
+    margin-bottom: 35px; }
+
+.order-return-table:focus,
+.order-cancel-table:focus {
+  border-color: #341314;
+  outline: 0;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(52, 19, 20, 0.6);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(52, 19, 20, 0.6); }
+
+.order-return-table thead > th tr:nth-child(2) th,
+.order-cancel-table thead > th tr:nth-child(2) th {
+  padding: 3px; }
+
+.order-return-table tbody tr td:last-child,
+.order-cancel-table tbody tr td:last-child {
+  vertical-align: top;
+  text-align: center; }
+
+.order-return-table .item-name .fa-inr,
+.order-cancel-table .item-name .fa-inr {
+  margin-right: 5px; }
+
+.order-return-table .order-return .quantity__input,
+.order-cancel-table .order-return .quantity__input {
+  margin-top: 10px; }
+
+.order-return-table .checkbox,
+.order-cancel-table .checkbox {
+  margin-top: 15px; }
+
+.order-return-table .item-return--btn,
+.order-cancel-table .item-return--btn {
+  color: #341314;
+  border: 1px dashed #341314;
+  padding: 0 12px;
+  text-align: left; }

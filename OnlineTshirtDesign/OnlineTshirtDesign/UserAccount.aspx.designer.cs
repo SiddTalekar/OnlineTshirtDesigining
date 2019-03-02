@@ -409,6 +409,15 @@ namespace OnlineTshirtDesign {
         protected global::System.Web.UI.WebControls.View ViewUserReturned;
         
         /// <summary>
+        /// PanelUserOrderReturnTable control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Panel PanelUserOrderReturnTable;
+        
+        /// <summary>
         /// ViewUserCancelled control.
         /// </summary>
         /// <remarks>
@@ -416,6 +425,15 @@ namespace OnlineTshirtDesign {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.View ViewUserCancelled;
+        
+        /// <summary>
+        /// PanelUserOrderCancelTable control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Panel PanelUserOrderCancelTable;
         
         /// <summary>
         /// PaneluserWishlist control.
