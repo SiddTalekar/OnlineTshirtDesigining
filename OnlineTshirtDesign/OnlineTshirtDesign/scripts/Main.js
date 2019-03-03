@@ -3,6 +3,8 @@
 /// <reference path="jquery-1.9.1.intellisense.min.js" />
 
 $(document).ready(function () {
+    
+    $('[data-toggle="popover"]').popover();
     $('#HomeBannersSlider').flexslider({
         animation: "slide"
     });

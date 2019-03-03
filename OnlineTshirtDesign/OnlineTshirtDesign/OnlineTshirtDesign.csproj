@@ -109,6 +109,10 @@
     <Content Include="Images\AboutUs\background-banner.jpg" />
     <Content Include="Images\AboutUs\man.png" />
     <Content Include="Images\AboutUs\qoutes.png" />
+    <Content Include="Images\Checkout\1.jpg" />
+    <Content Include="Images\Checkout\20.png" />
+    <Content Include="Images\Checkout\checkout-bg.jpg" />
+    <Content Include="Images\Checkout\item.jpg" />
     <Content Include="Images\UserAccount\myaccount-banner.jpg" />
     <Content Include="Images\Brands\logo.png" />
     <Content Include="Images\ContactUs\contactus-banner.jpg" />

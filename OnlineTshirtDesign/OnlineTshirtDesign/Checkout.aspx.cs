@@ -13,5 +13,12 @@ namespace OnlineTshirtDesign
         {
 
         }
+
+        protected void RegValidEmail_Init(object sender, EventArgs e)
+        {
+            RegValidEmail.Attributes.Add("data-toggle", "popover");
+            RegValidEmail.Attributes.Add("data-content", "popover");
+
+        }
     }
 }

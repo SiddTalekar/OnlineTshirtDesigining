@@ -105,7 +105,7 @@ body {
 }
 
 .form-control:focus {
-    border-color: $brand-primary;
+    border-color: $darkBrown1;
     outline: 0;
     box-shadow: none;
 }
@@ -1891,7 +1891,7 @@ p.item-cost {
 
 .order-details-table {
     // This class has been extended in order-return-table
-     padding: 0 85px 35px;
+    padding: 0 85px 35px;
     @extend .account-order-table;
 
     tbody {
@@ -2003,3 +2003,128 @@ p.item-cost {
     }
 }
 //End of orderdetail.html
+
+//START of check out
+.checkout-drop {
+    background: transparent;
+    padding: 8px 0;
+    color: #555554;
+    width: 100%;
+    border: none;
+    text-align: left;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+
+    &:focus,
+    &:active:focus {
+        outline: none;
+        color: #555554;
+    }
+}
+
+.country-selection {
+    .fa-angle-down:before {
+        position: absolute;
+        bottom: 5px;
+        right: 12px;
+        cursor: pointer;
+    }
+}
+
+.list-checkout {
+    padding-left: 70px;
+}
+
+.checkout {
+    .content-spacing {
+        margin: 45px 0 70px;
+
+        .btn--list {
+            margin-bottom: 10px;
+            padding: 3px 0;
+            width: 175px;
+            text-transform: uppercase;
+            color: $darkBrown1;
+            border: 1px dashed $darkBrown1;
+            letter-spacing: 1px;
+
+            &:focus,
+            &:active {
+                color: white;
+            }
+        }
+    }
+
+    .product-cal {
+        min-width: 190px;
+
+        .gst {
+            flex-grow: 2;
+        }
+
+        .gst-rupee {
+            flex: 1;
+        }
+    }
+
+    .next--btn {
+        @extend .btn--brown;
+        width: 150px;
+        padding: 2px 0;
+    }
+
+    .login-popover {
+        background: $darkBrown1;
+        border-color: $darkBrown1;
+
+        .popover-content {
+            display: none;
+        }
+
+        .popover-title {
+            background-color: $darkBrown1;
+            color: white;
+            border-radius: 6px;
+            border-color: $darkBrown1;
+        }
+
+        .arrow {
+            border-bottom-color: $darkBrown1;
+
+            &:after {
+                border-bottom-color: $darkBrown1;
+            }
+        }
+    }
+}
+
+.social-icons {
+    text-align: center;
+
+    .social-icons__list {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        text-align: center;
+        font-size: 24px;
+        line-height: 50px;
+
+        a {
+            color: white;
+        }
+    }
+
+    .fb {
+        background: #3b5997;
+    }
+
+    .tw {
+        background: #3fa9f5;
+    }
+
+    .gp {
+        background: #de4b39;
+    }
+}
+//END of check out
