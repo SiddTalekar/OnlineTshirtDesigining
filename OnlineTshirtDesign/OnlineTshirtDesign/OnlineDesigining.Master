@@ -55,7 +55,8 @@
                                 <div>
                                     <div class="search-box-area">
                                         <div>
-                                            <input type="search"  placeholder="search">
+                                            <asp:TextBox ID="TextBoxProductSearch" Text="search" TextMode="Search" runat="server"></asp:TextBox>
+                                            <%--<input type="search"  placeholder="search">--%>
                                         </div>
                                     </div>
                                 </div>

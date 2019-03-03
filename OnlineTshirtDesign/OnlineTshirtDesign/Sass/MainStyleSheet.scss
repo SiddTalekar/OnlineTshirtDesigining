@@ -275,6 +275,48 @@ body {
     }
 }
 
+.customized-form {
+    .form-control {
+        height: 45px;
+        border-top: none;
+        border-left: none;
+        border-right: none;
+        border-bottom: 1px solid $darkBrown1;
+    }
+
+    .forgot__checkout {
+        margin-bottom: 20px;
+
+        a {
+            color: $darkGray;
+            text-decoration: underline;
+            text-decoration: #929292;
+        }
+    }
+
+    .btn--brown {
+        @include button-variant(white, $darkBrown1, white);
+
+        &:hover {
+            color: white;
+            background-color: lighten($darkBrown1, 10%);
+        }
+
+        &:focus {
+            outline: none; // @include button-variant(white $darkBrown1,
+            // white);
+            // color: white;
+            // background-color: lighten($darkBrown1, 10%);
+        }
+    }
+}
+
+.btn--login {
+    @extend .btn--brown;
+    padding: 3px 0;
+    font-size: 20px;
+}
+
 .btn--brownActive {
     color: white !important;
     font-weight: normal;
@@ -2128,3 +2170,58 @@ p.item-cost {
     }
 }
 //END of check out
+// .checkout details tab
+.details-form {
+    margin-bottom: 65px;
+
+    h3 {
+        color: $darkBrown1;
+    }
+
+    .detail-tab__head {
+        text-transform: uppercase;
+        font-family: 'fjalla-reg';
+    }
+
+    .checkout__cont-btn {
+        @extend .btn--brown;
+        @include size(260px, auto);
+        margin: 20px 0;
+        padding-top: 3px;
+        padding-bottom: 3px;
+        font-size: 20px;
+    }
+
+    .payment-checkbox {
+        margin-top: 15px;
+        margin-bottom: 5px;
+
+        .font__style {
+            text-transform: uppercase;
+            font-family: 'vadodara-lgt';
+            font-size: 18px;
+        }
+
+        .checkbox {
+            margin-top: 0;
+
+            label {
+                padding-right: 5px;
+                padding-left: 5px;
+                margin-right: 30px;
+            }
+        }
+
+        [type="checkbox"]:not(:checked) + label:before,
+        [type="checkbox"]:checked + label:before {
+            width: 18px;
+            height: 18px;
+        }
+
+        [type="checkbox"]:not(:checked) + label:after,
+        [type="checkbox"]:checked + label:after {
+            top: 6px;
+            font-size: 18px;
+        }
+    }
+}

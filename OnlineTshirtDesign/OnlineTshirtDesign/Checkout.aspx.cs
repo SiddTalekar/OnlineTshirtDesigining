@@ -20,5 +20,17 @@ namespace OnlineTshirtDesign
             RegValidEmail.Attributes.Add("data-content", "popover");
 
         }
+
+        protected void ButtonUserLogIn_Click(object sender, EventArgs e)
+        {
+            if (Page.IsValid == false) return;
+            Label1.Text = "Click executed";
+        }
+
+        protected void ButtonSignUpForm_Click(object sender, EventArgs e)
+        {
+            if (Page.IsValid == false || CheckboxDataAgree.Checked == false) return;
+            LabelAggreeMsg.Text = "click executed";
+        }
     }
 }
