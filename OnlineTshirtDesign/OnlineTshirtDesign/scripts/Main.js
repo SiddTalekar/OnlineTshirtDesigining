@@ -32,5 +32,21 @@ $(document).ready(function () {
         itemWidth: 300,
         controlNav: false
     });
+
+
+    // This function will show your client chat up and down on basis of user action 
+    $("#userClientChat, #userClientChatMin").click(function (event) {
+        event.preventDefault();
+        if ($(".compare-product-main").hasClass("compareProductMenuOut")) {
+            $(".compare-product-main").removeClass("compareProductMenuOut");
+            $(".compare-product-main").addClass("compareProductMenuIn");
+        }
+        else if ($(".compare-product-main").hasClass("compareProductMenuIn")) {
+            $(".compare-product-main").removeClass("compareProductMenuIn");
+            $(".compare-product-main").addClass("compareProductMenuOut");
+        }
+    });
+
     
 });
+

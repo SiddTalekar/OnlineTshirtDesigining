@@ -2225,3 +2225,368 @@ p.item-cost {
         }
     }
 }
+
+// modal styles
+.modal__customized-form {
+    @extend .customized-form;
+
+    .form-control {
+        height: 37px;
+        margin-bottom: 9px;
+    }
+}
+
+.orCircle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    @include translate(-50%, -50%);
+    text-align: center;
+    width: 50px;
+    height: 50px;
+    color: #341314;
+    line-height: 46px;
+    font-size: 20px;
+    background: #fff;
+    border-radius: 50%;
+    box-shadow: -2px 1px 6px #dedede;
+}
+// .modal-dialog {
+//     width: 735px;
+// }
+.cross-absolute {
+    right: 10px;
+    width: 3%;
+    top: 10px;
+    position: absolute;
+    cursor: pointer;
+}
+
+.modal-container {
+    padding: 10px 50px 20px; // margin-top: 40px;
+    .minHeight {
+        // min-height: 430px;
+        min-height: 330px;
+    }
+
+    .marginTop {
+        margin-top: 38px;
+    }
+
+    .login-head {
+        h1 {
+            text-transform: uppercase;
+            //  font-family: 'fjalla-reg';
+            font-size: 35px;
+            margin-bottom: 5px;
+            cursor: pointer;
+        }
+
+        h1.brown--color {
+            color: $darkBrown1;
+        }
+
+        p {
+            font-family: 'vadodara-lgt';
+            font-size: 22px;
+        }
+
+        p.gray--color {
+            color: $darkGray;
+        }
+    }
+
+    .login-head-top {
+        margin-top: 80px;
+    }
+
+    .have-account {
+        margin-top: 90px !important;
+    }
+
+    .login-footer {
+        font-size: 14px;
+        color: $darkBrown1; // margin-top: 50%;
+        text-align: center;
+        margin: 35px 0 0 0;
+
+        a {
+            color: #292929;
+            text-decoration: underline;
+        }
+    }
+
+    .change-password,
+    .otp-one {
+        h1 {
+            color: $darkBrown1;
+        }
+
+        .form {
+            padding: 5% 20%;
+        }
+
+        .form-otp {
+            padding: 10px 20%;
+        }
+
+        .fourdgt-otpbox {
+            input {
+                width: 155px;
+                margin: 0 auto;
+                letter-spacing: 15px;
+            }
+        }
+
+        .form-group {
+            input {
+                border: none;
+                border-bottom: 2px solid;
+            }
+        }
+
+        .closes {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+
+            .fa {
+                &:before {
+                    color: $darkBrown1;
+                }
+            }
+        }
+    }
+
+    .resend {
+        color: $darkBrown1;
+    }
+
+    .form-groups {
+        span {
+            display: inline-block;
+            @include size(30px, 30px);
+            border-bottom: 2px solid;
+            margin: 0 5px;
+        }
+    }
+
+    .login-popover {
+        background: $darkBrown1;
+        border-color: $darkBrown1;
+
+        .popover-content {
+            display: none;
+        }
+
+        .popover-title {
+            background-color: $darkBrown1;
+            color: white;
+            border-radius: 6px;
+            border-color: $darkBrown1;
+        }
+
+        .arrow {
+            border-bottom-color: $darkBrown1;
+
+            &:after {
+                border-bottom-color: $darkBrown1;
+            }
+        }
+    }
+}
+
+.btn-login {
+    @extend .btn--brown;
+    // width: 265px;
+    padding: 3px 0;
+    font-size: 20px;
+}
+
+.modal-container-right {
+    @extend .modal-container;
+    background: url('../Images/Home/login.jpg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    color: white; // min-height: 584px;
+    min-height: 520px;
+
+    .login-head {
+        p {
+            line-height: 1;
+        }
+    }
+
+    .login-footer {
+        color: white;
+
+        p {
+            font-family: 'vadodara-lgt';
+        }
+
+        a {
+            color: white;
+        }
+    }
+
+    .login__social-icons {
+        @extend .social-icons;
+
+        .social-icons__list {
+            background: white;
+            margin-top: 15px;
+        }
+
+        .fb {
+            a {
+                color: #3b5997;
+            }
+        }
+
+        .tw {
+            a {
+                color: #3fa9f5;
+            }
+        }
+
+        .gp {
+            a {
+                color: #de4b39;
+            }
+        }
+    }
+}
+
+/*****NOTE: We can extend this class by using @extend method. Please don't customise the main class(Parent class) .close-modal--btn-circle ****/
+
+.close-modal--btn-circle {
+    @include size(25px, 25px);
+    text-align: center;
+    padding: 0;
+    font-size: 15px;
+    border: 1px solid #ccc;
+    border-radius: 15px;
+    line-height: 1.428571429;
+    color: #333;
+    background-color: white;
+}
+
+.close-modal {
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+// Used to show compare products
+.compare-product-main {
+    width: 400px;
+    min-height: 5px;
+    padding: 20px;
+    border: 1px solid transparent;
+    border-radius: 0;
+    box-shadow: 0px 0px 16px 3px rgba(0,0,0,0.2);
+    margin: 0 auto;
+    position: fixed;
+    left: 50%;
+    bottom: 0;
+    background-color: white;
+    z-index: 9999;
+}
+
+
+.compareProductMenuOut {
+    @include rotate(0);
+    @include scale(1);
+    @include skew(0, 0);
+    @include translate(69%, 1000px);
+    /*@include translate(-50%, 1000px);*/
+    /*@include transform(rotate(0deg) scale(1) skew(0deg) translate(-50%, 1000px));*/
+    @include transform-origin(center top);
+    @include transition(all 800ms ease);
+}
+
+.compareProductMenuIn {
+    @include rotate(0);
+    @include scale(1);
+    @include skew(0, 0);
+    @include translate(69%, 0);
+    /*@include translate(-50%, 0);*/
+    @include transform-origin(center bottom);
+    @include transition(all 800ms ease);
+}
+
+.mycart-table {
+    @extend .order-table;
+
+    tbody > tr {
+        td:last-child {
+            border-top: 0;
+            border-left: 0;
+        }
+
+        td + td {
+            vertical-align: bottom !important;
+            border-bottom: none;
+        }
+    }
+
+    td:last-child {
+        vertical-align: bottom;
+    }
+
+    td {
+        a {
+            i {
+                color: #341314;
+            }
+        }
+    }
+
+    .disabled-outofstock {
+        td:first-child {
+            img {
+                opacity: 0.4;
+            }
+        }
+
+        td + td {
+            color: #ccc !important;
+            pointer-events: none;
+
+            .square__bg,
+            .quantity__input {
+                color: #ccc;
+                background-color: white;
+            }
+        }
+    }
+
+    .outofstock {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        @include translate(-50%, -50%);
+        font-size: 12px;
+        text-align: center;
+    }
+
+    .mycart-list {
+        li {
+            list-style-type: none;
+        }
+    }
+
+    .mycart-footer {
+        a.linking {
+            text-decoration: none;
+            color: #cfcfcf;
+        }
+
+        ul {
+            color: $darkBrown1;
+        }
+    }
+}

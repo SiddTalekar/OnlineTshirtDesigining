@@ -4,7 +4,7 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="listing-img listing-img-common">
-        <asp:Image ID="imageAboutUs"  ImageUrl="Images/AboutUs/background-banner.jpg" AlternateText="Background Banner" runat="server" CssClass="img-responsive" />
+        <asp:Image ID="imageAboutUs" ImageUrl="Images/AboutUs/background-banner.jpg" AlternateText="Background Banner" runat="server" CssClass="img-responsive" />
     </div>
     <div class="container">
         <div class="about-desc">

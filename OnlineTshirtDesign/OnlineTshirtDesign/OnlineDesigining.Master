@@ -15,7 +15,7 @@
     <!--Flexslider links -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/flexslider/2.7.1/flexslider.css" rel="stylesheet" />
     <link href="https://cdnjs.cloudflare.com/ajax/libs/flexslider/2.7.1/flexslider.min.css.map" rel="stylesheet" />
-    
+
     <script src="scripts/jquery-1.9.1.intellisense.js"></script>
     <script src="scripts/jquery-1.9.1.js"></script>
     <script src="scripts/bootstrap.js"></script>
@@ -43,7 +43,7 @@
                         <div>
 
                             <div class="navbar-brand-wrap inline-block">
-                                <asp:HyperLink ID="HyperLinkBrandLogo" CssClass="navbar-brand" runat="server">
+                                <asp:HyperLink ID="HyperLinkBrandLogo" NavigateUrl="~/Home.aspx" CssClass="navbar-brand" runat="server">
                                     <asp:Image ID="ImageLogo" Width="130px" ImageUrl="Images/Brands/logo.png" CssClass="img-responsive" runat="server" />
                                 </asp:HyperLink>
                             </div>
@@ -63,9 +63,9 @@
                             </li>
 
                             <li>
-                                <asp:HyperLink ID="HyperLinkwishlistNav" NavigateUrl="#"  CssClass="wish-list" runat="server">
+                                <asp:HyperLink ID="HyperLinkwishlistNav" NavigateUrl="#" CssClass="wish-list" runat="server">
                                     <i class="fa fa-heart hvr-pulse"></i>Wishlist</asp:HyperLink>
-                                </li>
+                            </li>
 
                             <li>
                                 <asp:HyperLink ID="HyperLinkCart" NavigateUrl="#" CssClass="mycart" runat="server">
@@ -79,9 +79,11 @@
                                             </div>
                                             <div class="inline-block desc ">
                                                 <h5>Product</h5>
-                                                <p><i class="fa fa-inr " aria-hidden="true ">
-                                                    <asp:Label ID="LabelProductCost" CssClass="product-cost" runat="server" Text="0"></asp:Label>
-                                                   </i></p>
+                                                <p>
+                                                    <i class="fa fa-inr " aria-hidden="true ">
+                                                        <asp:Label ID="LabelProductCost" CssClass="product-cost" runat="server" Text="0"></asp:Label>
+                                                    </i>
+                                                </p>
                                                 <p></p>
 
                                                 <div class="inline-block__size ">
@@ -114,7 +116,7 @@
 
                             <li>
                                 <a>
-                                    <asp:Button ID="ButtonLogin" CssClass="btn header--login" runat="server" Text="LOGIN" />
+                                    <asp:Button ID="ButtonLogin" CssClass="btn header--login" OnClick="ButtonLogin_Click" PostBackUrl="~/Login.aspx" runat="server" Text="LOGIN" />
                                 </a>
                             </li>
                             <li>
@@ -180,7 +182,7 @@
                                 <h5>CUSTOMER SERVICE</h5>
                                 <ul class="list-unstyled">
                                     <li>
-                                        <a>Contact Us</a>
+                                        <a href="ContactUs.aspx">Contact Us</a>
                                     </li>
                                     <li>
                                         <a>Brands</a>
@@ -194,10 +196,13 @@
                                 <h5>INFORMATION</h5>
                                 <ul class="list-unstyled">
                                     <li>
-                                        <a>About Us</a>
+                                        <a href="AboutUs.aspx">About Us</a>
                                     </li>
                                     <li>
                                         <a>Blogs</a>
+                                    </li>
+                                    <li>
+                                        <a id="userClientChat" href="#"><i class="fa fa-weixin" aria-hidden="true">Live Chat Now</i></a>
                                     </li>
                                     <li>
                                         <a href="#">Order Policy</a>
@@ -209,7 +214,7 @@
                                         <a href="#">Shipping & Retunrs</a>
                                     </li>
                                     <li>
-                                        <a href="#">Privacy Policy</a>
+                                        <a href="PrivacyPolicy.aspx">Privacy Policy</a>
                                     </li>
                                     <li>
                                         <a href="#">Terms & Conditions</a>
@@ -275,7 +280,7 @@
                             <div class="inline-block">
                                 <div class="share-link__social-icon">
                                     <asp:HyperLink ID="HyperLinkFacebook" NavigateUrl="#" runat="server"><i class="fa fa-facebook" aria-hidden="true"></i></asp:HyperLink>
-                                    <asp:HyperLink ID="HyperLinkTwitter" NavigateUrl="#"  runat="server"><i class="fa fa-twitter" aria-hidden="true"></i></asp:HyperLink>
+                                    <asp:HyperLink ID="HyperLinkTwitter" NavigateUrl="#" runat="server"><i class="fa fa-twitter" aria-hidden="true"></i></asp:HyperLink>
 
                                     <asp:HyperLink ID="HyperLinkInsta" NavigateUrl="#" runat="server"><i class="fa fa-instagram" aria-hidden="true"></i></asp:HyperLink>
 
@@ -290,6 +295,48 @@
                         </p>
                     </div>
                 </div>
+            </div>
+            <%--Client chat--%>
+            <div class="compare-product-main compareProductMenuOut">
+                <div class="close-modal" id="userClientChatMin">
+                    <asp:HyperLink ID="UserClientChatClose" data-dismiss="alert" CssClass="close-modal--btn-circle" aria-label="close" runat="server"><i class="fa fa-minus-circle"></i></asp:HyperLink>
+                    <%--<a href="" title="Close" ng-click="compareProductModal()"> </a>--%>
+                </div>
+                <asp:Panel ID="PanelUserClientChat" runat="server">
+                    <ul class="list-unstyled compare-product-list">
+                        <li>
+                            <div class="form-group">
+                                <asp:Label ID="LabelUserClientChatName" runat="server" Text="What is your name"></asp:Label><br />
+                                <input id="ClientChatName" class="form-control" placeholder="enter text here" type="text" runat="server" />
+                            </div>
+                        </li>
+                        <li>
+                            <div class="form-group">
+                                <asp:Label ID="LabelUserClientChatEmail" runat="server" Text="What is your email address"></asp:Label><br />
+                                <asp:TextBox ID="TextBoxClientChatEmail" Text="enter text here" TextMode="Email" CssClass="form-control" runat="server"></asp:TextBox>
+                            </div>
+                        </li>
+
+                        <li>
+                            <div class="form-group">
+                                <asp:Label ID="LabelUserClientChatRsn" runat="server" Text="Please select your reason for chatting today"></asp:Label><br />
+                                <asp:DropDownList ID="DropDownListUserChattingResn" CssClass="form-control" runat="server">
+                                    <asp:ListItem Text="Help placing an order" />
+                                    <asp:ListItem Text="An order i recently placed" />
+
+                                </asp:DropDownList>
+                            </div>
+                        </li>
+                        <li>
+                            <p class="text-center">
+                                <asp:Button ID="BtnUserChattCancel" CssClass="btn btn--brown" runat="server" Text="Cancel" />
+                                &nbsp; &nbsp;
+                                <asp:Button ID="BtnUserChattSbmt" CssClass="btn btn--brown" runat="server" Text="Submit" />
+                            </p>
+                        </li>
+                    </ul>
+                </asp:Panel>
+
             </div>
         </footer>
     </form>

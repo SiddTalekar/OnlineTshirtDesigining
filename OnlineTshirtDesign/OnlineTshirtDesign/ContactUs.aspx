@@ -5,7 +5,7 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="contact-us">
         <div class="contactus-bgimg listing-img-common">
-            <asp:Image ID="ImageContactUs" ImageUrl="Images/ContactUs/contactus-banner.jpg" CssClass="img-responsive" runat="server" AlternateText="Banner Image" />
+            <asp:image id="ImageContactUs" imageurl="Images/ContactUs/contactus-banner.jpg" cssclass="img-responsive" runat="server" alternatetext="Banner Image" />
         </div>
         <div class="container">
             <div class="contactus-content">
@@ -14,7 +14,7 @@
                         <div class="enquiry-form">
                             <h3 class="tab-title text-center">ENQUIRY FORM
                             </h3>
-                            <asp:Panel ID="CustomizedForm" CssClass="customized-form" runat="server">
+                            <asp:panel id="CustomizedForm" cssclass="customized-form" runat="server">
                                 <div class="row">
                                     <div class="col-md-12 col-sm-12">
                                         <div class="form-group">
@@ -42,7 +42,7 @@
                                            </p>
                                     </div>
                                 </div>
-                                </asp:Panel>
+                                </asp:panel>
                         </div>
                     </div>
                 </div>
