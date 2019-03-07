@@ -10,42 +10,42 @@
 namespace OnlineTshirtDesign {
     
     
-    public partial class UserCart {
+    public partial class Products {
         
         /// <summary>
-        /// ImageMyCartBg control.
+        /// HpLinkShortSleeve control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Image ImageMyCartBg;
+        protected global::System.Web.UI.WebControls.HyperLink HpLinkShortSleeve;
         
         /// <summary>
-        /// TableUserCart control.
+        /// ImgShortSleeve control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Table TableUserCart;
+        protected global::System.Web.UI.WebControls.Image ImgShortSleeve;
         
         /// <summary>
-        /// UserCartHeaderRow control.
+        /// HpLinkLongSleeve control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TableHeaderRow UserCartHeaderRow;
+        protected global::System.Web.UI.WebControls.HyperLink HpLinkLongSleeve;
         
         /// <summary>
-        /// BtnCheckout control.
+        /// ImgLongSleeve control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton BtnCheckout;
+        protected global::System.Web.UI.WebControls.Image ImgLongSleeve;
     }
 }

@@ -15,11 +15,11 @@
                             <div class="list-checkout">
                                 <div class="checkout-tab-btn">
                                     <asp:Button ID="ButtonLogin" OnClick="ButtonLogin_Click" runat="server" Text="Login" CssClass="btn btn--list btn--brownActive" />
-                                  
+
                                 </div>
                                 <div class="checkout-tab-btn">
-                                    <asp:Button ID="ButtonOrder"  OnClick="ButtonOrder_Click" CssClass="btn btn--list " runat="server" Text="Order" />
-                                  
+                                    <asp:Button ID="ButtonOrder" OnClick="ButtonOrder_Click" CssClass="btn btn--list " runat="server" Text="Order" />
+
                                 </div>
                                 <div class="checkout-tab-btn">
                                     <asp:Button ID="ButtonDtls" OnClick="ButtonDtls_Click" runat="server" CssClass="btn btn--list" Text="Details" />
@@ -76,88 +76,88 @@
                                     </div>
                                 </div>
 
-                                    <div class="col-md-3 col-md-offset-1  col-sm-6">
-                                        <div class="customized-form custom-checkbox ">
-                                            <div class="form-group">
-                                                <input type="text" id="UserFirstName" runat="server" placeholder="First Name" name="firstname" class="form-control">
-                                                <asp:RequiredFieldValidator ID="RequiredValidatorSignUpFstNam" runat="server" ErrorMessage="Enter your Last name" ControlToValidate="UserFirstName">
+                                <div class="col-md-3 col-md-offset-1  col-sm-6">
+                                    <div class="customized-form custom-checkbox ">
+                                        <div class="form-group">
+                                            <input type="text" id="UserFirstName" runat="server" placeholder="First Name" name="firstname" class="form-control">
+                                            <asp:RequiredFieldValidator ID="RequiredValidatorSignUpFstNam" runat="server" ErrorMessage="Enter your Last name" ControlToValidate="UserFirstName">
                                                      <i class="fa fa-exclamation-circle text-danger" aria-hidden="true"></i>
                                                    &nbsp; Enter your first name
 
-                                                </asp:RequiredFieldValidator>
-                                            </div>
-                                            <div class="form-group">
-                                                <input type="text" placeholder="Last Name" runat="server" id="UserLastName" name="lastname" class="form-control">
-                                                <asp:RequiredFieldValidator ID="RequiredValidatorSignUpLstNam" runat="server" ErrorMessage="Enter your Last name" ControlToValidate="UserLastName">
+                                            </asp:RequiredFieldValidator>
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="text" placeholder="Last Name" runat="server" id="UserLastName" name="lastname" class="form-control">
+                                            <asp:RequiredFieldValidator ID="RequiredValidatorSignUpLstNam" runat="server" ErrorMessage="Enter your Last name" ControlToValidate="UserLastName">
                                                      <i class="fa fa-exclamation-circle text-danger" aria-hidden="true"></i>
                                                    &nbsp; Enter your Last name
 
-                                                </asp:RequiredFieldValidator>
-                                            </div>
-                                            <div class="form-group">
-                                                <asp:TextBox ID="TextBoxUserEmailSignUp" TextMode="Email" Text="Email Address" CssClass="form-control" runat="server"></asp:TextBox>
-                                                <asp:RegularExpressionValidator ID="RegExpValidatorSignUpEmail" runat="server" Text="Invalid email address" ControlToValidate="TextBoxUserEmailSignUp" ValidationExpression=".+@.+">
+                                            </asp:RequiredFieldValidator>
+                                        </div>
+                                        <div class="form-group">
+                                            <asp:TextBox ID="TextBoxUserEmailSignUp" TextMode="Email" Text="Email Address" CssClass="form-control" runat="server"></asp:TextBox>
+                                            <asp:RegularExpressionValidator ID="RegExpValidatorSignUpEmail" runat="server" Text="Invalid email address" ControlToValidate="TextBoxUserEmailSignUp" ValidationExpression=".+@.+">
                                                     <i class="fa fa-exclamation-circle text-danger" aria-hidden="true"></i>
                                                    &nbsp; Invalid email address
-                                                </asp:RegularExpressionValidator>
-                                            </div>
-                                            <div class="form-group">
-                                                <asp:TextBox ID="TextBoxUserSignUpMob" placeholder="Mob No" TextMode="Number" CssClass="form-control" runat="server"></asp:TextBox>
-                                                <asp:RequiredFieldValidator ID="RequiredValidatorSignUpMob" runat="server" Text="Enter mobile no" ControlToValidate="TextBoxUserSignUpMob">
+                                            </asp:RegularExpressionValidator>
+                                        </div>
+                                        <div class="form-group">
+                                            <asp:TextBox ID="TextBoxUserSignUpMob" placeholder="Mob No" TextMode="Number" CssClass="form-control" runat="server"></asp:TextBox>
+                                            <asp:RequiredFieldValidator ID="RequiredValidatorSignUpMob" runat="server" Text="Enter mobile no" ControlToValidate="TextBoxUserSignUpMob">
                                                     <i class="fa fa-exclamation-circle text-danger" aria-hidden="true"></i>
                                                        &nbsp;Enter mobile no
-                                                </asp:RequiredFieldValidator>
-                                            </div>
-                                            <div class="form-group">
-                                                <asp:TextBox ID="TextBoxUserSignUpPwd" TextMode="Password" CssClass="form-control" placeholder="Password" runat="server"></asp:TextBox>
-                                                <asp:RequiredFieldValidator ID="RequiredValidatorSignUpPwd" runat="server" ErrorMessage="Enter password" ControlToValidate="TextBoxUserSignUpPwd">
+                                            </asp:RequiredFieldValidator>
+                                        </div>
+                                        <div class="form-group">
+                                            <asp:TextBox ID="TextBoxUserSignUpPwd" TextMode="Password" CssClass="form-control" placeholder="Password" runat="server"></asp:TextBox>
+                                            <asp:RequiredFieldValidator ID="RequiredValidatorSignUpPwd" runat="server" ErrorMessage="Enter password" ControlToValidate="TextBoxUserSignUpPwd">
                                                     <i class="fa fa-exclamation-circle text-danger" aria-hidden="true"></i>
                                                    &nbsp; Enter password
-                                                </asp:RequiredFieldValidator>
-                                            </div>
-                                            <div class="form-group">
-                                                <asp:TextBox ID="TextBoxUserSignUpCnfpwd" TextMode="Password" CssClass="form-control" placeholder="Confirm Password" runat="server"></asp:TextBox>
-                                                <asp:CompareValidator ID="CompareValidatorSignUpRePwd" runat="server" ErrorMessage="Wrong password" ControlToCompare="TextBoxUserSignUpPwd" ControlToValidate="TextBoxUserSignUpCnfpwd">
+                                            </asp:RequiredFieldValidator>
+                                        </div>
+                                        <div class="form-group">
+                                            <asp:TextBox ID="TextBoxUserSignUpCnfpwd" TextMode="Password" CssClass="form-control" placeholder="Confirm Password" runat="server"></asp:TextBox>
+                                            <asp:CompareValidator ID="CompareValidatorSignUpRePwd" runat="server" ErrorMessage="Wrong password" ControlToCompare="TextBoxUserSignUpPwd" ControlToValidate="TextBoxUserSignUpCnfpwd">
                                                     <i class="fa fa-exclamation-circle text-danger" aria-hidden="true"></i>
                                                    &nbsp; Wrong password
-                                                </asp:CompareValidator>
-                                            </div>
-                                            <div class="checkbox forgot__checkout">
-                                                <input id="CheckboxDataAgree" runat="server" value="X" name="agree" type="checkbox" />
+                                            </asp:CompareValidator>
+                                        </div>
+                                        <div class="checkbox forgot__checkout">
+                                            <input id="CheckboxDataAgree" runat="server" value="X" name="agree" type="checkbox" />
 
-                                                <label for="a1">I agree with the terms and conditions and privacy policy</label>
-                                            </div>
-                                            <div>
-                                                <asp:Button ID="ButtonSignUpForm" OnClick="ButtonSignUpForm_Click" CssClass="btn btn--login btn-block" runat="server" Text="sign up" /><br />
-                                                <asp:Label ID="LabelAggreeMsg" CssClass="text-danger" runat="server"></asp:Label>
-                                            </div>
-                                            <p class="user-dicision border-line">or</p>
-                                            <div class="social-icons">
-                                                <ul class="list-unstyled list-inline">
-                                                    <li>
-                                                        <div class="social-icons__list fb">
-                                                            <asp:HyperLink ID="HyperLinkSignUpFb" NavigateUrl="#" runat="server">                                                            <i class="fa fa-facebook" aria-hidden="true"></i>
-                                                            </asp:HyperLink>
+                                            <label for="a1">I agree with the terms and conditions and privacy policy</label>
+                                        </div>
+                                        <div>
+                                            <asp:Button ID="ButtonSignUpForm" OnClick="ButtonSignUpForm_Click" CssClass="btn btn--login btn-block" runat="server" Text="sign up" /><br />
+                                            <asp:Label ID="LabelAggreeMsg" CssClass="text-danger" runat="server"></asp:Label>
+                                        </div>
+                                        <p class="user-dicision border-line">or</p>
+                                        <div class="social-icons">
+                                            <ul class="list-unstyled list-inline">
+                                                <li>
+                                                    <div class="social-icons__list fb">
+                                                        <asp:HyperLink ID="HyperLinkSignUpFb" NavigateUrl="#" runat="server">                                                            <i class="fa fa-facebook" aria-hidden="true"></i>
+                                                        </asp:HyperLink>
 
-                                                        </div>
-                                                    </li>
-                                                    <li>
-                                                        <div class="social-icons__list tw">
-                                                            <asp:HyperLink ID="HyperLinkSignUpTwitt" NavigateUrl="#" runat="server">                                                            <i class="fa fa-twitter" aria-hidden="true"></i>
-                                                            </asp:HyperLink>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="social-icons__list tw">
+                                                        <asp:HyperLink ID="HyperLinkSignUpTwitt" NavigateUrl="#" runat="server">                                                            <i class="fa fa-twitter" aria-hidden="true"></i>
+                                                        </asp:HyperLink>
 
-                                                        </div>
-                                                    </li>
-                                                    <li>
-                                                        <div class="social-icons__list gp">
-                                                            <asp:HyperLink ID="HyperLinkSignUpGp" NavigateUrl="#" runat="server">                                                            <i class="fa fa-google-plus" aria-hidden="true"></i>
-                                                            </asp:HyperLink>
-                                                        </div>
-                                                    </li>
-                                                </ul>
-                                            </div>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="social-icons__list gp">
+                                                        <asp:HyperLink ID="HyperLinkSignUpGp" NavigateUrl="#" runat="server">                                                            <i class="fa fa-google-plus" aria-hidden="true"></i>
+                                                        </asp:HyperLink>
+                                                    </div>
+                                                </li>
+                                            </ul>
                                         </div>
                                     </div>
+                                </div>
                             </asp:View>
                             <asp:View ID="Vieworder" runat="server">
                                 <h2>In View orders</h2>
@@ -421,7 +421,7 @@
                                             <div class="panel panel-default">
                                                 <div class="panel-heading">
                                                     <h3 class="panel-title">Payment Details
-                    </h3>
+                                                    </h3>
                                                     <div class="checkbox pull-right">
                                                         <label>
                                                             <input type="checkbox" />

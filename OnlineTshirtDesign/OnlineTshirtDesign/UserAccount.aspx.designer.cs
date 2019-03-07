@@ -400,6 +400,15 @@ namespace OnlineTshirtDesign {
         protected global::System.Web.UI.WebControls.Panel PanelUserOrderTable;
         
         /// <summary>
+        /// TableUserOrder control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Table TableUserOrder;
+        
+        /// <summary>
         /// ViewUserReturned control.
         /// </summary>
         /// <remarks>

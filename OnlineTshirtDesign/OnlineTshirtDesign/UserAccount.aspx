@@ -291,23 +291,16 @@
                         <asp:Panel ID="PaneluserOrderButtons" CssClass="col-md-9 col-sm-12 col-xs-12" runat="server">
 
                             <p class="text-uppercase order-list-action text-center">
-                                <asp:Button ID="ButtonUserOrders" OnClick="ButtonUserOrders_Click" CssClass="btn order-list--btn text-capitalize" runat="server" Text="orders" />
-                                <asp:Button ID="ButtonUserReturn" OnClick="ButtonUserReturn_Click" CssClass="btn order-list--btn text-capitalize" runat="server" Text="return" />
-                                <asp:Button ID="ButtonUserCancelled" OnClick="ButtonUserCancelled_Click"  CssClass="btn order-list--btn text-capitalize" runat="server" Text="cancelled" />
+                                <asp:Button ID="ButtonUserOrders" OnClick="ButtonUserOrders_Click" CssClass="btn order-list--btn text-capitalize" runat="server" Text="orders" UseSubmitBehavior="false"  />
+                                <asp:Button ID="ButtonUserReturn" OnClick="ButtonUserReturn_Click" CssClass="btn order-list--btn text-capitalize" runat="server" Text="return" UseSubmitBehavior="false"  />
+                                <asp:Button ID="ButtonUserCancelled" OnClick="ButtonUserCancelled_Click" UseSubmitBehavior="false"  CssClass="btn order-list--btn text-capitalize" runat="server" Text="cancelled"  />
                             </p>
                         <asp:MultiView ID="MultiViewUserOrdered" ActiveViewIndex="0" runat="server">
                             <asp:View ID="ViewUserOrdered" runat="server">
                                 <asp:Panel ID="PanelUserOrderTable" CssClass="account-order-table table-responsive" runat="server">
-                                    <%--<asp:Table ID="TableUserOrder" CssClass="table" runat="server">
+                                    <asp:Table ID="TableUserOrder" CssClass="table" runat="server">
                                        
-                                    </asp:Table>--%>
-                                    <%--<asp:Table ID="TableTest" runat="server">
-                                        <asp:TableHeaderRow ID="thr" runat="server">
-                                           <asp:TableHeaderCell ID="th" runat="server">
-                                               Sammer
-                                           </asp:TableHeaderCell>
-                                        </asp:TableHeaderRow>
-                                    </asp:Table>--%>
+                                    </asp:Table>
                                 </asp:Panel>
                             </asp:View>
 
@@ -315,6 +308,7 @@
                                 <asp:Panel ID="PanelUserOrderReturnTable" CssClass="account-order-table table-responsive" runat="server">
 
                                 </asp:Panel>
+                             
                             </asp:View>
 
                             <asp:View ID="ViewUserCancelled" runat="server">
