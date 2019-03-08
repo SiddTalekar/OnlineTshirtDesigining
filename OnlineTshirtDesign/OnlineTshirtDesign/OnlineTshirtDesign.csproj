@@ -116,6 +116,7 @@
     <Content Include="Images\Checkout\item.jpg" />
     <Content Include="Images\Products\FullSleeve.jpg" />
     <Content Include="Images\Products\Filter.png" />
+    <Content Include="Images\Products\JerseyTShirt.jpg" />
     <Content Include="Images\Products\ShortSleeve.jpg" />
     <Content Include="Images\Products\UltraCottonTShirt.jpg" />
     <Content Include="Images\UserAccount\myaccount-banner.jpg" />
@@ -266,6 +267,7 @@
     <Content Include="Sass\MainStyleSheet.min.css">
       <DependentUpon>MainStyleSheet.css</DependentUpon>
     </Content>
+    <Content Include="Sass\PreetyCheckbox.min.css" />
     <Content Include="scripts\bootstrap.js" />
     <Content Include="scripts\bootstrap.min.js" />
     <Content Include="scripts\bootstrap\affix.js" />

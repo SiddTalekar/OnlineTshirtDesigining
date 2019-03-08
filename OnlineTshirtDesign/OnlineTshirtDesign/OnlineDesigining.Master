@@ -9,6 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link href="Content/bootstrap.css" type="text/css" rel="stylesheet" />
+    <link href="Sass/PreetyCheckbox.min.css" type="text/css" rel="stylesheet" />    
     <link href="Sass/MainStyleSheet.css" type="text/css" rel="stylesheet" />
     <link href="Content/font-awesome.css" rel="stylesheet" />
 

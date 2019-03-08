@@ -2681,3 +2681,16 @@ p.item-cost {
         }
     }
 }
+.pretty .state label.black:after, .pretty .state label.black:before{
+    background-color:black;
+}
+
+.pretty .state label.blue:after, .pretty .state label.blue:before{
+    background-color:blue;
+}
+.pretty .state label.brwn:after, .pretty .state label.brwn:before{
+    background-color: saddlebrown;
+}
+.pretty .state label.green:after, .pretty .state label.green:before{
+    background-color:green;
+}
