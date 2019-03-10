@@ -76,6 +76,74 @@ $darkGray: #252525;
 $borderColor: #e7dada;
 $lightGray1: #ededed;
 
+/* The container */
+.custom-check-container {
+  display: inline-block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.custom-check-container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+}
+
+/* On mouse-over, add a grey background color */
+.custom-check-container:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+/* When the checkbox is checked, add a blue background */
+.custom-check-container input:checked ~ .checkmark {
+  background-color: #2196F3;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.custom-check-container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.custom-check-container .checkmark:after {
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
 html, body {
     height: 95%;
 }
@@ -91,7 +159,6 @@ body {
     -webkit-font-smoothing: antialiased !important;
     -moz-font-smooth: always !important;
 }
-
 /************ Global classes ******************/
 //bootstrap forms
 .input-lg,
@@ -211,7 +278,6 @@ body {
     // This class is used for p elemment'font size
     font-size: 17px;
 }
-
 //For navigation of flex slider
 .flexslider:hover .flex-direction-nav .flex-prev:hover,
 .flexslider:hover .flex-direction-nav .flex-next:hover {
@@ -259,9 +325,7 @@ body {
         @include translate(-50%, -50%);
     }
 }
-
 /*Boot strap mixin*/
-
 .btn--brown {
     // @include button-variant($darkBrown1,
     // #ededed,
@@ -375,9 +439,7 @@ body {
 a {
     @include transition(all 0.3s ease 0s);
 }
-
 /*Note: You need to extend this class by using @extend method */
-
 .plus-minus-btn {
     .square__bg {
         border: 1px solid $borderColor;
@@ -404,9 +466,7 @@ a {
     }
 }
 //End of  plus & minus quantity
-
 /*NOTE: extend this class in dropdown's by using @extend */
-
 .dropdown-hidden-anim {
     display: block;
     visibility: hidden;
@@ -437,7 +497,6 @@ a {
 //End of Drop Down animation
 //Start of Bottom-Border-Line animation
 /*NOTE: extend this class for border-bottom-line animation by using @extend */
-
 .border-btm-hidden-anim {
     content: '';
     opacity: 0;
@@ -507,7 +566,6 @@ a {
     @include transition-timing-function(linear linear);
 }
 /* Pulse */
-
 @-moz-keyframes hvr-pulse {
     25% {
         transform: scale(1.1);
@@ -577,14 +635,10 @@ input[type=number]::-webkit-outer-spin-button {
         background: $darkBrown1;
     }
 }
-
-
 /************* End of global classes ************/
-
 .main-content {
     min-height: 450px;
 }
-
 // start of navigation menu ///
 .navbar {
     background-color: white;
@@ -976,17 +1030,14 @@ footer {
         }
     }
 }
-
 //Start of Header
 /*nav li:hover .dropdown-menu {
     display: block;
 }*/
-
 .navbar-default .navbar-nav > li > a {
     color: $darkBrown1 !important;
     font-size: 20px;
 }
-
 //start of footermenu
 .footer-up {
     background-color: $darkBrown1;
@@ -1080,7 +1131,6 @@ footer {
     }
 }
 //end of footermenu
-
 //Start of Clothes Categories
 .cloth-cat {
     .flexslider {
@@ -1172,7 +1222,6 @@ footer {
     }
 }
 //End of  Clothes Categories
-
 //start of new New arrival section
 .new-arrival {
     margin-bottom: 55px;
@@ -1293,7 +1342,6 @@ footer {
     }
 }
 //end of new New arrival section
-
 //start of About.html
 .about-info {
     padding-right: 30px;
@@ -1354,7 +1402,6 @@ footer {
     padding-bottom: 30px;
 }
 //about ended
-
 //Start of Blogs.html
 .main-blog-section {
     padding: 25px;
@@ -1371,7 +1418,6 @@ footer {
     }
 }
 //End of blogs.html
-
 //Start of Blog section design
 .blog {
     .blog__title {
@@ -1470,7 +1516,6 @@ footer {
     }
 }
 //End of Blog section design
-
 //Start of contactus.html
 .contact-us {
     background: $lightGray1;
@@ -1526,7 +1571,6 @@ footer {
     }
 }
 //End of contactus.html
-
 //Start of inner-blogs.html
 .inner-blog-title {
     padding: 5px 0;
@@ -1636,7 +1680,6 @@ footer {
     padding: 25px 0;
 }
 //End of inner-blogs.html
-
 //Start of My account(myaccount.html)
 .content-spacing {
     margin: 40px 0 60px;
@@ -1804,7 +1847,6 @@ footer {
     }
 }
 /*NOTE:.account-order-table class has been extended in order-detail.html & return-order.html*/
-
 .account-order-table {
     thead > th {
         tr:first-child,
@@ -2009,9 +2051,7 @@ p.item-cost {
     line-height: 1;
 }
 //End of My account(myaccount.html)
-
 /*NOTE:.account-order-table class has been extended in order-detail.html & return-order.html*/
-
 //End of My account(myaccount.html)
 //Start of orderdetail.html
 .order-status-title {
@@ -2136,7 +2176,6 @@ p.item-cost {
     }
 }
 //End of orderdetail.html
-
 //START of check out
 .checkout-drop {
     background: transparent;
@@ -2316,7 +2355,6 @@ p.item-cost {
         }
     }
 }
-
 // modal styles
 .modal__customized-form {
     @extend .customized-form;
@@ -2549,9 +2587,7 @@ p.item-cost {
         }
     }
 }
-
 /*****NOTE: We can extend this class by using @extend method. Please don't customise the main class(Parent class) .close-modal--btn-circle ****/
-
 .close-modal--btn-circle {
     @include size(25px, 25px);
     text-align: center;
@@ -2570,7 +2606,6 @@ p.item-cost {
     top: 0;
     right: 0;
 }
-
 // Used to show compare products
 .compare-product-main {
     width: 400px;
@@ -2681,16 +2716,42 @@ p.item-cost {
         }
     }
 }
-.pretty .state label.black:after, .pretty .state label.black:before{
-    background-color:black;
+
+.pretty .state label.black:after, .pretty .state label.black:before {
+    background-color: black;
 }
 
-.pretty .state label.blue:after, .pretty .state label.blue:before{
-    background-color:blue;
+.pretty .state label.blue:after, .pretty .state label.blue:before {
+    background-color: blue;
 }
-.pretty .state label.brwn:after, .pretty .state label.brwn:before{
+
+.pretty .state label.brwn:after, .pretty .state label.brwn:before {
     background-color: saddlebrown;
 }
-.pretty .state label.green:after, .pretty .state label.green:before{
-    background-color:green;
+
+.pretty .state label.green:after, .pretty .state label.green:before {
+    background-color: green;
+}
+
+// Individual product.aspx
+.comment-wrapper .panel-body {
+    max-height:650px;
+    overflow:auto;
+}
+.comment-wrapper .panel-info{
+    border-color: $darkBrown1;
+}
+.comment-wrapper .panel-info > .panel-heading{
+    background-color: $darkBrown1;
+    color: white;
+}
+.comment-wrapper .media-list .media img {
+    width:64px;
+    height:64px;
+    border:2px solid #e5e7e8;
+}
+
+.comment-wrapper .media-list .media {
+    border-bottom:1px dashed #efefef;
+    margin-bottom:25px;
 }

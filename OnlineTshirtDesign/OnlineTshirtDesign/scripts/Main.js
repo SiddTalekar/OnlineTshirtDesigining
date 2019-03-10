@@ -33,6 +33,28 @@ $(document).ready(function () {
         controlNav: false
     });
 
+    // The slider being synced must be initialized first
+    $('#thumbnailChoiced').flexslider({
+        animation: "slide",
+        controlNav: false,
+        animationLoop: false,
+        slideshow: false,
+        itemWidth: 140,
+        itemMargin: 5,
+        asNavFor: '#colorChoicedSlider'
+    });
+
+    $('#colorChoicedSlider').flexslider({
+        animation: "slide",
+        itemWidth: 400,
+        itemMargin: 5,
+        controlNav: false,
+        animationLoop: false,
+        slideshow: false,
+        sync: "#thumbnailChoiced"
+    });
+
+
 
     // This function will show your client chat up and down on basis of user action 
     $("#userClientChat, #userClientChatMin").click(function (event) {

@@ -40,12 +40,57 @@ namespace OnlineTshirtDesign {
         protected global::System.Web.UI.WebControls.Button BtnProductDesign;
         
         /// <summary>
-        /// ChkBoxLstProductColr control.
+        /// ChkBoxAvailColrBlack control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.CheckBoxList ChkBoxLstProductColr;
+        protected global::System.Web.UI.WebControls.CheckBox ChkBoxAvailColrBlack;
+        
+        /// <summary>
+        /// ChkBoxAvailColrBlue control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CheckBox ChkBoxAvailColrBlue;
+        
+        /// <summary>
+        /// ChkBoxAvailColrBrow control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CheckBox ChkBoxAvailColrBrow;
+        
+        /// <summary>
+        /// ChkBoxAvailColrGreen control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CheckBox ChkBoxAvailColrGreen;
+        
+        /// <summary>
+        /// TBoxUserComment control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox TBoxUserComment;
+        
+        /// <summary>
+        /// BtnUserCommentPost control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button BtnUserCommentPost;
     }
 }

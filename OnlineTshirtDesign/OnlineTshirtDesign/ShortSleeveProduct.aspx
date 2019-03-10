@@ -34,6 +34,7 @@
 
                                                 <asp:LinkButton ID="LnkBtnFilterStyleMen" CssClass="pretty p-icon" runat="server">
                                                     <asp:CheckBox ID="ChkBoxMen" runat="server" />
+
                                                     <div class="state">
                                                         <i class="icon fa fa-check"></i>
                                                         <label>Men's</label>

@@ -48,7 +48,7 @@
                                             </p>
                                         </div>
                                         <div>
-                                            <asp:Button ID="ButtonUserLogIn" runat="server" OnClick="ButtonUserLogIn_Click" CssClass="btn btn--login btn-block" Text="login" data-toggle="popover" />
+                                            <asp:Button ID="ButtonUserLogIn" UseSubmitBehavior="false" runat="server" OnClick="ButtonUserLogIn_Click" CssClass="btn btn--login btn-block" Text="login" data-toggle="popover" />
                                             <asp:Label ID="Label1" runat="server"></asp:Label>
                                         </div>
                                         <p class="user-dicision border-line">or</p>

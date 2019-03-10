@@ -114,6 +114,9 @@
     <Content Include="Images\Checkout\20.png" />
     <Content Include="Images\Checkout\checkout-bg.jpg" />
     <Content Include="Images\Checkout\item.jpg" />
+    <Content Include="Images\Products\CustomDesiging\1.jpg" />
+    <Content Include="Images\Products\CustomDesiging\1back.jpg" />
+    <Content Include="Images\Products\CustomDesiging\front_large_extended.jpg" />
     <Content Include="Images\Products\FullSleeve.jpg" />
     <Content Include="Images\Products\Filter.png" />
     <Content Include="Images\Products\JerseyTShirt.jpg" />
