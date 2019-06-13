@@ -9,7 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link href="Content/bootstrap.css" type="text/css" rel="stylesheet" />
-    <%--<link href="Sass/PreetyCheckbox.min.css" type="text/css" rel="stylesheet" />--%>    
+    <link href="Sass/PreetyCheckbox.min.css" type="text/css" rel="stylesheet" />    
     <link href="Sass/MainStyleSheet.css" type="text/css" rel="stylesheet" />
     <link href="Content/font-awesome.css" rel="stylesheet" />
 
@@ -69,7 +69,7 @@
                             </li>
 
                             <li>
-                                <asp:HyperLink ID="HyperLinkCart" NavigateUrl="#" CssClass="mycart" runat="server">
+                                <asp:HyperLink ID="HyperLinkCart" NavigateUrl="~/UserCart.aspx" Target="_self" CssClass="mycart" runat="server">
                                     <i class="fa fa-shopping-cart "></i>Cart ( <span>3</span> )
                                 </asp:HyperLink>
                                 <ul class="cart-dropdown-menu dropdown-menu">
@@ -117,7 +117,7 @@
 
                             <li>
                                 <a>
-                                    <asp:Button ID="ButtonLogin" CssClass="btn header--login" OnClick="ButtonLogin_Click" PostBackUrl="~/Login.aspx" runat="server" Text="LOGIN" />
+                                    <asp:Button ID="ButtonLogin" UseSubmitBehavior="false" CssClass="btn header--login" OnClick="ButtonLogin_Click" PostBackUrl="~/Login.aspx" runat="server" Text="LOGIN" />
                                 </a>
                             </li>
                             <li>

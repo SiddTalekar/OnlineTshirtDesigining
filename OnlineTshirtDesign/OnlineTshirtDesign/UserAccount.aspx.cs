@@ -387,5 +387,10 @@ namespace OnlineTshirtDesign
         {
             MultiViewUserOrdered.ActiveViewIndex = 0;
         }
+
+        protected void LinkButtonUserProf_Click(object sender, EventArgs e)
+        {
+            ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "alertMessage", "alert('Record Inserted Successfully')", true);
+        }
     }
 }

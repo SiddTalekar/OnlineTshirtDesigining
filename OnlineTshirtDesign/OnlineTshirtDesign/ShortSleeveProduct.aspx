@@ -29,7 +29,7 @@
 
                                         </div>
                                         <div class="panel-body">
-                                            <div id="FilterStyle" class="collapse">
+                                            <div id="FilterStyle" class="collapse-in">
                                                 <%--<asp:CheckBoxList ID="ChkBoxListStyle" runat="server"></asp:CheckBoxList>--%>
 
                                                 <asp:LinkButton ID="LnkBtnFilterStyleMen" CssClass="pretty p-icon" runat="server">
@@ -62,7 +62,8 @@
                                         </div>
 
                                         <div class="panel-body">
-                                            <div id="FilterColor" class="collapse">
+                                            <div id="FilterColor" class="collapse-in
+                                                ">
 
                                                 <asp:LinkButton ID="LnkBtnFilterColorBlk" CssClass="pretty p-icon" runat="server">
                                                     <asp:CheckBox ID="ChkBoxBlack" runat="server" />
@@ -103,7 +104,7 @@
                                             <asp:HyperLink ID="HpLinkFilterFeature" NavigateUrl="#FilterFeature" data-toggle="collapse" runat="server">Features</asp:HyperLink>
                                         </div>
                                         <div class="panel-body">
-                                            <div id="FilterFeature" class="collapse">
+                                            <div id="FilterFeature" class="collapse-in">
                                               <asp:LinkButton ID="LnkBtnFilterFeat" CssClass="pretty p-icon" runat="server">
                                                     <asp:CheckBox ID="ChkBoxFeat" runat="server" />
                                                     <div class="state">

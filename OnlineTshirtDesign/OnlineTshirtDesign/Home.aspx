@@ -9,21 +9,21 @@
             <div id="HomeBannersSlider" class="flexslider flexslider-home-banner">
                 <ul class="slides cloth-cat__banner-detail relate">
                     <li class="relate">
-                        <asp:HyperLink ID="HyperLinkHomeBanner" NavigateUrl="#" Target="_blank" runat="server">
+                        <asp:HyperLink ID="HyperLinkHomeBanner" NavigateUrl="~/Products.aspx" Target="_self" runat="server">
                             <asp:Image ID="ImageHomeBanner" ImageUrl="~/Images/Home/1.jpg" CssClass="img-responsive" runat="server" />
                         </asp:HyperLink>
                         <div class="get-center text-uppercase">
                             <h1>{{cloth.name}}</h1>
                             <h3>{{cloth.desc}}</h3>
                             <p>
-                                <asp:HyperLink ID="HyperLinkHomeBanShop" runat="server">
-                                    <asp:Button ID="ButtonHomeShopNow" CssClass="btn shop--now" runat="server" Text="Shop Now" />
+                                <asp:HyperLink ID="HyperLinkHomeBanShop" NavigateUrl="~/Products.aspx" Target="_self" runat="server">
+                                    <asp:Button ID="ButtonHomeShopNow" UseSubmitBehavior="false" PostBackUrl="~/Products.aspx" CssClass="btn shop--now" runat="server" Text="Shop Now" />
                                 </asp:HyperLink>
                             </p>
                         </div>
                     </li>
                     <li>
-                        <asp:HyperLink ID="HyperLink1" NavigateUrl="#" Target="_blank" runat="server">
+                        <asp:HyperLink ID="HyperLink1" NavigateUrl="~/Products.aspx"  Target="_self"  runat="server">
                             <asp:Image ID="Image1" ImageUrl="~/Images/Home/2.jpg" CssClass="img-responsive" runat="server" />
                         </asp:HyperLink>
                     </li>

@@ -13,7 +13,7 @@
                     <div class="col-md-3 col-sm-12 col-xs-12">
                         <div class="list-checkout">
                             <div class="checkout-tab-btn">
-                                <asp:LinkButton ID="LinkButtonUserProf" CssClass="btn btn--list" runat="server">PROFILE</asp:LinkButton>
+                                <asp:LinkButton ID="LinkButtonUserProf" CssClass="btn btn--list" OnClick="LinkButtonUserProf_Click" runat="server">PROFILE</asp:LinkButton>
 
                             </div>
                             <div class="checkout-tab-btn">
@@ -42,7 +42,7 @@
                                     <div class="row">
                                         <div class="col-md-6 col-sm-12  col-xs-12">
                                             <div class="userdtl-main">
-                                                <asp:MultiView ID="MultiViewUserDtl" ActiveViewIndex="0" runat="server">
+                                                <asp:MultiView ID="MultiViewUserDtl" ActiveViewIndex="1" runat="server">
 
                                                     <asp:View ID="ViewUserDtlSaved" runat="server">
                                                         <asp:Panel ID="PanelUserDtlSave" runat="server">
@@ -67,7 +67,7 @@
 
                                                                 </p>
                                                                 <p>
-                                                                    <asp:Button ID="Button1" CommandName="SwitchViewByID" CommandArgument="ViewUserDtlEdit" runat="server" Text="Edit" />
+                                                                    <asp:Button ID="Button1" CommandName="SwitchViewByID" CommandArgument="ViewUserDtlEdit" UseSubmitBehavior="false" CssClass="btn btn--brown" runat="server" Text="Edit" />
                                                                 </p>
                                                             </div>
                                                         </asp:Panel>
@@ -113,7 +113,7 @@
                                                                 </div>
                                                             </div>
                                                             <p>
-                                                                <asp:Button ID="Button2" CommandName="SwitchViewByID" CommandArgument="ViewUserDtlSaved" runat="server" Text="Save" />
+                                                                <asp:Button ID="Button2" CommandName="SwitchViewByID" CommandArgument="ViewUserDtlSaved" UseSubmitBehavior="false" CssClass="btn btn--brown" runat="server" Text="Save" />
                                                             </p>
                                                         </asp:Panel>
                                                     </asp:View>
@@ -134,7 +134,7 @@
 
                     <%--To open Manage address panel--%>
                     <asp:Panel ID="PanelUserAddr" runat="server">
-                        <asp:MultiView ID="MultiViewUserAddr" runat="server">
+                        <asp:MultiView ID="MultiViewUserAddr"   runat="server">
                             <asp:View ID="ViewUserAddrSaved" runat="server">
                                 <!--To open Manage Address Tab-->
                                 <div class="col-md-9 col-sm-12 col-xs-12">

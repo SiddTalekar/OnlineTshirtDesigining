@@ -18,15 +18,15 @@
 
                                 </div>
                                 <div class="checkout-tab-btn">
-                                    <asp:Button ID="ButtonOrder" OnClick="ButtonOrder_Click" CssClass="btn btn--list " runat="server" Text="Order" />
+                                    <asp:Button ID="ButtonOrder" UseSubmitBehavior="false" OnClick="ButtonOrder_Click" CssClass="btn btn--list " runat="server" Text="Order" />
 
                                 </div>
                                 <div class="checkout-tab-btn">
-                                    <asp:Button ID="ButtonDtls" OnClick="ButtonDtls_Click" runat="server" CssClass="btn btn--list" Text="Details" />
+                                    <asp:Button ID="ButtonDtls" UseSubmitBehavior="false" OnClick="ButtonDtls_Click" runat="server" CssClass="btn btn--list" Text="Details" />
 
                                 </div>
                                 <div class="checkout-tab-btn">
-                                    <asp:Button ID="ButtonPayment" OnClick="ButtonPayment_Click" CssClass="btn btn--list" runat="server" Text="Payment" />
+                                    <asp:Button ID="ButtonPayment" UseSubmitBehavior="false" OnClick="ButtonPayment_Click" CssClass="btn btn--list" runat="server" Text="Payment" />
                                 </div>
                             </div>
                         </div>

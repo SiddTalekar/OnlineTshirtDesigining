@@ -32,7 +32,7 @@ namespace OnlineTshirtDesign
             Label1.Text = "Click executed";
             ButtonOrder.Enabled = true;
             ButtonDtls.Enabled = true;
-
+            ButtonPayment.Enabled = true;
             ButtonLogin.CssClass = "btn btn--list";
             ButtonOrder.CssClass = "btn btn--list btn--brownActive";
 

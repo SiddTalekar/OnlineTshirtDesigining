@@ -36,7 +36,7 @@
                                     <div class="login-footer">
                                         <asp:HyperLink ID="HyperLinkForgotPwd" runat="server">Forgot Password?</asp:HyperLink>
 
-                                        <a class="visible-xs" ng-click="viewLogin();">Sign Up</a>
+                                        <a class="visible-xs">Sign Up</a>
                                     </div>
                                 </div>
                             </div>
