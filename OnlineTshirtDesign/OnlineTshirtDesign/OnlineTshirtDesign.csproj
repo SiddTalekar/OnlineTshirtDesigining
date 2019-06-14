@@ -76,6 +76,7 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="MySql.Data, Version=6.9.9.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -85,6 +86,9 @@
     <Reference Include="System.Core" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Windows.Forms.DataVisualization.Design" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Web" />
@@ -92,11 +96,12 @@
     <Reference Include="System.Configuration" />
     <Reference Include="System.Web.Services" />
     <Reference Include="System.EnterpriseServices" />
+    <Reference Include="WindowsFormsIntegration" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="AboutUs.aspx" />
-    <Content Include="Checkout.aspx" />
-    <Content Include="ContactUs.aspx" />
+    <Content Include="AboutUs\AboutUs.aspx" />
+    <Content Include="OrderDetails\Checkout.aspx" />
+    <Content Include="AboutUs\ContactUs.aspx" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
@@ -156,11 +161,11 @@
     <Content Include="Images\Home\logo.png" />
     <Content Include="Images\Home\sidenav.png" />
     <Content Include="Images\Home\whitearrow.png" />
-    <Content Include="IndividualProduct.aspx" />
-    <Content Include="InnerBlogs.aspx" />
-    <Content Include="Login.aspx" />
-    <Content Include="LongSleeveProduct.aspx" />
-    <Content Include="OrderDetails.aspx" />
+    <Content Include="Products\IndividualProduct.aspx" />
+    <Content Include="Blogs\InnerBlogs.aspx" />
+    <Content Include="Account\Login.aspx" />
+    <Content Include="Products\ProductLongSleeve\LongSleeveProduct.aspx" />
+    <Content Include="OrderDetails\OrderDetails.aspx" />
     <Content Include="packages.config" />
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
@@ -261,9 +266,9 @@
     <Content Include="Content\bootstrap\mixins\_border-radius.scss" />
     <Content Include="Content\bootstrap\mixins\_background-variant.scss" />
     <Content Include="Content\bootstrap\mixins\_alerts.scss" />
-    <None Include="scripts\jquery-1.9.1.intellisense.js" />
-    <Content Include="PrivacyPolicy.aspx" />
-    <Content Include="Products.aspx" />
+    <None Include="Scripts\jquery-1.9.1.intellisense.js" />
+    <Content Include="AboutUs\PrivacyPolicy.aspx" />
+    <Content Include="Products\Products.aspx" />
     <Content Include="Sass\MainStyleSheet.css">
       <DependentUpon>MainStyleSheet.scss</DependentUpon>
     </Content>
@@ -271,23 +276,23 @@
       <DependentUpon>MainStyleSheet.css</DependentUpon>
     </Content>
     <Content Include="Sass\PreetyCheckbox.min.css" />
-    <Content Include="scripts\bootstrap.js" />
-    <Content Include="scripts\bootstrap.min.js" />
-    <Content Include="scripts\bootstrap\affix.js" />
-    <Content Include="scripts\bootstrap\alert.js" />
-    <Content Include="scripts\bootstrap\button.js" />
-    <Content Include="scripts\bootstrap\carousel.js" />
-    <Content Include="scripts\bootstrap\collapse.js" />
-    <Content Include="scripts\bootstrap\dropdown.js" />
-    <Content Include="scripts\bootstrap\modal.js" />
-    <Content Include="scripts\bootstrap\popover.js" />
-    <Content Include="scripts\bootstrap\scrollspy.js" />
-    <Content Include="scripts\bootstrap\tab.js" />
-    <Content Include="scripts\bootstrap\tooltip.js" />
-    <Content Include="scripts\bootstrap\transition.js" />
-    <Content Include="scripts\jquery-1.9.1.js" />
-    <Content Include="scripts\jquery-1.9.1.min.js" />
-    <Content Include="scripts\jquery-1.9.1.min.map" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\bootstrap\affix.js" />
+    <Content Include="Scripts\bootstrap\alert.js" />
+    <Content Include="Scripts\bootstrap\button.js" />
+    <Content Include="Scripts\bootstrap\carousel.js" />
+    <Content Include="Scripts\bootstrap\collapse.js" />
+    <Content Include="Scripts\bootstrap\dropdown.js" />
+    <Content Include="Scripts\bootstrap\modal.js" />
+    <Content Include="Scripts\bootstrap\popover.js" />
+    <Content Include="Scripts\bootstrap\scrollspy.js" />
+    <Content Include="Scripts\bootstrap\tab.js" />
+    <Content Include="Scripts\bootstrap\tooltip.js" />
+    <Content Include="Scripts\bootstrap\transition.js" />
+    <Content Include="Scripts\jquery-1.9.1.js" />
+    <Content Include="Scripts\jquery-1.9.1.min.js" />
+    <Content Include="Scripts\jquery-1.9.1.min.map" />
     <Content Include="Sass\MainStyleSheet.scss" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -297,35 +302,37 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="scripts\ai.0.22.9-build00167.js" />
-    <Content Include="scripts\ai.0.22.9-build00167.min.js" />
-    <Content Include="scripts\Main.js" />
-    <Content Include="ShortSleeveProduct.aspx" />
-    <Content Include="StoreLocator.aspx" />
-    <Content Include="UserAccount.aspx" />
-    <Content Include="UserCart.aspx" />
-    <Content Include="Web.config" />
+    <Content Include="Scripts\ai.0.22.9-build00167.js" />
+    <Content Include="Scripts\ai.0.22.9-build00167.min.js" />
+    <Content Include="Scripts\Main.js" />
+    <Content Include="Products\ProductShortSleeve\ShortSleeveProduct.aspx" />
+    <Content Include="AboutUs\StoreLocator.aspx" />
+    <Content Include="Account\UserAccount.aspx" />
+    <Content Include="OrderDetails\UserCart.aspx" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AboutUs.aspx.cs">
+    <Compile Include="AboutUs\AboutUs.aspx.cs">
       <DependentUpon>AboutUs.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="AboutUs.aspx.designer.cs">
+    <Compile Include="AboutUs\AboutUs.aspx.designer.cs">
       <DependentUpon>AboutUs.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Checkout.aspx.cs">
+    <Compile Include="OrderDetails\Checkout.aspx.cs">
       <DependentUpon>Checkout.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Checkout.aspx.designer.cs">
+    <Compile Include="OrderDetails\Checkout.aspx.designer.cs">
       <DependentUpon>Checkout.aspx</DependentUpon>
     </Compile>
-    <Compile Include="ContactUs.aspx.cs">
+    <Compile Include="AboutUs\ContactUs.aspx.cs">
       <DependentUpon>ContactUs.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="ContactUs.aspx.designer.cs">
+    <Compile Include="AboutUs\ContactUs.aspx.designer.cs">
       <DependentUpon>ContactUs.aspx</DependentUpon>
     </Compile>
     <Compile Include="Home.aspx.cs">
@@ -335,32 +342,32 @@
     <Compile Include="Home.aspx.designer.cs">
       <DependentUpon>Home.aspx</DependentUpon>
     </Compile>
-    <Compile Include="IndividualProduct.aspx.cs">
+    <Compile Include="Products\IndividualProduct.aspx.cs">
       <DependentUpon>IndividualProduct.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="IndividualProduct.aspx.designer.cs">
+    <Compile Include="Products\IndividualProduct.aspx.designer.cs">
       <DependentUpon>IndividualProduct.aspx</DependentUpon>
     </Compile>
-    <Compile Include="InnerBlogs.aspx.cs">
+    <Compile Include="Blogs\InnerBlogs.aspx.cs">
       <DependentUpon>InnerBlogs.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="InnerBlogs.aspx.designer.cs">
+    <Compile Include="Blogs\InnerBlogs.aspx.designer.cs">
       <DependentUpon>InnerBlogs.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Login.aspx.cs">
+    <Compile Include="Account\Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Login.aspx.designer.cs">
+    <Compile Include="Account\Login.aspx.designer.cs">
       <DependentUpon>Login.aspx</DependentUpon>
     </Compile>
-    <Compile Include="LongSleeveProduct.aspx.cs">
+    <Compile Include="Products\ProductLongSleeve\LongSleeveProduct.aspx.cs">
       <DependentUpon>LongSleeveProduct.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="LongSleeveProduct.aspx.designer.cs">
+    <Compile Include="Products\ProductLongSleeve\LongSleeveProduct.aspx.designer.cs">
       <DependentUpon>LongSleeveProduct.aspx</DependentUpon>
     </Compile>
     <Compile Include="OnlineDesigining.Master.cs">
@@ -370,60 +377,63 @@
     <Compile Include="OnlineDesigining.Master.designer.cs">
       <DependentUpon>OnlineDesigining.Master</DependentUpon>
     </Compile>
-    <Compile Include="OrderDetails.aspx.cs">
+    <Compile Include="OrderDetails\OrderDetails.aspx.cs">
       <DependentUpon>OrderDetails.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="OrderDetails.aspx.designer.cs">
+    <Compile Include="OrderDetails\OrderDetails.aspx.designer.cs">
       <DependentUpon>OrderDetails.aspx</DependentUpon>
     </Compile>
-    <Compile Include="PrivacyPolicy.aspx.cs">
+    <Compile Include="AboutUs\PrivacyPolicy.aspx.cs">
       <DependentUpon>PrivacyPolicy.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="PrivacyPolicy.aspx.designer.cs">
+    <Compile Include="AboutUs\PrivacyPolicy.aspx.designer.cs">
       <DependentUpon>PrivacyPolicy.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Products.aspx.cs">
+    <Compile Include="Products\Products.aspx.cs">
       <DependentUpon>Products.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Products.aspx.designer.cs">
+    <Compile Include="Products\Products.aspx.designer.cs">
       <DependentUpon>Products.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ShortSleeveProduct.aspx.cs">
+    <Compile Include="Products\ProductShortSleeve\ShortSleeveProduct.aspx.cs">
       <DependentUpon>ShortSleeveProduct.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="ShortSleeveProduct.aspx.designer.cs">
+    <Compile Include="Products\ProductShortSleeve\ShortSleeveProduct.aspx.designer.cs">
       <DependentUpon>ShortSleeveProduct.aspx</DependentUpon>
     </Compile>
-    <Compile Include="StoreLocator.aspx.cs">
+    <Compile Include="AboutUs\StoreLocator.aspx.cs">
       <DependentUpon>StoreLocator.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="StoreLocator.aspx.designer.cs">
+    <Compile Include="AboutUs\StoreLocator.aspx.designer.cs">
       <DependentUpon>StoreLocator.aspx</DependentUpon>
     </Compile>
-    <Compile Include="UserAccount.aspx.cs">
+    <Compile Include="Account\UserAccount.aspx.cs">
       <DependentUpon>UserAccount.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="UserAccount.aspx.designer.cs">
+    <Compile Include="Account\UserAccount.aspx.designer.cs">
       <DependentUpon>UserAccount.aspx</DependentUpon>
     </Compile>
-    <Compile Include="UserCart.aspx.cs">
+    <Compile Include="OrderDetails\UserCart.aspx.cs">
       <DependentUpon>UserCart.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="UserCart.aspx.designer.cs">
+    <Compile Include="OrderDetails\UserCart.aspx.designer.cs">
       <DependentUpon>UserCart.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Images\Individual\" />
     <Folder Include="Images\StoreLocator\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

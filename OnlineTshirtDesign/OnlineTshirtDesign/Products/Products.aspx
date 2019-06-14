@@ -12,7 +12,7 @@
             <div class="products-cat">
                 <div class="row">
                     <div class="col-md-6">
-                        <asp:HyperLink ID="HpLinkShortSleeve" NavigateUrl="~/ShortSleeveProduct.aspx" runat="server">
+                        <asp:HyperLink ID="HpLinkShortSleeve" NavigateUrl="~/Products/ProductShortSleeve/ShortSleeveProduct.aspx" runat="server">
                             <asp:Image ID="ImgShortSleeve" ImageUrl="~/Images/Products/ShortSleeve.jpg" runat="server" />
                         </asp:HyperLink>
                     </div>

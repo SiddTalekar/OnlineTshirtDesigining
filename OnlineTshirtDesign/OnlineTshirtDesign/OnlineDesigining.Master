@@ -9,7 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link href="Content/bootstrap.css" type="text/css" rel="stylesheet" />
-    <link href="Sass/PreetyCheckbox.min.css" type="text/css" rel="stylesheet" />    
+    <link href="Sass/PreetyCheckbox.min.css" type="text/css" rel="stylesheet" />
     <link href="Sass/MainStyleSheet.css" type="text/css" rel="stylesheet" />
     <link href="Content/font-awesome.css" rel="stylesheet" />
 
@@ -17,20 +17,29 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/flexslider/2.7.1/flexslider.css" rel="stylesheet" />
     <link href="https://cdnjs.cloudflare.com/ajax/libs/flexslider/2.7.1/flexslider.min.css.map" rel="stylesheet" />
 
-    <script src="scripts/jquery-1.9.1.intellisense.js"></script>
-    <script src="scripts/jquery-1.9.1.js"></script>
-    <script src="scripts/bootstrap.js"></script>
-    <script src="scripts/Main.js"></script>
-
     <!--Flexslider scripts -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/flexslider/2.7.1/jquery.flexslider.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/flexslider/2.7.1/jquery.flexslider.min.js.map"></script>
+    <%--  <script src="https://cdnjs.cloudflare.com/ajax/libs/flexslider/2.7.1/jquery.flexslider.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flexslider/2.7.1/jquery.flexslider.min.js.map"></script>--%>
 
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
 </head>
 <body>
     <form id="form1" runat="server">
+        <asp:ScriptManager runat="server">
+            <Scripts>
+                <%--To learn more about bundling scripts in ScriptManager see http://go.microsoft.com/fwlink/?LinkID=301884 --%>
+                <%--Framework Scripts--%>
+                <asp:ScriptReference Path="scripts/jquery-1.9.1.intellisense.js" />
+                <asp:ScriptReference Path="~/Scripts/jquery-1.9.1.js" />
+                <asp:ScriptReference Path="~/Scripts/bootstrap.js" />
+                <asp:ScriptReference Path="~/Scripts/Main.js" />
+                <asp:ScriptReference Path="https://cdnjs.cloudflare.com/ajax/libs/flexslider/2.7.1/jquery.flexslider.js" />
+                <asp:ScriptReference Path="https://cdnjs.cloudflare.com/ajax/libs/flexslider/2.7.1/jquery.flexslider.min.js.map" />
+            </Scripts>
+        </asp:ScriptManager>
+
+         <%--Header Section--%>
         <header>
             <nav class="navbar navbar-default navbar-fixed-top">
                 <div class="container hidden-sm  hidden-xs ">
@@ -131,7 +140,7 @@
                                         <asp:HyperLink ID="HyperLinkManageAddress" NavigateUrl="~/UserAccount.aspx" runat="server">manage address</asp:HyperLink>
                                     </li>
                                     <li class="text-uppercase">
-                                        <asp:HyperLink ID="HyperLinkOrder" NavigateUrl= "~/OrderDetails.aspx" runat="server">order</asp:HyperLink>
+                                        <asp:HyperLink ID="HyperLinkOrder" NavigateUrl="~/OrderDetails.aspx" runat="server">order</asp:HyperLink>
                                     </li>
                                     <li class="text-uppercase">
                                         <asp:HyperLink ID="HyperLinkWishlist" NavigateUrl="#" runat="server">Wishlist</asp:HyperLink>

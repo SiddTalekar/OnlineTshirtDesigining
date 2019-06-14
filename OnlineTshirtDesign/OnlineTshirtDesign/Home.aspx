@@ -132,7 +132,7 @@
                                         <h3 class="text-uppercase">{{blog.name}}</h3>
                                         <p class="typedin-desc">bakskajbkjafbkkbkabkfakabkfabfafbkakfkakfafk</p>
                                         <p class="relate extra-content">
-                                            <asp:HyperLink ID="HyperLinkReadMore" NavigateUrl="#" runat="server">Read more</asp:HyperLink>
+                                            <asp:HyperLink ID="HyperLinkReadMore" NavigateUrl="~/Blogs/InnerBlogs.aspx" runat="server">Read more</asp:HyperLink>
                                             </p>
                                     </div>
                                 </article>

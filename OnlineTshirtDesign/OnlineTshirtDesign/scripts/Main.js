@@ -15,7 +15,7 @@ $(document).ready(function () {
         controlNav: false
     });
 
-    $('.innerBlogSlider').flexslider({
+    $('#innerBlogSlider').flexslider({
         animation: "slide",
         controlNav: false,
         slideShow: false
