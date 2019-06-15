@@ -100,6 +100,10 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="AboutUs\AboutUs.aspx" />
+    <Content Include="Account\AdminLogin.aspx" />
+    <Content Include="Account\AdminOrder.aspx" />
+    <Content Include="Content\toastr.css" />
+    <Content Include="Content\toastr.min.css" />
     <Content Include="OrderDetails\Checkout.aspx" />
     <Content Include="AboutUs\ContactUs.aspx" />
     <Content Include="Content\bootstrap-theme.css" />
@@ -266,6 +270,8 @@
     <Content Include="Content\bootstrap\mixins\_border-radius.scss" />
     <Content Include="Content\bootstrap\mixins\_background-variant.scss" />
     <Content Include="Content\bootstrap\mixins\_alerts.scss" />
+    <Content Include="Content\toastr.scss" />
+    <Content Include="Content\toastr.less" />
     <None Include="Scripts\jquery-1.9.1.intellisense.js" />
     <Content Include="AboutUs\PrivacyPolicy.aspx" />
     <Content Include="Products\Products.aspx" />
@@ -309,6 +315,8 @@
     <Content Include="AboutUs\StoreLocator.aspx" />
     <Content Include="Account\UserAccount.aspx" />
     <Content Include="OrderDetails\UserCart.aspx" />
+    <Content Include="Scripts\toastr.js" />
+    <Content Include="Scripts\toastr.min.js" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
@@ -320,6 +328,20 @@
     </Compile>
     <Compile Include="AboutUs\AboutUs.aspx.designer.cs">
       <DependentUpon>AboutUs.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\AdminLogin.aspx.cs">
+      <DependentUpon>AdminLogin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\AdminLogin.aspx.designer.cs">
+      <DependentUpon>AdminLogin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\AdminOrder.aspx.cs">
+      <DependentUpon>AdminOrder.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\AdminOrder.aspx.designer.cs">
+      <DependentUpon>AdminOrder.aspx</DependentUpon>
     </Compile>
     <Compile Include="OrderDetails\Checkout.aspx.cs">
       <DependentUpon>Checkout.aspx</DependentUpon>

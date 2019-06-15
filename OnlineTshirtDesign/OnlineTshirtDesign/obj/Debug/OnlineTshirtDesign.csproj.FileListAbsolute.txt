@@ -31,3 +31,5 @@ C:\Users\Engineer\Documents\Visual Studio 2015\Projects\OnlineTshirtDesigining\O
 C:\Users\Engineer\Documents\Visual Studio 2015\Projects\OnlineTshirtDesigining\OnlineTshirtDesign\OnlineTshirtDesign\obj\Debug\OnlineTshirtDesign.csprojResolveAssemblyReference.cache
 C:\Users\Engineer\Documents\Visual Studio 2015\Projects\OnlineTshirtDesigining\OnlineTshirtDesign\OnlineTshirtDesign\obj\Debug\OnlineTshirtDesign.dll
 C:\Users\Engineer\Documents\Visual Studio 2015\Projects\OnlineTshirtDesigining\OnlineTshirtDesign\OnlineTshirtDesign\obj\Debug\OnlineTshirtDesign.pdb
+C:\Users\Engineer\Documents\Visual Studio 2015\Projects\OnlineTshirtDesigining\OnlineTshirtDesign\OnlineTshirtDesign\bin\MySql.Data.dll
+C:\Users\Engineer\Documents\Visual Studio 2015\Projects\OnlineTshirtDesigining\OnlineTshirtDesign\OnlineTshirtDesign\bin\MySql.Data.xml

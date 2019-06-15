@@ -1,5 +1,5 @@
 ﻿<%@ Page Title="Online T-Shirt Design" Language="C#" MasterPageFile="~/OnlineDesigining.Master" AutoEventWireup="true" CodeBehind="Home.aspx.cs" Inherits="OnlineTshirtDesign.Home" %>
-
+<%@ MasterType VirtualPath="~/OnlineDesigining.Master" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">

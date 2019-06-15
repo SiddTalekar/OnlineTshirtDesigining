@@ -16,6 +16,8 @@
     <!--Flexslider links -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/flexslider/2.7.1/flexslider.css" rel="stylesheet" />
     <link href="https://cdnjs.cloudflare.com/ajax/libs/flexslider/2.7.1/flexslider.min.css.map" rel="stylesheet" />
+     <%--Toster links--%>
+    <link href="Content/toastr.css" rel="stylesheet" />
 
     <!--Flexslider scripts -->
     <%--  <script src="https://cdnjs.cloudflare.com/ajax/libs/flexslider/2.7.1/jquery.flexslider.js"></script>
@@ -36,6 +38,7 @@
                 <asp:ScriptReference Path="~/Scripts/Main.js" />
                 <asp:ScriptReference Path="https://cdnjs.cloudflare.com/ajax/libs/flexslider/2.7.1/jquery.flexslider.js" />
                 <asp:ScriptReference Path="https://cdnjs.cloudflare.com/ajax/libs/flexslider/2.7.1/jquery.flexslider.min.js.map" />
+                 <asp:ScriptReference Path="~/Scripts/toastr.js" />
             </Scripts>
         </asp:ScriptManager>
 

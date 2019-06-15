@@ -218,5 +218,17 @@ namespace OnlineTshirtDesign {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.HyperLink HyperLinkReadMore;
+        
+        /// <summary>
+        /// Master property.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated property.
+        /// </remarks>
+        public new OnlineTshirtDesign.OnlineDesigining Master {
+            get {
+                return ((OnlineTshirtDesign.OnlineDesigining)(base.Master));
+            }
+        }
     }
 }
