@@ -65,5 +65,26 @@ namespace OnlineTshirtDesign.Account {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.GridView GridHomeBannerData;
+        
+        /// <summary>
+        /// LblDatabaseError control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label LblDatabaseError;
+        
+        /// <summary>
+        /// Master property.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated property.
+        /// </remarks>
+        public new OnlineTshirtDesign.OnlineDesigining Master {
+            get {
+                return ((OnlineTshirtDesign.OnlineDesigining)(base.Master));
+            }
+        }
     }
 }

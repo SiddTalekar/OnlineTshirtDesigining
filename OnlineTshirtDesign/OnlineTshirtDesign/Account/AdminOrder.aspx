@@ -1,5 +1,5 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/OnlineDesigining.Master" AutoEventWireup="true" CodeBehind="AdminOrder.aspx.cs" Inherits="OnlineTshirtDesign.Account.AdminOrder" %>
-
+<%@ MasterType VirtualPath="~/OnlineDesigining.Master" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
@@ -58,5 +58,6 @@
                 </asp:GridView>
             </div>
         </div>
+        <asp:Label  ID="LblDatabaseError" runat="server" />
     </div>
 </asp:Content>
