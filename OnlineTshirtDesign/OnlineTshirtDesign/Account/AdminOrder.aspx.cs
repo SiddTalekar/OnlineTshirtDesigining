@@ -24,7 +24,7 @@ namespace OnlineTshirtDesign.Account
             //this.TboxBannerDesc.Focus();
             //this.TboxBannerName. += 
 
-            if (this.IsPostBack == false)
+            if (!this.IsPostBack)
             {
                 // to stay upadated for gridview even after page referesh 
                 UpdateHomeBanner();
@@ -137,19 +137,33 @@ namespace OnlineTshirtDesign.Account
         {
             // need to reterive the info from database 
             string selectSQL = "SELECT * FROM home_banner";
+            DataTable dt = new DataTable();
             MySqlConnection connection = new MySqlConnection(Master.connectionString);
             MySqlCommand cmd = new MySqlCommand(selectSQL, connection);
             MySqlDataAdapter adapter = new MySqlDataAdapter(cmd);
 
-            //Fill the DataSet 
-            DataSet ds = new DataSet();
-            adapter.Fill(ds, "home_banner");
+            try
+            {
+                using (connection)
+                {
+                    // Open database connection 
+                    connection.Open();
+                    // Fill the Data to DataAdaptor
+                    adapter.Fill(dt);
 
-            // Perform the binding .
-            GridHomeBannerData.DataSource = ds;
-            GridHomeBannerData.DataBind();
-            //  Response.Redirect(Request.Url.AbsoluteUri);
+                    if (dt.Rows.Count > 0)
+                    {
+                        GridHomeBannerData.DataSource = dt;
+                        GridHomeBannerData.DataBind();
+                    }
+                }
+            }
+            catch (Exception error)
+            {
 
+                LblDatabaseError.Text = error.ToString();
+            }
+        
         }
 
         //BLOB data is fetched from the GridView DataItem property and then its converted back 
@@ -163,6 +177,72 @@ namespace OnlineTshirtDesign.Account
                 string base64Srting = Convert.ToBase64String(bytes, 0, bytes.Length);
                 (e.Row.FindControl("GridHomeBannerImg") as Image).ImageUrl = "data:image/png;base64," + base64Srting;
             }
+        }
+
+        protected void GridHomeBannerData_RowEditing(object sender, GridViewEditEventArgs e)
+        {
+            //NewEditIndex property used to determine the index of the row being edited
+            GridHomeBannerData.EditIndex = e.NewEditIndex;
+            UpdateHomeBanner();  
+        }
+        
+
+        protected void GridHomeBannerData_RowUpdating(object sender, GridViewUpdateEventArgs e)
+        {
+            //Find the controls from GridView for the row which is going to update
+            Label imgId = GridHomeBannerData.Rows[e.RowIndex].FindControl("LblImgId") as Label;
+            TextBox bannerName = GridHomeBannerData.Rows[e.RowIndex].FindControl("TBoxImgName") as TextBox;
+            TextBox bannerDesc = GridHomeBannerData.Rows[e.RowIndex].FindControl("TBoxBannerDesc") as TextBox;
+
+            // Define ADO.NET Obj
+
+            string updateSQL = "UPDATE home_banner SET HomeBannerName = @HomeBannerName, HomeBannerDesc= @HomeBannerDesc WHERE HomeImgId=@HomeImgId";
+            //updateSQL += "HomeBannerName = @HomeBannerName, HomeBannerDesc= @HomeBannerDesc,";
+            //updateSQL += "WHERE HomeImgId = @HomeImgId";
+            //updateSQL += "HomeBannerName ='" + bannerName.Text + "', HomeBannerDesc='" + bannerDesc.Text + "'WHERE HomeImgId=" + Convert.ToInt32 (imgId.Text);
+           
+            
+            MySqlConnection connection = new MySqlConnection(Master.connectionString);
+            MySqlCommand cmd = new MySqlCommand(updateSQL, connection);
+
+            //Add with parameters 
+            cmd.Parameters.AddWithValue("@HomeBannerName", bannerName.Text.Trim());
+            cmd.Parameters.AddWithValue("@HomeBannerDesc", bannerDesc.Text.Trim());
+            cmd.Parameters.AddWithValue("@HomeImgId", Convert.ToInt32(imgId.Text));
+
+            try
+            {
+                //Open Database connection 
+                using (connection)
+                {
+                    connection.Open();
+                    cmd.ExecuteNonQuery();
+
+                    //Setting the EditIndex property to -1 to cancel the Edit mode in
+                    // GridView
+                    GridHomeBannerData.EditIndex = -1;
+
+                    //Call UpdateBanenr to display data 
+                    UpdateHomeBanner();
+                }
+            }
+            catch (Exception err )
+            {
+
+                LblDatabaseError.Text = err.ToString();
+            }
+
+        }
+
+    
+        protected void GridHomeBannerData_RowCancelingEdit(object sender, GridViewCancelEditEventArgs e)
+        {
+            //Setting the EditIndex property to -1 to cancel the Edit mode in
+            // GridView
+            GridHomeBannerData.EditIndex = -1;
+
+            //Call UpdateBanenr to display data 
+            UpdateHomeBanner();
         }
     }
 }

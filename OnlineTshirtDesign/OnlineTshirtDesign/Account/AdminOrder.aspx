@@ -44,37 +44,71 @@
 
         <div class="row">
             <div class="col-md-12">
-                <asp:GridView ID="GridHomeBannerData" CssClass="table table-hover" runat="server" PageSize="5" AllowPaging="true" AutoGenerateColumns="false" OnRowDataBound="GridHomeBannerData_RowDataBound" DataSource="SqlDataScHomeBanner" DataKeyNames="HomeImgId">
-                    <Columns>
-                        <%--<asp:BoundField DataField="HomeImg" ReadOnly="true" HeaderText="Home Banner Image" />--%>
-                        <asp:TemplateField HeaderText="Image">
-                            <ItemTemplate>
-                                <asp:Image ID="GridHomeBannerImg" Width="255px" CssClass="img-responsive" runat="server" />
-                            </ItemTemplate>
-                        </asp:TemplateField>
+                <div class="table-responsive">
 
-                        <%--<asp:TemplateField HeaderText="Image Name">
-                            <ItemTemplate>
-                                <i><%# Eval("HomeBannerName") %> </i> 
-                            </ItemTemplate>
-                            <EditItemTemplate>
-                               <
-                            </EditItemTemplate>
-                        </asp:TemplateField>--%>
+                    <asp:GridView ID="GridHomeBannerData" CssClass="table table-hover" runat="server" PageSize="5" AllowPaging="true" OnRowDataBound="GridHomeBannerData_RowDataBound" AutoGenerateColumns="false" OnRowEditing="GridHomeBannerData_RowEditing"  OnRowUpdating="GridHomeBannerData_RowUpdating" OnRowCancelingEdit="GridHomeBannerData_RowCancelingEdit">
+                        <Columns>
+                            <%--<asp:BoundField DataField="HomeImg" ReadOnly="true" HeaderText="Home Banner Image" />--%>
+                            <asp:TemplateField HeaderText="Image">
+                                <ItemTemplate>
+                                    <asp:Image ID="GridHomeBannerImg" Width="255px" CssClass="img-responsive" runat="server" />
+                                </ItemTemplate>
+                            </asp:TemplateField>
 
-                        <asp:BoundField DataField="HomeBannerName" HeaderText="Image Name" />
-                        <asp:BoundField DataField="HomeBannerDesc" HeaderText="Banner Description" />
-                        <asp:CommandField ShowEditButton="true"  ButtonType="Button" ControlStyle-CssClass="btn btn--brown" />
-                        <asp:TemplateField HeaderText="Change Image" Visible="false">
-                            <ItemTemplate>
-                                <asp:FileUpload ID="AdminNewUpload" CssClass="form-control" runat="server" />
-                            </ItemTemplate>
-                        </asp:TemplateField>
-                    </Columns>
-                </asp:GridView>
-                <asp:SqlDataSource ID="SqlDataScHomeBanner" runat="server" ProviderName="MySql.Data.MySqlClient" ConnectionString="<%$ ConnectionStrings:online_tshirt_designing %>" SelectCommand="SELECT * FROM home_banner" UpdateCommand="UPDATE home_banner  SET HomeBannerName = @HomeBannerName, HomeBannerDesc = @HomeBannerDesc WHERE HomeImgId = @HomeImgId">
-                    
-                </asp:SqlDataSource>
+                            <asp:TemplateField HeaderText="Id" Visible="false">
+                                <ItemTemplate>
+                                     <asp:Label ID="LblImgId" runat="server"  Text='<%# Eval("HomeImgId") %>'></asp:Label>
+                                </ItemTemplate>
+                            </asp:TemplateField>
+
+                            <asp:TemplateField HeaderText="Image Name">
+                                <ItemTemplate>
+                                    <i><%# Eval("HomeBannerName") %> </i>
+                                </ItemTemplate>
+
+                                <EditItemTemplate>
+                                    <asp:TextBox ID="TBoxImgName" Text=' <%# Eval("HomeBannerName") %>' CssClass="form-control" runat="server"></asp:TextBox>
+                                </EditItemTemplate>
+                            </asp:TemplateField>
+
+                            <asp:TemplateField HeaderText="Banner Description">
+                                <ItemTemplate>
+                                    <i><%# Eval("HomeBannerDesc") %> </i>
+                                </ItemTemplate>
+                                <EditItemTemplate>
+                                    <asp:TextBox ID="TBoxBannerDesc" Text='<%# Eval("HomeBannerDesc") %>' CssClass="form-control" runat="server"></asp:TextBox>
+                                </EditItemTemplate>
+                            </asp:TemplateField>
+
+                            <asp:TemplateField>
+                                <ItemTemplate>
+                                    <asp:LinkButton Text="Edit" ID="LnkBtn" CssClass="btn btn--brown" CommandName="Edit" runat="server" /><br />
+                                </ItemTemplate>
+                                <EditItemTemplate>
+
+                                    <asp:LinkButton ID="LnkBtnUpdate" Text="Update" runat="server" CssClass="btn btn--brown"  CommandName="Update" />
+
+                                    <asp:LinkButton ID="LnkBtnCan" CssClass="btn btn--brown" Text="Cancel" runat="server" CommandArgument='<%# Eval("HomeImgId") %>' CommandName="Cancel" CausesValidation="false" />
+                                </EditItemTemplate>
+                            </asp:TemplateField>
+
+                            <%-- <asp:commandfield   showeditbutton="true"    buttontype="button"  />
+                             <asp:BoundField DataField="HomeBannerName"  HeaderText="Home Banner Image" />
+                             <asp:BoundField DataField="HomeBannerDesc"  HeaderText="Home Banner Image" />--%>
+
+                            <asp:TemplateField HeaderText="Change Image" Visible="false">
+                                <ItemTemplate>
+                                    <asp:FileUpload ID="AdminNewUpload" CssClass="form-control" runat="server" />
+                                </ItemTemplate>
+                            </asp:TemplateField>
+                        </Columns>
+                    </asp:GridView>
+
+<%--                    <asp:SqlDataSource DataSourceMode="DataSet" ConflictDetection="CompareAllValues" ProviderName="MySql.Data.MySqlClient" ConnectionString="<%$ ConnectionStrings: OnlineTshirtDesigning %>" OnSelected="SqlDataSrcHomeBanner_Selected" OnUpdated="SqlDataSrcHomeBanner_Updated" SelectCommand=" SELECT * FROM home_banner;" UpdateCommand="UPDATE home_banner SET HomeBannerName = @HomeBannerName, HomeBannerDesc = @HomeBannerDesc WHERE HomeImgId = @HomeImgId"
+                        ID="SqlDataSrcHomeBanner" runat="server">
+                        
+                    </asp:SqlDataSource>--%>
+                </div>
             </div>
         </div>
         <asp:Label ID="LblDatabaseError" runat="server" />

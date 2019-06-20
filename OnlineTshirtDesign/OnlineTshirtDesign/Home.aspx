@@ -1,4 +1,5 @@
 ﻿<%@ Page Title="Online T-Shirt Design" Language="C#" MasterPageFile="~/OnlineDesigining.Master" AutoEventWireup="true" CodeBehind="Home.aspx.cs" Inherits="OnlineTshirtDesign.Home" %>
+
 <%@ MasterType VirtualPath="~/OnlineDesigining.Master" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
@@ -8,25 +9,29 @@
         <div class="cloth-cat">
             <div id="HomeBannersSlider" class="flexslider flexslider-home-banner">
                 <ul class="slides cloth-cat__banner-detail relate">
-                    <li class="relate">
-                        <asp:HyperLink ID="HyperLinkHomeBanner" NavigateUrl="~/Products.aspx" Target="_self" runat="server">
-                            <asp:Image ID="ImageHomeBanner" ImageUrl="~/Images/Home/1.jpg" CssClass="img-responsive" runat="server" />
-                        </asp:HyperLink>
-                        <div class="get-center text-uppercase">
-                            <h1>{{cloth.name}}</h1>
-                            <h3>{{cloth.desc}}</h3>
-                            <p>
-                                <asp:HyperLink ID="HyperLinkHomeBanShop" NavigateUrl="~/Products.aspx" Target="_self" runat="server">
-                                    <asp:Button ID="ButtonHomeShopNow" UseSubmitBehavior="false" PostBackUrl="~/Products.aspx" CssClass="btn shop--now" runat="server" Text="Shop Now" />
+                    <asp:Repeater ID="RepeatHomeBannerData" runat="server" OnItemDataBound="RepeatHomeBannerData_ItemDataBound">
+                        <ItemTemplate>
+                            <li class="relate">
+                                <asp:HyperLink ID="HyperLinkHomeBanner" NavigateUrl="~/Products.aspx" Target="_self" runat="server">
+                                    <asp:Image ID="SliderHomeBannerImg" CssClass="img-responsive" runat="server" />
                                 </asp:HyperLink>
-                            </p>
-                        </div>
-                    </li>
-                    <li>
+                                <div class="get-center text-uppercase">
+                                    <h1><%# Eval("HomeBannerName") %></h1>
+                                    <h3><%# Eval("HomeBannerDesc") %></h3>
+                                    <p>
+                                        <asp:HyperLink ID="HyperLinkHomeBanShop" NavigateUrl="~/Products.aspx" Target="_self" runat="server">
+                                            <asp:Button ID="ButtonHomeShopNow" UseSubmitBehavior="false" PostBackUrl="~/Products.aspx" CssClass="btn shop--now" runat="server" Text="Shop Now" />
+                                        </asp:HyperLink>
+                                    </p>
+                                </div>
+                            </li>
+                        </ItemTemplate>
+                    </asp:Repeater>
+                    <%--   <li>
                         <asp:HyperLink ID="HyperLink1" NavigateUrl="~/Products.aspx"  Target="_self"  runat="server">
                             <asp:Image ID="Image1" ImageUrl="~/Images/Home/2.jpg" CssClass="img-responsive" runat="server" />
                         </asp:HyperLink>
-                    </li>
+                    </li>--%>
                 </ul>
                 <div class="custom-flex-nav">
                     <ul class="flex-direction-nav">
@@ -34,6 +39,9 @@
                         <li class="flex-nav-next"><a class="flex-next" href="#"></a></li>
                     </ul>
                 </div>
+            </div>
+            <div>
+                <asp:Label ID="LblDatabaseError" runat="server"></asp:Label>
             </div>
         </div>
     </section>
@@ -133,7 +141,7 @@
                                         <p class="typedin-desc">bakskajbkjafbkkbkabkfakabkfabfafbkakfkakfafk</p>
                                         <p class="relate extra-content">
                                             <asp:HyperLink ID="HyperLinkReadMore" NavigateUrl="~/Blogs/InnerBlogs.aspx" runat="server">Read more</asp:HyperLink>
-                                            </p>
+                                        </p>
                                     </div>
                                 </article>
                             </li>
