@@ -23,11 +23,48 @@ namespace OnlineTshirtDesign
         {
 
         }
-       
-        protected void ButtonLogin_Click(object sender, EventArgs e)
+
+        // This prperty will set the visiblity of header control
+        // When in the admin page for admin own navigation 
+
+        public bool HeaderVisibility {
+
+            get
+            {
+                return HeaderPanel.Visible;
+            }
+            set
+            {
+                HeaderPanel.Visible = value;
+            }
+
+        }
+
+        public bool AdminHeaderVisibility
         {
-            //ButtonLogin.Attributes.Add("data-toggle", "modal");
-            //ButtonLogin.Attributes.Add("data-target", "#LoginModal");
+
+            get
+            {
+                return AdminHeaderPanel.Visible;
+            }
+            set
+            {
+                AdminHeaderPanel.Visible = value;
+            }
+
+        }
+
+        public bool FooterVisibility
+        {
+
+            get
+            {
+                return FooterPanel.Visible;
+            }
+            set
+            {
+                FooterPanel.Visible = value;
+            }
 
         }
     }

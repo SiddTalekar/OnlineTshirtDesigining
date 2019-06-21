@@ -29,6 +29,10 @@ namespace OnlineTshirtDesign.Account
                 // to stay upadated for gridview even after page referesh 
                 UpdateHomeBanner();
             }
+
+            Master.HeaderVisibility = false;
+            Master.FooterVisibility = false;
+            Master.AdminHeaderVisibility = true;
         }
 
         protected void BtnAddHomeImg_Click(object sender, EventArgs e)
