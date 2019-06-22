@@ -10,16 +10,10 @@
                 <a class="dropdown-toggle" data-toggle="dropdown" href="#">Page 1 <span class="caret"></span></a>
                 <ul class="dropdown-menu">
                     <li>
-                        <asp:HyperLink ID="HyperLink1" runat="server">HyperLink</asp:HyperLink>
-
+                        <asp:HyperLink ID="HypLinkHomeBanner" NavigateUrl="~/Account/AdminOrder.aspx" runat="server">Home Baneer</asp:HyperLink>
                     </li>
                     <li>
-                        <asp:HyperLink ID="HyperLink2" runat="server">HyperLink</asp:HyperLink>
-
-                    </li>
-                    <li>
-                        <asp:HyperLink ID="HyperLink3" runat="server">HyperLink</asp:HyperLink>
-
+                        <asp:HyperLink ID="HypLinkUserOrder" runat="server">HyperLink</asp:HyperLink>
                     </li>
                 </ul>
             </li>

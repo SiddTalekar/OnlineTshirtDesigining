@@ -102,6 +102,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="AboutUs\AboutUs.aspx" />
+    <Content Include="Account\AdminBlogs.aspx" />
     <Content Include="Account\AdminLogin.aspx" />
     <Content Include="Account\AdminOrder.aspx" />
     <Content Include="Content\toastr.css" />
@@ -333,6 +334,13 @@
     </Compile>
     <Compile Include="AboutUs\AboutUs.aspx.designer.cs">
       <DependentUpon>AboutUs.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\AdminBlogs.aspx.cs">
+      <DependentUpon>AdminBlogs.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\AdminBlogs.aspx.designer.cs">
+      <DependentUpon>AdminBlogs.aspx</DependentUpon>
     </Compile>
     <Compile Include="Account\AdminLogin.aspx.cs">
       <DependentUpon>AdminLogin.aspx</DependentUpon>
