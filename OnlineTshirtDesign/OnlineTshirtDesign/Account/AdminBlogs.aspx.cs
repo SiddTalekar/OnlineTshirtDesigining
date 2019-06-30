@@ -34,7 +34,9 @@ namespace OnlineTshirtDesign.Account
 
             // Create a new folder in your current directory 
             // to store the uplaoded images 
-            uploadDirectory = Path.Combine(Request.PhysicalApplicationPath, "UploadedBlogs");
+            string uploadedBlogs = "UploadedBlogsImages";
+            uploadDirectory = Path.Combine(Request.PhysicalApplicationPath, uploadedBlogs);
+           
         }
 
         private void UpdateHomeBanner()
@@ -73,17 +75,17 @@ namespace OnlineTshirtDesign.Account
         {
             // Using this code , the saved file will retain its original 
             // file name when it's placed on the server.
-            string serverFileName = Path.GetFileName(AdminUpload.PostedFile.FileName);
+        //    string serverFileName = Path.GetFileName(AdminUpload.PostedFile.FileName);
 
             //Full path of the folder named UploadedBlogs with saved file name
             //This we are to store in the database to fetch the images 
-            string fullUploadPath = Path.Combine(uploadDirectory, serverFileName);
+       //     string fullUploadPath = Path.Combine("~/UploadedBlogsImages/", serverFileName);
 
             LblDatabaseError.Text = "RowDataBound event occured";
-            if (e.Row.RowType == DataControlRowType.DataRow)
-            {
-                (e.Row.FindControl("GridHomeBannerImg") as Image).ImageUrl = fullUploadPath;
-            }
+            //if (e.Row.RowType == DataControlRowType.DataRow)
+            //{
+            //    (e.Row.FindControl("GridBlogImg") as Image).ImageUrl = fullUploadPath;
+            //}
         }
 
         protected void GridBlogData_RowEditing(object sender, GridViewEditEventArgs e)
@@ -184,6 +186,7 @@ namespace OnlineTshirtDesign.Account
                 //Full path of folder UploadedBlogs with saved file name
                 //This we are to store in the database to fetch the images 
                 string fullUploadPath = Path.Combine(uploadDirectory, serverFileName);
+                string databaseFilePath = "~/UploadedBlogsImages/" + serverFileName;
 
                 // Define Ado.net Connection Object 
                 MySqlConnection connection = new MySqlConnection(Master.connectionString);
@@ -216,7 +219,7 @@ namespace OnlineTshirtDesign.Account
                         {
                             //Add the paramaters 
                             cmd.Parameters.AddWithValue("@InnerBlogsId", dTime.Millisecond);
-                            cmd.Parameters.AddWithValue("@InnerBlogsImg", fullUploadPath);
+                            cmd.Parameters.AddWithValue("@InnerBlogsImg", databaseFilePath);
                             cmd.Parameters.AddWithValue("@InnerBlogsName", TboxBannerName.Text);
                             cmd.Parameters.AddWithValue("@InnerBlogsDesc", TboxBannerDesc.Text);
                             cmd.Parameters.AddWithValue("@InnerBlogsImgName", serverFileName);

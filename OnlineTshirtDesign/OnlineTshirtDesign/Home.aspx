@@ -130,21 +130,26 @@
                     <div id="blog__slider" class="blog__slider flexslider">
                         <ul class="slides">
                             <%-- <flex-slider flex-slide="blog in blogs track by $index" prev-text="" next-text="" animation="slide" item-width="400" min-items="3">--%>
+                            <asp:Repeater ID="RepeatBlogData" runat="server">
+                                <ItemTemplate>
                             <li class="relate">
                                 <article class="blog__banner-detail relate">
                                     <asp:HyperLink ID="HyperLinkInnerBlog" NavigateUrl="#" runat="server">
-                                        <asp:Image ID="ImageInnerBlog" ImageUrl="~/Images/Home/16.jpg" CssClass="img-responsive" runat="server" />
+                                        <asp:Image ID="ImageInnerBlog" ImageUrl='<%# Eval("InnerBlogsImg") %>' CssClass="img-responsive" runat="server" />
                                     </asp:HyperLink>
 
                                     <div class="blog__desc">
-                                        <h3 class="text-uppercase">{{blog.name}}</h3>
-                                        <p class="typedin-desc">bakskajbkjafbkkbkabkfakabkfabfafbkakfkakfafk</p>
+                                        <h3 class="text-uppercase">'<%# Eval("InnerBlogsName") %>'</h3>
+                                        <p class="typedin-desc">'<%# Eval("InnerBlogsDesc") %>'</p>
                                         <p class="relate extra-content">
-                                            <asp:HyperLink ID="HyperLinkReadMore" NavigateUrl="~/Blogs/InnerBlogs.aspx" runat="server">Read more</asp:HyperLink>
+                                          
+                                            <asp:HyperLink ID="HyperLinkReadMore" NavigateUrl='<%# Eval("InnerBlogsId" , "~/Blogs/{0}") %>' runat="server"  Target="_self">Read more</asp:HyperLink>
                                         </p>
                                     </div>
                                 </article>
                             </li>
+                                </ItemTemplate>
+                            </asp:Repeater>
                         </ul>
                     </div>
                 </asp:Panel>

@@ -33,6 +33,9 @@
 
             </div>
         </div>
+        <div> 
+            <asp:Image ID="Image1"  runat="server" />
+        </div>
         <div class="row">
             <div class="col-md-12">
                 <div class="table-responsive">
@@ -44,7 +47,7 @@
                             <%--<asp:BoundField DataField="HomeImg" ReadOnly="true" HeaderText="Home Banner Image" />--%>
                             <asp:TemplateField HeaderText="Image">
                                 <ItemTemplate>
-                                    <asp:Image ID="GridHomeBannerImg" Width="255px" CssClass="img-responsive" runat="server" />
+                                    <asp:Image ID="GridBlogImg" ImageUrl='<%# Eval("InnerBlogsImg") %>' Width="255px" CssClass="img-responsive" runat="server" />
                                 </ItemTemplate>
                             </asp:TemplateField>
 

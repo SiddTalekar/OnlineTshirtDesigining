@@ -107,6 +107,7 @@
     <Content Include="Account\AdminOrder.aspx" />
     <Content Include="Content\toastr.css" />
     <Content Include="Content\toastr.min.css" />
+    <Content Include="Global.asax" />
     <Content Include="OrderDetails\Checkout.aspx" />
     <Content Include="AboutUs\ContactUs.aspx" />
     <Content Include="Content\bootstrap-theme.css" />
@@ -356,6 +357,9 @@
     <Compile Include="Account\AdminOrder.aspx.designer.cs">
       <DependentUpon>AdminOrder.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
     <Compile Include="OrderDetails\Checkout.aspx.cs">
       <DependentUpon>Checkout.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -487,6 +491,7 @@
   <ItemGroup>
     <Folder Include="Images\Individual\" />
     <Folder Include="Images\StoreLocator\" />
+    <Folder Include="UploadedBlogsImages\" />
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Service References\" />

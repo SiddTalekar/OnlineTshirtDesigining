@@ -13,6 +13,15 @@ namespace OnlineTshirtDesign {
     public partial class InnerBlogs {
         
         /// <summary>
+        /// Label1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Label1;
+        
+        /// <summary>
         /// PanelInnerBlogSlider control.
         /// </summary>
         /// <remarks>
@@ -22,58 +31,31 @@ namespace OnlineTshirtDesign {
         protected global::System.Web.UI.WebControls.Panel PanelInnerBlogSlider;
         
         /// <summary>
-        /// ImageInnerBlogUser control.
+        /// RepeatInnerBlogs control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Image ImageInnerBlogUser;
+        protected global::System.Web.UI.WebControls.Repeater RepeatInnerBlogs;
         
         /// <summary>
-        /// HyperLinkInnerBlogFb control.
+        /// DataSourceParticularUser control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink HyperLinkInnerBlogFb;
+        protected global::System.Web.UI.WebControls.SqlDataSource DataSourceParticularUser;
         
         /// <summary>
-        /// HyperLinkInnerBlogTw control.
+        /// LblDatabaseError control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink HyperLinkInnerBlogTw;
-        
-        /// <summary>
-        /// HyperLinkInnerBlogInsta control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink HyperLinkInnerBlogInsta;
-        
-        /// <summary>
-        /// HyperLinkInnerBlogFlexNext control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink HyperLinkInnerBlogFlexNext;
-        
-        /// <summary>
-        /// LabelInnerBlogNext control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label LabelInnerBlogNext;
+        protected global::System.Web.UI.WebControls.Label LblDatabaseError;
         
         /// <summary>
         /// PanelInnerBlogOther control.
@@ -101,5 +83,17 @@ namespace OnlineTshirtDesign {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.HyperLink HyperLinkinnerBlogRead;
+        
+        /// <summary>
+        /// Master property.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated property.
+        /// </remarks>
+        public new OnlineTshirtDesign.OnlineDesigining Master {
+            get {
+                return ((OnlineTshirtDesign.OnlineDesigining)(base.Master));
+            }
+        }
     }
 }
