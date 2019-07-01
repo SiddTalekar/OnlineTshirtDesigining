@@ -1,4 +1,5 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/OnlineDesigining.Master" AutoEventWireup="true" CodeBehind="InnerBlogs.aspx.cs" Inherits="OnlineTshirtDesign.InnerBlogs" %>
+
 <%@ MasterType VirtualPath="~/OnlineDesigining.Master" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
@@ -81,7 +82,7 @@
                                         </li>
                                     </ItemTemplate>
                                 </asp:Repeater>
-                               
+
                             </ul>
                         </div>
                         <%--<flex-slider flex-slide="allBlogData in sliderBlogsData track by $index" animation="slide" item-width="" min-items="1" slideshow="false">
@@ -90,33 +91,39 @@
                     </li>
                 </flex-slider>--%>
                     </asp:Panel>
-                    
+
                     <%--SqlDataSource for the particular user--%>
                     <asp:SqlDataSource ID="DataSourceParticularUser" runat="server" ProviderName="MySql.Data.MySqlClient" ConnectionString="<%$ ConnectionStrings:OnlineTshirtDesigning %>" SelectCommand="SELECT InnerBlogsId, InnerBlogsImg, InnerBlogsName, InnerBlogsDesc FROM inner_blogs WHERE InnerBlogsId=@InnerBlogsId">
-                       <SelectParameters>
-                           <asp:QueryStringParameter Name="InnerBlogsId" QueryStringField="InnerBlogsId" />
-                       </SelectParameters>
+                        <SelectParameters>
+                            <asp:QueryStringParameter Name="InnerBlogsId" QueryStringField="InnerBlogsId" />
+                        </SelectParameters>
                     </asp:SqlDataSource>
-                    <asp:Label ID="LblDatabaseError" runat="server" ></asp:Label>
-                    <%--Also view section--%> 
+                    <asp:Label ID="LblDatabaseError" runat="server"></asp:Label>
+                    <%--Also view section--%>
                     <div class="also-view">
                         <h3 class="inner-blog-title text-uppercase">Also view</h3>
                         <asp:Panel ID="PanelInnerBlogOther" runat="server">
                             <div class="flexslider innerblog-other">
                                 <ul class="slides">
-                                    <li>
-                                        <div class="blog__banner-detail relate">
-                                            <asp:Image ID="ImageInnerBlogOther" CssClass="img-responsive" ImageUrl="~/Images/Home/17.jpg" runat="server"></asp:Image>
-                                            <div class="blog__desc">
-                                                <h3 class="text-uppercase">{{blogs.name}}</h3>
-                                                <div class="typedin-desc"></div>
-                                                <p class="relate extra-content">
-                                                    <asp:HyperLink ID="HyperLinkinnerBlogRead" NavigateUrl="#" runat="server">Read more</asp:HyperLink>
+                                    <asp:Repeater ID="RepeatAlsoView" runat="server">
+                                        <ItemTemplate>
+                                            <li>
+                                                <div class="blog__banner-detail relate">
+                                                    <asp:Image ID="ImageInnerBlogOther" CssClass="img-responsive" ImageUrl='<%# Eval("InnerBlogsImg") %>' runat="server"></asp:Image>
+                                                    <div class="blog__desc">
+                                                        <h3 class="text-uppercase"><%# Eval("InnerBlogsName") %></h3>
+                                                        <p class="typedin-desc">
+                                                            <%# Eval("InnerBlogsDesc") %>
+                                                        </p>
+                                                        <p class="relate extra-content">
+                                                            <asp:HyperLink ID="HyperLinkinnerBlogRead" NavigateUrl='<%# Eval("InnerBlogsId", "~/Blogs/{0}") %>' Target="_self" runat="server">Read more</asp:HyperLink>
 
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </li>
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ItemTemplate>
+                                    </asp:Repeater>
                                 </ul>
                             </div>
                         </asp:Panel>

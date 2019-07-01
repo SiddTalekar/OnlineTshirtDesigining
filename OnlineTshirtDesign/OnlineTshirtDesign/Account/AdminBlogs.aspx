@@ -40,7 +40,7 @@
             <div class="col-md-12">
                 <div class="table-responsive">
 
-                    <asp:GridView ID="GridBlogData" CssClass="table table-hover" runat="server" PageSize="5" AllowPaging="true" OnRowDataBound="GridBlogData_RowDataBound" AutoGenerateColumns="false" OnRowEditing="GridBlogData_RowEditing"
+                    <asp:GridView ID="GridBlogData" CssClass="table table-hover " runat="server" PageSize="5" AllowPaging="true" OnRowDataBound="GridBlogData_RowDataBound" AutoGenerateColumns="false" OnRowEditing="GridBlogData_RowEditing"
                          OnRowUpdating="GridBlogData_RowUpdating"
                         OnRowCancelingEdit="GridBlogData_RowCancelingEdit">
                         <Columns>

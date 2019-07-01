@@ -67,22 +67,13 @@ namespace OnlineTshirtDesign {
         protected global::System.Web.UI.WebControls.Panel PanelInnerBlogOther;
         
         /// <summary>
-        /// ImageInnerBlogOther control.
+        /// RepeatAlsoView control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Image ImageInnerBlogOther;
-        
-        /// <summary>
-        /// HyperLinkinnerBlogRead control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink HyperLinkinnerBlogRead;
+        protected global::System.Web.UI.WebControls.Repeater RepeatAlsoView;
         
         /// <summary>
         /// Master property.
