@@ -8,15 +8,19 @@ using MySql.Data.MySqlClient;
 using System.Data;
 using System.Text;
 using System.Data.OleDb;
+using OnlineTshirtDesign.App_Code;
 
 namespace OnlineTshirtDesign
 {
     public partial class InnerBlogs : System.Web.UI.Page
     {
+        Shopping sp; 
+
         protected void Page_Load(object sender, EventArgs e)
         {
             Label1.Text = "You requested " + (string)Page.RouteData.Values["BlogsId"];
             GetUserDetls();
+           
         }
 
         private void GetUserDetls()
@@ -41,6 +45,7 @@ namespace OnlineTshirtDesign
 
             MySqlDataAdapter adapter = new MySqlDataAdapter(cmd);
             MySqlDataAdapter adapterAlsoView = new MySqlDataAdapter(cmdAlsoView);
+            
 
             try
             {
